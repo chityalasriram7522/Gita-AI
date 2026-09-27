@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Bhagavad Gita • Divine Gallery & Discourse</title>
+    <title>Bhagavad Gita • The Song of God</title>
     <link rel="stylesheet" href="index.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#e6a817">
@@ -14,27 +14,13 @@
         });
       }
     </script>
-    <!-- YouTube IFrame API for Exact Devotional Track: 33_-Bjt6icQ -->
-    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
-<body class="gallery-body">
-    <!-- Interactive Background Cosmic Canvas with Sacred Symbols: ॐ, 卐, ✦, ✧, 🪷 -->
+<body class="entry-body">
+    <!-- Interactive Cosmic Canvas with Sacred Symbols: ॐ, 卐, ✦, ✧ & Sacred Lotus 🪷 -->
     <canvas id="cosmicCanvas"></canvas>
 
-    <!-- Dedicated YouTube Devotional Music Player Engine (https://youtube.com/shorts/33_-Bjt6icQ) -->
-    <div id="ytAudioWrap" style="position: fixed; bottom: -9999px; left: -9999px; width: 240px; height: 240px; opacity: 1; pointer-events: none; overflow: hidden; z-index: -999;">
-        <iframe id="ytPlayer"
-            width="240" height="240"
-            src="https://www.youtube.com/embed/33_-Bjt6icQ?enablejsapi=1&autoplay=0&controls=0&loop=1&playlist=33_-Bjt6icQ&playsinline=1&rel=0&modestbranding=1"
-            title="Bhagavad Gita Devotional Music Player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-    </div>
-
     <!-- Minimalist Bottom-Right Sacred Audio Toggle Button -->
-    <div class="sacred-audio-fab" id="audioToggleFab" role="button" tabindex="0" title="Play / Pause Devotional Music" aria-label="Toggle Devotional Music">
+    <div class="sacred-audio-fab" id="audioToggleFab" role="button" tabindex="0" title="Play / Replay Vishwaroopam" aria-label="Toggle Video Song">
         <div class="fab-disc" id="chakraDisc">
             <span class="om-symbol" id="fabSymbol">ॐ</span>
         </div>
@@ -45,728 +31,225 @@
         </div>
     </div>
 
-    <!-- Header & Sacred Centered Branding -->
-    <header class="home-header">
-        <div class="brand-hero">
-            <div class="logo"></div>
-            <div class="text">
-                <p>Bhagavad Gita</p>
-            </div>
-            <div class="brand-tagline">
-                <span>॥ श्रीमद्भगवद्गीता • The Song Divine ॥</span>
-            </div>
-
-        </div>
-    </header>
-
-    <!-- Dual-Direction 3D Infinite Stream Marquees -->
-    <section class="marquehead">
-        <div class="stream-title">
-            <span>✨ SACRED GLIMPSES • DIVINE REVELATIONS ✨</span>
-        </div>
-
-        <!-- LINE 1: Scrolling Left to Right (Continuous) -->
-        <div class="stream-track stream-left-to-right">
-            <div class="stream-content">
-                <!-- 1. Govardhan -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="Krishna Govardhan.jpeg" alt="Krishna Govardhan" class="card-img" />
-                            <div class="card-overlay"><span>Govardhan</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="GOVARDHANA" data-te="గోవర్ధనోద్ధారణ">GOVARDHANA</h4>
-                                    <div class="card-back-role" data-en="Supreme Protector" data-te="పరమ రక్షకుడు">Supreme Protector</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Lord Krishna lifted Mount Govardhan on His little finger for 7 days to shield all villagers and cows from Indra's storms.</p>
-                                <p class="card-desc-te">ఇంద్రుని ఆగ్రహం నుండి గోకులాన్ని రక్షించడానికి చిటికెన వేలిపై గోవర్ధన గిరిని ఎత్తిన శ్రీకృష్ణ పరమాత్ముడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Divine Shelter" data-te="దివ్య రక్షణ">Divine Shelter</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Shri Krishna -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123625.jpg" alt="Shri Krishna" class="card-img" />
-                            <div class="card-overlay"><span>Devotion</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="SHRI KRISHNA" data-te="శ్రీకృష్ణుడు">SHRI KRISHNA</h4>
-                                    <div class="card-back-role" data-en="The Supreme Guide" data-te="జగద్గురువు">The Supreme Guide</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">The Divine Charioteer who spoke the eternal Bhagavad Gita on Kurukshetra to dispel delusion and illuminate dharma.</p>
-                                <p class="card-desc-te">కురుక్షేత్ర రణరంగంలో మోహంలో మునిగిన అర్జునునికి భగవద్గీతను ఉపదేశించిన విశ్వ గురువు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Parthasarathy" data-te="పార్థసారథి">Parthasarathy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Yudhishthira -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="2232de381d57b7c95aa60cc216683119.jpg" alt="Yudhishthira" class="card-img" />
-                            <div class="card-overlay"><span>Wisdom</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="YUDHISHTHIRA" data-te="ధర్మరాజు">YUDHISHTHIRA</h4>
-                                    <div class="card-back-role" data-en="King of Righteousness" data-te="ధర్మమూర్తి">King of Righteousness</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Eldest Pandava, son of Dharma, renowned across worlds for unyielding truth, moral rectitude, and righteous leadership.</p>
-                                <p class="card-desc-te">పాండవాగ్రజుడు, ధర్మదేవత అంశతో జన్మించి సత్యమే ఊపిరిగా జీవించిన పరమ ధార్మికుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Truth & Virtue" data-te="సత్యవాక్యపాలన">Truth & Virtue</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Bheema -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123407.jpg" alt="Bheema" class="card-img" />
-                            <div class="card-overlay"><span>Duty</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="BHEEMA" data-te="భీమసేనుడు">BHEEMA</h4>
-                                    <div class="card-back-role" data-en="The Unstoppable Might" data-te="మహాబలుడు">The Unstoppable Might</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Endowed with the colossal strength of 10,000 elephants, fierce defender of righteousness who crushed tyranny.</p>
-                                <p class="card-desc-te">పదివేల ఏనుగుల బలం గల వాయుపుత్రుడు; ధర్మరక్షణకై శపథాలను నెరవేర్చిన మహావీరుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Vrikodara" data-te="వృకోదరుడు">Vrikodara</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Arjuna -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123651.jpg" alt="Arjuna" class="card-img" />
-                            <div class="card-overlay"><span>Sacrifice</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="ARJUNA" data-te="అర్జునుడు">ARJUNA</h4>
-                                    <div class="card-back-role" data-en="The Chosen Archer" data-te="శ్రేష్ఠ గాండీవి">The Chosen Archer</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Master of Gandiva bow, the devoted seeker who surrendered to Krishna and received the ultimate wisdom of life.</p>
-                                <p class="card-desc-te">గాండీవధారి; శ్రీకృష్ణుని ప్రియ సఖుడై గీతామృతాన్ని స్వీకరించి విజయాన్ని సాధించిన వీరుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Savyasachi" data-te="సవ్యసాచి">Savyasachi</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. Nakula & Sahadeva -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123543.jpg" alt="Nakula & Sahadeva" class="card-img" />
-                            <div class="card-overlay"><span>Yoga</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="NAKULA & SAHADEVA" data-te="నకుల సహదేవులు">NAKULA & SAHADEVA</h4>
-                                    <div class="card-back-role" data-en="The Ashvini Twins" data-te="అశ్వినీ కుమారులు">The Ashvini Twins</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Nakula, master equestrian; Sahadeva, supreme astrologer and seer of future destiny. Pillars of fraternal unity.</p>
-                                <p class="card-desc-te">అద్వితీయ అశ్వపాలనా దక్షుడు నకులుడు, త్రికాలవేది జ్ఞాని సహదేవుడు - పాండవ అనుంగు తమ్ములు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Harmony & Insight" data-te="జ్ఞానైక్యత">Harmony & Insight</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. Karna -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123548.jpg" alt="Karna" class="card-img" />
-                            <div class="card-overlay"><span>Meditation</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="KARNA" data-te="దానవీర కర్ణుడు">KARNA</h4>
-                                    <div class="card-back-role" data-en="Danaveera Hero" data-te="సూర్యపుత్రుడు">Danaveera Hero</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Son of Surya, warrior of peerless archery and selfless generosity, who parted with his golden divine armor for charity.</p>
-                                <p class="card-desc-te">అడిగిన వారికి ప్రాణాలైనా ఇచ్చే దాతృత్వశీలి; కవచకుండలాలను సైతం దానమిచ్చిన మహానుభావుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Supreme Charity" data-te="దానగుణం">Supreme Charity</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8. Bhishma Pitamah -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123519.jpg" alt="Bhishma Pitamah" class="card-img" />
-                            <div class="card-overlay"><span>Liberation</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="BHISHMA PITAMAH" data-te="భీష్మ పితామహుడు">BHISHMA PITAMAH</h4>
-                                    <div class="card-back-role" data-en="Revered Grandsire" data-te="పితామహుడు">Revered Grandsire</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">The invincible grandsire of the Kuru dynasty, master of martial arts bound by eternal vows of honor and righteousness.</p>
-                                <p class="card-desc-te">ఇచ్ఛామరణి, గంగాపుత్రుడైన భీష్మ పితామహుడు - ఆజన్మ బ్రహ్మచర్య సత్యప్రతిజ్ఞా నిష్ఠాగరిష్ఠుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Sacred Vows" data-te="ధర్మనిష్ఠ">Sacred Vows</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Dronacharya -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123530.jpg" alt="Dronacharya" class="card-img" />
-                            <div class="card-overlay"><span>Eternity</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="DRONACHARYA" data-te="ద్రోణాచార్యుడు">DRONACHARYA</h4>
-                                    <div class="card-back-role" data-en="The Skilled Master Guru" data-te="ధనుర్విద్యా గురువు">The Skilled Master Guru</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">The revered master of military arts and supreme weapons, royal teacher to both Pandavas and Kauravas.</p>
-                                <p class="card-desc-te">కౌరవ పాండవులకు దివ్యాస్త్రాలను ఉపదేశించిన అద్వితీయ ధనుర్విద్యా గురువైన ద్రోణాచార్యుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Martial Guru" data-te="గురుదేవుడు">Martial Guru</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 10. Abhimanyu -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123452.jpg" alt="Abhimanyu" class="card-img" />
-                            <div class="card-overlay"><span>Valor</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="ABHIMANYU" data-te="అభిమన్యుడు">ABHIMANYU</h4>
-                                    <div class="card-back-role" data-en="Chakravyuha Hero" data-te="వీరాధివీరుడు">Chakravyuha Hero</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Brave son of Arjuna who fearlessly penetrated the impenetrable Chakravyuha single-handedly in immortal valor.</p>
-                                <p class="card-desc-te">అర్జునుని వీర తనయుడు; కురుక్షేత్రంలో పద్మవ్యూహాన్ని ఒంటిచేత్తో ఛేదించి అమరుడైన బాలవీరుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Fearless Valor" data-te="అద్వితీయ శౌర్యం">Fearless Valor</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11. Yuyutsu -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="20250714_123540.jpg" alt="Yuyutsu" class="card-img" />
-                            <div class="card-overlay"><span>Righteousness</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="YUYUTSU" data-te="యుయుత్సుడు">YUYUTSU</h4>
-                                    <div class="card-back-role" data-en="The Unsung Warrior" data-te="ధర్మపక్షపాతి">The Unsung Warrior</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">The principled Kaurava prince who courageously crossed over to Pandavas for the supreme cause of righteous dharma.</p>
-                                <p class="card-desc-te">అధర్మాన్ని తిరస్కరించి, ధర్మరక్షణ కోసం కురుక్షేత్రంలో సత్యపక్షాన నిలిచిన ధైర్యశాలి యుయుత్సుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Dharma Choice" data-te="ధర్మవిజయం">Dharma Choice</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Clones for seamless infinite loop (Line 1) -->
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="Krishna Govardhan.jpeg" alt="Krishna Govardhan" class="card-img" /><div class="card-overlay"><span>Govardhan</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="GOVARDHANA" data-te="గోవర్ధనోద్ధారణ">GOVARDHANA</h4><div class="card-back-role" data-en="Supreme Protector" data-te="పరమ రక్షకుడు">Supreme Protector</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Lord Krishna lifted Mount Govardhan on His little finger for 7 days to shield all villagers and cows from storms.</p><p class="card-desc-te">ఇంద్రుని ఆగ్రహం నుండి గోకులాన్ని రక్షించడానికి చిటికెన వేలిపై గోవర్ధన గిరిని ఎత్తిన శ్రీకృష్ణ పరమాత్ముడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Divine Shelter" data-te="దివ్య రక్షణ">Divine Shelter</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123625.jpg" alt="Shri Krishna" class="card-img" /><div class="card-overlay"><span>Devotion</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="SHRI KRISHNA" data-te="శ్రీకృష్ణుడు">SHRI KRISHNA</h4><div class="card-back-role" data-en="The Supreme Guide" data-te="జగద్గురువు">The Supreme Guide</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">The Divine Charioteer who spoke the eternal Bhagavad Gita on Kurukshetra to illuminate dharma.</p><p class="card-desc-te">కురుక్షేత్ర రణరంగంలో మోహంలో మునిగిన అర్జునునికి భగవద్గీతను ఉపదేశించిన విశ్వ గురువు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Parthasarathy" data-te="పార్థసారథి">Parthasarathy</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="2232de381d57b7c95aa60cc216683119.jpg" alt="Yudhishthira" class="card-img" /><div class="card-overlay"><span>Wisdom</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="YUDHISHTHIRA" data-te="ధర్మరాజు">YUDHISHTHIRA</h4><div class="card-back-role" data-en="King of Righteousness" data-te="ధర్మమూర్తి">King of Righteousness</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Eldest Pandava, son of Dharma, renowned for unyielding truth, moral rectitude, and righteous leadership.</p><p class="card-desc-te">పాండవాగ్రజుడు, ధర్మదేవత అంశతో జన్మించి సత్యమే ఊపిరిగా జీవించిన పరమ ధార్మికుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Truth & Virtue" data-te="సత్యవాక్యపాలన">Truth & Virtue</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123407.jpg" alt="Bheema" class="card-img" /><div class="card-overlay"><span>Duty</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="BHEEMA" data-te="భీమసేనుడు">BHEEMA</h4><div class="card-back-role" data-en="The Unstoppable Might" data-te="మహాబలుడు">The Unstoppable Might</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Endowed with colossal strength of 10,000 elephants, fierce defender of righteousness who crushed tyranny.</p><p class="card-desc-te">పదివేల ఏనుగుల బలం గల వాయుపుత్రుడు; ధర్మరక్షణకై శపథాలను నెరవేర్చిన మహావీరుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Vrikodara" data-te="వృకోదరుడు">Vrikodara</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123651.jpg" alt="Arjuna" class="card-img" /><div class="card-overlay"><span>Sacrifice</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="ARJUNA" data-te="అర్జునుడు">ARJUNA</h4><div class="card-back-role" data-en="The Chosen Archer" data-te="శ్రేష్ఠ గాండీవి">The Chosen Archer</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Master of Gandiva bow, devoted seeker who surrendered to Krishna and received eternal wisdom.</p><p class="card-desc-te">గాండీవధారి; శ్రీకృష్ణుని ప్రియ సఖుడై గీతామృతాన్ని స్వీకరించి విజయాన్ని సాధించిన వీరుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Savyasachi" data-te="సవ్యసాచి">Savyasachi</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123543.jpg" alt="Nakula & Sahadeva" class="card-img" /><div class="card-overlay"><span>Yoga</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="NAKULA & SAHADEVA" data-te="నకుల సహదేవులు">NAKULA & SAHADEVA</h4><div class="card-back-role" data-en="The Ashvini Twins" data-te="అశ్వినీ కుమారులు">The Ashvini Twins</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Nakula, master equestrian; Sahadeva, supreme astrologer and seer of destiny. Pillars of brotherhood.</p><p class="card-desc-te">అద్వితీయ అశ్వపాలనా దక్షుడు నకులుడు, త్రికాలవేది జ్ఞాని సహదేవుడు - పాండవ అనుంగు తమ్ములు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Harmony & Insight" data-te="జ్ఞానైక్యత">Harmony & Insight</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123548.jpg" alt="Karna" class="card-img" /><div class="card-overlay"><span>Meditation</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="KARNA" data-te="దానవీర కర్ణుడు">KARNA</h4><div class="card-back-role" data-en="Danaveera Hero" data-te="సూర్యపుత్రుడు">Danaveera Hero</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Son of Surya, warrior of peerless archery and selfless generosity who gave away his armor for charity.</p><p class="card-desc-te">అడిగిన వారికి ప్రాణాలైనా ఇచ్చే దాతృత్వశీలి; కవచకుండలాలను సైతం దానమిచ్చిన మహానుభావుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Supreme Charity" data-te="దానగుణం">Supreme Charity</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123519.jpg" alt="Bhishma Pitamah" class="card-img" /><div class="card-overlay"><span>Liberation</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="BHISHMA PITAMAH" data-te="భీష్మ పితామహుడు">BHISHMA PITAMAH</h4><div class="card-back-role" data-en="Revered Grandsire" data-te="పితామహుడు">Revered Grandsire</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Invincible grandsire of Kuru dynasty, bound by eternal vows of honor and righteousness.</p><p class="card-desc-te">గంగాపుత్రుడైన భీష్మ పితామహుడు - ఆజన్మ బ్రహ్మచర్య సత్యప్రతిజ్ఞా నిష్ఠాగరిష్ఠుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Sacred Vows" data-te="ధర్మనిష్ఠ">Sacred Vows</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123530.jpg" alt="Dronacharya" class="card-img" /><div class="card-overlay"><span>Eternity</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="DRONACHARYA" data-te="ద్రోణాచార్యుడు">DRONACHARYA</h4><div class="card-back-role" data-en="The Skilled Master Guru" data-te="ధనుర్విద్యా గురువు">The Skilled Master Guru</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">The revered master of military arts and royal teacher to Pandavas and Kauravas.</p><p class="card-desc-te">కౌరవ పాండవులకు దివ్యాస్త్రాలను ఉపదేశించిన అద్వితీయ ధనుర్విద్యా గురువైన ద్రోణాచార్యుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Martial Guru" data-te="గురుదేవుడు">Martial Guru</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123452.jpg" alt="Abhimanyu" class="card-img" /><div class="card-overlay"><span>Valor</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="ABHIMANYU" data-te="అభిమన్యుడు">ABHIMANYU</h4><div class="card-back-role" data-en="Chakravyuha Hero" data-te="వీరాధివీరుడు">Chakravyuha Hero</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Brave son of Arjuna who penetrated the Chakravyuha single-handedly in supreme valor.</p><p class="card-desc-te">కురుక్షేత్రంలో పద్మవ్యూహాన్ని ఒంటిచేత్తో ఛేదించి అమరుడైన బాలవీరుడు అభిమన్యుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Fearless Valor" data-te="అద్వితీయ శౌర్యం">Fearless Valor</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="20250714_123540.jpg" alt="Yuyutsu" class="card-img" /><div class="card-overlay"><span>Righteousness</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="YUYUTSU" data-te="యుయుత్సుడు">YUYUTSU</h4><div class="card-back-role" data-en="The Unsung Warrior" data-te="ధర్మపక్షపాతి">The Unsung Warrior</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">The principled Kaurava prince who joined Pandavas for the supreme cause of dharma.</p><p class="card-desc-te">ధర్మరక్షణ కోసం కురుక్షేత్రంలో సత్యపక్షాన నిలిచిన ధైర్యశాలి యుయుత్సుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Dharma Choice" data-te="ధర్మవిజయం">Dharma Choice</span></div></div></div></div>
+    <main id="firstfield">
+        <!-- Seamless Continuous Divine Shloka Banner -->
+        <div class="shloka-banner">
+            <div class="shloka-track">
+                <span class="shloka-text">यदा यदा हि धर्मस्य ग्लानिर्भवति भारत । अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥ परित्राणाय साधूनां विनाशाय च दुष्कृताम् । धर्मसंस्थापनार्थाय सम्भवामि युगे युगे ॥</span>
+                <span class="shloka-divider">✦</span>
+                <span class="shloka-text">यदा यदा हि धर्मस्य ग्लानिर्भवति भारत । अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥ परित्राणाय साधूनां विनाशाय च दुष्कृताम् । धर्मसंस्थापनार्थाय सम्भवामि युगे युगे ॥</span>
+                <span class="shloka-divider">✦</span>
             </div>
         </div>
 
-        <!-- LINE 2: Scrolling Right to Left (Continuous) -->
-        <div class="stream-track stream-right-to-left">
-            <div class="stream-content">
-                <!-- 1. Divine Birth -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="efca9b6f-ade2-43c0-81f3-789ccfb9e1a6.jpeg" alt="Divine Birth" class="card-img" />
-                            <div class="card-overlay"><span>Divine Birth</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="DIVINE BIRTH" data-te="శ్రీకృష్ణావతారం">DIVINE BIRTH</h4>
-                                    <div class="card-back-role" data-en="Lord Vishnu's Descent" data-te="దివ్య అవతార లీల">Lord Vishnu's Descent</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Lord Vishnu appears in His magnificent four-armed form before Devaki and Vasudeva in the Mathura prison on Janmashtami.</p>
-                                <p class="card-desc-te">మథుర కారాగారంలో దేవకీ వసుదేవులకు శంఖ చక్ర గదాధారియై చతుర్భుజ రూపంలో దర్శనమిచ్చిన శ్రీ మహావిష్ణువు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Janmashtami" data-te="జన్మాష్టమి">Janmashtami</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Yamuna Crossing -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="0b34eae6-ee2b-4ced-8bd1-4da3d0fd8f08.jpeg" alt="Yamuna Crossing" class="card-img" />
-                            <div class="card-overlay"><span>Yamuna Crossing</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="YAMUNA CROSSING" data-te="యమునా దాటడం">YAMUNA CROSSING</h4>
-                                    <div class="card-back-role" data-en="Divine Journey" data-te="రక్షణా యాత్ర">Divine Journey</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Vasudeva carries infant Krishna across the tempestuous Yamuna river, sheltered from the torrential storm by Adishesha.</p>
-                                <p class="card-desc-te">ఉరుములు మెరుపుల శ్రావణ రాత్రి ఆదిశేషుని నీడలో కృష్ణుని యమునా నది దాటించిన వసుదేవుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Divine Shelter" data-te="శేష రక్షణ">Divine Shelter</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Kaliya Mardan -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="b90867ff-26e2-4503-b282-5d8f2510701d.jpeg" alt="Kaliya Mardan" class="card-img" />
-                            <div class="card-overlay"><span>Kaliya Mardan</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="KALIYA MARDAN" data-te="కాళీయ మర్దనం">KALIYA MARDAN</h4>
-                                    <div class="card-back-role" data-en="Taming the Serpent" data-te="విషనాశనం">Taming the Serpent</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Young Krishna leapt into the poisoned Yamuna and fearlessly danced upon the hoods of venomous serpent Kaliya to purify the waters.</p>
-                                <p class="card-desc-te">యమునా నదిని విషతుల్యం చేసిన కాళీయ సర్పం పడగలపై నాట్యమాడి అహంకారాన్ని అణచివేసిన బాలకృష్ణుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Ego Subjugation" data-te="అహంకార నాశనం">Ego Subjugation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Giri Govardhan -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="43c519c2-d1e5-4528-a5c0-1f6f54e90cc2.jpeg" alt="Bal Gopal Govardhan" class="card-img" />
-                            <div class="card-overlay"><span>Giri Govardhan</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="GIRI GOVARDHAN" data-te="గిరిధారి">GIRI GOVARDHAN</h4>
-                                    <div class="card-back-role" data-en="Supreme Protector" data-te="గోకుల రక్షకుడు">Supreme Protector</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Child Krishna effortlessly lifted the entire Mount Govardhan on His little finger to shield the villagers and cattle from Indra's wrath.</p>
-                                <p class="card-desc-te">ఇంద్రుని ఆగ్రహం నుండి గోకులాన్ని రక్షించడానికి చిటికెన వేలిపై గోవర్ధన పర్వతాన్ని ఎత్తిన బాలగోపాలుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Absolute Grace" data-te="భక్త రక్షణ">Absolute Grace</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Mathura Arena -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="46f41a2e-3208-457c-9d70-d178af2c4022.jpeg" alt="Mathura Arena" class="card-img" />
-                            <div class="card-overlay"><span>Mathura Arena</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="MATHURA ARENA" data-te="మల్లయుద్ధం">MATHURA ARENA</h4>
-                                    <div class="card-back-role" data-en="Triumph of Justice" data-te="అధర్మ విధ్వంసం">Triumph of Justice</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Krishna and Balarama entering King Kamsa's royal arena, effortlessly overpowering tyrannical giant wrestlers Chanura and Mushtika.</p>
-                                <p class="card-desc-te">మథురలో కంసుని మల్లయోధులైన చాణూర, ముష్టికులను తుదముట్టించి ధర్మాన్ని నిలిపిన కృష్ణ బలరాములు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Karma Yoga" data-te="విజయ ధర్మం">Karma Yoga</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. Kamsa Vadha -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="60e4f0b0-b3a6-44fe-aa0c-148f002ecc42.jpeg" alt="Kamsa Vadha" class="card-img" />
-                            <div class="card-overlay"><span>Kamsa Vadha</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="KAMSA VADHA" data-te="కంస వధ">KAMSA VADHA</h4>
-                                    <div class="card-back-role" data-en="Destruction of Tyranny" data-te="దుష్టశిక్షణ">Destruction of Tyranny</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Lord Krishna leaps upon tyrant King Kamsa's throne in Mathura, slaying him to restore peace, righteousness, and dharma on earth.</p>
-                                <p class="card-desc-te">మథురలో దుష్ట పాలకుడైన కంసుడిని సింహాసనం నుండి లాగి సంహరించి ధర్మ సామ్రాజ్యాన్ని స్థాపించిన శ్రీకృష్ణుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Dharma Sthapana" data-te="ధర్మస్థాపన">Dharma Sthapana</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. Venugopala -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="cabeb903-61d2-4f52-9987-4f6c3394a19b.jpeg" alt="Venugopala" class="card-img" />
-                            <div class="card-overlay"><span>Venugopala</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="VENUGOPALA" data-te="వేణుగోపాలుడు">VENUGOPALA</h4>
-                                    <div class="card-back-role" data-en="The Divine Flute" data-te="మురళీధరుడు">The Divine Flute</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Krishna playing His celestial flute while leading the holy herd of white cows, enchanting all creation with blissful divine love.</p>
-                                <p class="card-desc-te">బృందావనంలో గోవులతో నడుస్తూ మధురమైన వేణుగానంతో సమస్త చరాచర జగత్తును పరవశింపజేసిన మురళీధరుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Divine Melody" data-te="దివ్య ప్రేమ">Divine Melody</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8. Parthasarathy -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="f8fd5a53-7621-44e8-afea-7ca096327aec.jpeg" alt="Parthasarathy" class="card-img" />
-                            <div class="card-overlay"><span>Parthasarathy</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="PARTHASARATHY" data-te="పార్థసారథి">PARTHASARATHY</h4>
-                                    <div class="card-back-role" data-en="Divine Charioteer" data-te="కురుక్షేత్ర సారథి">Divine Charioteer</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Lord Krishna reigning over the divine chariot on the vast battlefield of Kurukshetra, guiding Arjuna into the righteous war.</p>
-                                <p class="card-desc-te">కురుక్షేత్ర మహారణరంగంలో రథాన్ని నడిపిస్తూ ధర్మయుద్ధంలో అర్జునునికి మార్గదర్శనం చేసిన జగద్గురువు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Kurukshetra" data-te="రణరంగ సారథి">Kurukshetra</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Gita Upadesham -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="f82f42e3-1600-46e8-b5ef-4038edd9d477.jpeg" alt="Gita Upadesham" class="card-img" />
-                            <div class="card-overlay"><span>Gita Upadesham</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="GITA UPADESHAM" data-te="గీతోపదేశం">GITA UPADESHAM</h4>
-                                    <div class="card-back-role" data-en="Eternal Wisdom" data-te="మోక్ష మార్గం">Eternal Wisdom</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Lord Krishna dispelling Arjuna's grief and delusion, delivering the immortal teachings of the Bhagavad Gita for all humanity.</p>
-                                <p class="card-desc-te">శోకమోహాలలో మునిగిన అర్జునునికి అమృతతుల్యమైన భగవద్గీతా జ్ఞానాన్ని ఉపదేశించిన శ్రీకృష్ణ భగవానుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Jnana Marga" data-te="ఆత్మజ్ఞానం">Jnana Marga</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 10. Vishwaroopam -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="3f0a2367-774b-41bf-ba30-f7f77c23203d.jpeg" alt="Vishwaroopam" class="card-img" />
-                            <div class="card-overlay"><span>Vishwaroopam</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="VISHWAROOPAM" data-te="విశ్వరూప దర్శనం">VISHWAROOPAM</h4>
-                                    <div class="card-back-role" data-en="Cosmic Revelation" data-te="దివ్య దర్శనం">Cosmic Revelation</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">The Supreme cosmic manifestation revealing infinite suns, planets, galaxies, and the eternal cycle of creation and dissolution.</p>
-                                <p class="card-desc-te">సమస్త గ్రహాలు, తారలు, కాలం, సృష్టి స్థితి లయలు తనలోనే ఇమిడి ఉన్న కృష్ణుని అద్భుత విశ్వరూపం.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Cosmic Form" data-te="విశ్వరూపం">Cosmic Form</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 11. Virat Swaroop -->
-                <div class="card-3d">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="9ec5edf2-4f87-491e-b100-f89e6f002016.jpeg" alt="Virat Swaroop" class="card-img" />
-                            <div class="card-overlay"><span>Virat Swaroop</span></div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-header">
-                                <div class="card-back-title-wrap">
-                                    <h4 class="card-back-title" data-en="VIRAT SWAROOP" data-te="విరాట్ స్వరూపం">VIRAT SWAROOP</h4>
-                                    <div class="card-back-role" data-en="Supreme Divine Light" data-te="పరబ్రహ్మ తత్త్వం">Supreme Divine Light</div>
-                                </div>
-                                <button class="lang-char-btn" type="button" title="Translate / తెలుగు" aria-label="Translate to Telugu">
-                                    <span class="lang-char">తె</span>
-                                </button>
-                            </div>
-                            <div class="card-back-body">
-                                <p class="card-desc-en">Arjuna bowing with folded hands on his chariot, beholding the infinite radiant heads and effulgence of the Supreme Lord.</p>
-                                <p class="card-desc-te">రథంపై చేతులు జోడించి సాష్టాంగ నమస్కారం చేస్తూ కృష్ణుని తేజోమయ విరాట్ స్వరూపాన్ని దర్శిస్తున్న అర్జునుడు.</p>
-                            </div>
-                            <div class="card-back-footer">
-                                <span class="card-back-badge" data-en="Absolute Surrender" data-te="శరణాగతి">Absolute Surrender</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Clones for seamless infinite loop (Line 2) -->
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="efca9b6f-ade2-43c0-81f3-789ccfb9e1a6.jpeg" alt="Divine Birth" class="card-img" /><div class="card-overlay"><span>Divine Birth</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="DIVINE BIRTH" data-te="శ్రీకృష్ణావతారం">DIVINE BIRTH</h4><div class="card-back-role" data-en="Lord Vishnu's Descent" data-te="దివ్య అవతార లీల">Lord Vishnu's Descent</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Lord Vishnu appears in 4-armed form before Devaki & Vasudeva in Mathura prison.</p><p class="card-desc-te">మథుర కారాగారంలో దేవకీ వసుదేవులకు దర్శనమిచ్చిన శ్రీ మహావిష్ణువు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Janmashtami" data-te="జన్మాష్టమి">Janmashtami</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="0b34eae6-ee2b-4ced-8bd1-4da3d0fd8f08.jpeg" alt="Yamuna Crossing" class="card-img" /><div class="card-overlay"><span>Yamuna Crossing</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="YAMUNA CROSSING" data-te="యమునా దాటడం">YAMUNA CROSSING</h4><div class="card-back-role" data-en="Divine Journey" data-te="రక్షణా యాత్ర">Divine Journey</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Vasudeva carries infant Krishna across stormy Yamuna, sheltered by Adishesha.</p><p class="card-desc-te">శ్రావణ రాత్రి ఆదిశేషుని నీడలో కృష్ణుని యమున దాటించిన వసుదేవుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Divine Shelter" data-te="శేష రక్షణ">Divine Shelter</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="b90867ff-26e2-4503-b282-5d8f2510701d.jpeg" alt="Kaliya Mardan" class="card-img" /><div class="card-overlay"><span>Kaliya Mardan</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="KALIYA MARDAN" data-te="కాళీయ మర్దనం">KALIYA MARDAN</h4><div class="card-back-role" data-en="Taming the Serpent" data-te="విషనాశనం">Taming the Serpent</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Young Krishna danced upon the venomous hoods of Kaliya to purify the sacred river.</p><p class="card-desc-te">కాళీయ సర్పం పడగలపై నాట్యమాడి అణచివేసిన బాలకృష్ణుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Ego Subjugation" data-te="అహంకార నాశనం">Ego Subjugation</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="43c519c2-d1e5-4528-a5c0-1f6f54e90cc2.jpeg" alt="Bal Gopal Govardhan" class="card-img" /><div class="card-overlay"><span>Giri Govardhan</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="GIRI GOVARDHAN" data-te="గిరిధారి">GIRI GOVARDHAN</h4><div class="card-back-role" data-en="Supreme Protector" data-te="గోకుల రక్షకుడు">Supreme Protector</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Divine child sheltering the inhabitants of Vraja with the mountain on His little finger.</p><p class="card-desc-te">గోకులాన్ని కాపాడటానికి కొండను ఎత్తిన శ్రీకృష్ణ పరమాత్ముడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Absolute Grace" data-te="భక్త రక్షణ">Absolute Grace</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="46f41a2e-3208-457c-9d70-d178af2c4022.jpeg" alt="Mathura Arena" class="card-img" /><div class="card-overlay"><span>Mathura Arena</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="MATHURA ARENA" data-te="మల్లయుద్ధం">MATHURA ARENA</h4><div class="card-back-role" data-en="Triumph of Justice" data-te="అధర్మ విధ్వంసం">Triumph of Justice</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Krishna & Balarama entering Kamsa's arena, defeating tyrannical giant champions.</p><p class="card-desc-te">మథురలో మల్లయోధులను తుదముట్టించిన కృష్ణ బలరాములు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Karma Yoga" data-te="విజయ ధర్మం">Karma Yoga</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="60e4f0b0-b3a6-44fe-aa0c-148f002ecc42.jpeg" alt="Kamsa Vadha" class="card-img" /><div class="card-overlay"><span>Kamsa Vadha</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="KAMSA VADHA" data-te="కంస వధ">KAMSA VADHA</h4><div class="card-back-role" data-en="Destruction of Tyranny" data-te="దుష్టశిక్షణ">Destruction of Tyranny</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Lord Krishna slaying tyrant King Kamsa in Mathura to restore dharma on earth.</p><p class="card-desc-te">కంసుడిని సంహరించి ధర్మ సామ్రాజ్యాన్ని స్థాపించిన శ్రీకృష్ణుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Dharma Sthapana" data-te="ధర్మస్థాపన">Dharma Sthapana</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="cabeb903-61d2-4f52-9987-4f6c3394a19b.jpeg" alt="Venugopala" class="card-img" /><div class="card-overlay"><span>Venugopala</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="VENUGOPALA" data-te="వేణుగోపాలుడు">VENUGOPALA</h4><div class="card-back-role" data-en="The Divine Flute" data-te="మురళీధరుడు">The Divine Flute</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Krishna playing His flute leading the cows in Vrindavan, captivating creation in love.</p><p class="card-desc-te">బృందావనంలో వేణుగానంతో సృష్టిని పరవశింపజేసిన మురళిధరుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Divine Melody" data-te="దివ్య ప్రేమ">Divine Melody</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="f8fd5a53-7621-44e8-afea-7ca096327aec.jpeg" alt="Parthasarathy" class="card-img" /><div class="card-overlay"><span>Parthasarathy</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="PARTHASARATHY" data-te="పార్థసారథి">PARTHASARATHY</h4><div class="card-back-role" data-en="Divine Charioteer" data-te="కురుక్షేత్ర సారథి">Divine Charioteer</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Lord Krishna reigning over the divine chariot on the battlefield of Kurukshetra.</p><p class="card-desc-te">కురుక్షేత్ర రణరంగంలో రథాన్ని నడిపిస్తూ అర్జునునికి మార్గదర్శనం చేసిన సారథి.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Kurukshetra" data-te="రణరంగ సారథి">Kurukshetra</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="f82f42e3-1600-46e8-b5ef-4038edd9d477.jpeg" alt="Gita Upadesham" class="card-img" /><div class="card-overlay"><span>Gita Upadesham</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="GITA UPADESHAM" data-te="గీతోపదేశం">GITA UPADESHAM</h4><div class="card-back-role" data-en="Eternal Wisdom" data-te="మోక్ష మార్గం">Eternal Wisdom</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Lord Krishna delivering the immortal teachings of the Bhagavad Gita to Arjuna.</p><p class="card-desc-te">అర్జునునికి భగవద్గీతా జ్ఞానాన్ని ఉపదేశించిన శ్రీకృష్ణ భగవానుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Jnana Marga" data-te="ఆత్మజ్ఞానం">Jnana Marga</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="3f0a2367-774b-41bf-ba30-f7f77c23203d.jpeg" alt="Vishwaroopam" class="card-img" /><div class="card-overlay"><span>Vishwaroopam</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="VISHWAROOPAM" data-te="విశ్వరూప దర్శనం">VISHWAROOPAM</h4><div class="card-back-role" data-en="Cosmic Revelation" data-te="దివ్య దర్శనం">Cosmic Revelation</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">The supreme cosmic manifestation containing all suns, planets, and eternity.</p><p class="card-desc-te">సమస్త సృష్టి స్థితి లయలు తనలో ఇమిడి ఉన్న కృష్ణుని విశ్వరూపం.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Cosmic Form" data-te="విశ్వరూపం">Cosmic Form</span></div></div></div></div>
-                <div class="card-3d"><div class="card-inner"><div class="card-front"><img src="9ec5edf2-4f87-491e-b100-f89e6f002016.jpeg" alt="Virat Swaroop" class="card-img" /><div class="card-overlay"><span>Virat Swaroop</span></div></div><div class="card-back"><div class="card-back-header"><div class="card-back-title-wrap"><h4 class="card-back-title" data-en="VIRAT SWAROOP" data-te="విరాట్ స్వరూపం">VIRAT SWAROOP</h4><div class="card-back-role" data-en="Supreme Divine Light" data-te="పరబ్రహ్మ తత్త్వం">Supreme Divine Light</div></div><button class="lang-char-btn" type="button"><span class="lang-char">తె</span></button></div><div class="card-back-body"><p class="card-desc-en">Arjuna beholding the infinite radiant heads and effulgence of the Supreme Lord.</p><p class="card-desc-te">కృష్ణుని తేజోమయ విరాట్ స్వరూపాన్ని దర్శిస్తున్న అర్జునుడు.</p></div><div class="card-back-footer"><span class="card-back-badge" data-en="Absolute Surrender" data-te="శరణాగతి">Absolute Surrender</span></div></div></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enlarged Cinematic Theater Video Section - Zero Box Boundaries (Seamless Deep Black Smoke Melt) -->
-    <section class="theater-section" id="theaterSection">
-        <div class="theater-container">
-            <div class="theater-ambilight"></div>
-            <div class="theater-video-wrap">
-                <video id="theaterVideo" loop playsinline controls preload="metadata" muted poster="krishna_divine_entry.jpg" src="WhatsApp Video 2025-07-14 at 17.05.42_01d49a4b.mp4"></video>
+        <!-- Grand 4K Vishwaroopam Cosmic Stage (Video Sequence -> Smooth 4K Image Climax Transition) -->
+        <section class="hero-cosmic-stage" id="heroWrapper">
+            <!-- Pulsing Golden & Celestial Ambient Aura -->
+            <div class="cosmic-backlight-aura"></div>
+            
+            <!-- Video & 4K Final Image Stage -->
+            <div class="hero-video-wrap" id="heroCard">
+                <video id="entryHeroVideo" src="Untitled video - Made with Clipchamp (1).mp4" poster="vishwaroopam_4k_final.png" playsinline preload="auto"></video>
+                <!-- Pristine 4K Final Image (Instant switch, no transition animation) -->
+                <img id="entryFinalImage" class="hero-final-image" src="vishwaroopam_4k_final.png" alt="Ananta Vishwaroopam 4K Final" />
+                
+                <!-- Multi-Layer Vignette Melt Overlays -->
                 <div class="vignette-melt-radial"></div>
                 <div class="vignette-melt-vertical"></div>
+                <div class="card-glare" id="cardGlare"></div>
             </div>
-            <div class="theater-caption">
-                <h3>The Song Divine • Kurukshetra Discourse</h3>
-                <p>Immerse yourself in the eternal dialogue of righteousness, surrender, and ultimate transcendence.</p>
+
+            <!-- Grand Sacred Typography Floating in Deep Celestial Space -->
+            <div class="hero-divine-text" id="divineTypography">
+                <div class="divine-badge">✨ ANANTA VISHWAROOPAM ✨</div>
+                <h1 class="divine-title">श्रीमद्भगवद्गीता</h1>
+                <p class="divine-subtitle">The Eternal Song of God • Timeless Wisdom of Life</p>
+            </div>
+        </section>
+
+        <div class="enter" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center;">
+            <a href="home.html" id="enterPortalLink">
+                <button type="button" class="btn-portal" id="enterBtn">
+                    <span class="btn-text">Enter Sanctuary</span>
+                    <span class="btn-glow-ring"></span>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <!-- Fullscreen Cinematic Video Transition Overlay (Responsive for Desktop & 9:16 Mobile) -->
+    <div id="videoTransitionOverlay" class="video-transition-overlay" aria-hidden="true">
+        <!-- Ambient Glowing Aura Backdrop -->
+        <div class="video-transition-ambient"></div>
+
+        <!-- Atmospheric Vignettes for Seamless Edge Melt -->
+        <div class="video-transition-vignette-top"></div>
+        <div class="video-transition-vignette-bottom"></div>
+
+        <!-- Floating Quick Controls (Fill/Fit & Enter Now) -->
+        <div class="video-transition-controls">
+            <button type="button" class="vt-ctrl-btn vt-fit-btn" id="vtToggleFit" title="Toggle Fullscreen Fill / Fit Frame" aria-label="Toggle Fullscreen Fill or Fit Frame">
+                <span class="vt-icon" id="vtFitIcon">⛶</span>
+                <span class="vt-text" id="vtFitText">Fit Frame</span>
+            </button>
+            <button type="button" class="vt-ctrl-btn vt-skip-btn" id="vtSkipBtn" title="Enter Sanctuary Now" aria-label="Enter Sanctuary Now">
+                <span class="vt-text">Enter Now</span>
+                <span class="vt-icon">✦</span>
+            </button>
+        </div>
+
+        <div class="video-transition-inner" id="videoTransitionInner">
+            <video id="transitionVideo" src="Video Project 4.mp4" poster="vishwaroopam_4k_final.png" playsinline preload="auto"></video>
+            
+            <!-- Bottom Golden Progress Track -->
+            <div class="video-transition-progress">
+                <div class="video-transition-progress-bar" id="transitionProgressFill"></div>
             </div>
         </div>
-    </section>
-
-    <!-- Navigation Action Footer -->
-    <div class="footer home-footer">
-        <a href="entry.html"><button id="back" class="btn-secondary">✦ Entry Portal</button></a> 
-        <a href="page1.html"><button class="btn-primary">Begin Exploration ➔</button></a>
     </div>
 
-    <!-- YouTube & Local Devotional Audio Engine & On-Screen Video Synchronizer + 60FPS Cosmic Canvas -->
+    <!-- Golden Celestial Flash Overlay for Climax Navigation -->
+    <div id="indraFlash" class="indra-flash-overlay"></div>
+
+    <!-- Video Controller, 3D Physics & Sacred Lotus + Symbols Canvas -->
     <script>
         // =========================================================================
-        // 1. DEVOTIONAL MUSIC PLAYER & THEATER VIDEO VIEWPORT COORDINATOR
+        // 1. FULLSCREEN CINEMATIC FAST VIDEO TRANSITION (Video Project 4 - Responsive)
         // =========================================================================
-        let ytPlayer = null;
-        let isYtReady = false;
-        let isYtPlaying = false;
-        let isUserMuted = false;
-        let audioUnlocked = false;
-        let isVideoInView = false;
+        let isTransitioning = false;
+        const videoTransitionOverlay = document.getElementById('videoTransitionOverlay');
+        const videoTransitionInner = document.getElementById('videoTransitionInner');
+        const transitionVideo = document.getElementById('transitionVideo');
+        const transitionProgressFill = document.getElementById('transitionProgressFill');
+        const indraFlash = document.getElementById('indraFlash');
+        const vtToggleFit = document.getElementById('vtToggleFit');
+        const vtFitText = document.getElementById('vtFitText');
+        const vtFitIcon = document.getElementById('vtFitIcon');
+        const vtSkipBtn = document.getElementById('vtSkipBtn');
 
-        const YT_VIDEO_ID = '33_-Bjt6icQ';
-        const theaterVideo = document.getElementById('theaterVideo');
-        const theaterSection = document.getElementById('theaterSection');
+        // Toggle Fit / Fill on Mobile & Vertical Screens
+        if (vtToggleFit && videoTransitionInner) {
+            vtToggleFit.addEventListener('click', (e) => {
+                e.stopPropagation();
+                videoTransitionInner.classList.toggle('mode-contain');
+                const isContained = videoTransitionInner.classList.contains('mode-contain');
+                if (vtFitText) vtFitText.textContent = isContained ? 'Fill Screen' : 'Fit Frame';
+                if (vtFitIcon) vtFitIcon.textContent = isContained ? '⤢' : '⛶';
+            });
+        }
+
+        // Tap on overlay background to skip / navigate smoothly
+        if (videoTransitionOverlay) {
+            videoTransitionOverlay.addEventListener('click', (e) => {
+                if (e.target.closest('.vt-ctrl-btn')) return;
+                if (isTransitioning) {
+                    finishTransitionAndNavigate(enterPortalLink ? enterPortalLink.getAttribute('href') || 'home.html' : 'home.html');
+                }
+            });
+        }
+
+        function triggerVideoTransition(targetHref = 'home.html') {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            // Pause hero background video if playing
+            if (video && !video.paused) {
+                video.pause();
+                setAudioState(false);
+            }
+
+            if (!videoTransitionOverlay || !transitionVideo) {
+                window.location.href = targetHref;
+                return;
+            }
+
+            videoTransitionOverlay.classList.add('active');
+            videoTransitionOverlay.setAttribute('aria-hidden', 'false');
+
+            transitionVideo.currentTime = 0;
+            transitionVideo.muted = false;
+            transitionVideo.volume = 1.0;
+            transitionVideo.playbackRate = 1.75; // Fast-paced cinematic tempo
+
+            const playPromise = transitionVideo.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    transitionVideo.playbackRate = 1.75;
+                }).catch(() => {
+                    transitionVideo.muted = true;
+                    transitionVideo.playbackRate = 1.75;
+                    transitionVideo.play().catch(() => {});
+                });
+            }
+
+            // Update Progress Bar
+            transitionVideo.ontimeupdate = () => {
+                if (transitionProgressFill && transitionVideo.duration) {
+                    const pct = (transitionVideo.currentTime / transitionVideo.duration) * 100;
+                    transitionProgressFill.style.width = `${pct}%`;
+                }
+            };
+
+            // On Video Climax / End -> Golden Celestial Flash & Navigate!
+            transitionVideo.onended = () => {
+                finishTransitionAndNavigate(targetHref);
+            };
+
+            // Safety timeout: prevents users from being stuck on mobile network latency or stall
+            setTimeout(() => {
+                if (isTransitioning && (!indraFlash || !indraFlash.classList.contains('flashing'))) {
+                    finishTransitionAndNavigate(targetHref);
+                }
+            }, 3800);
+        }
+
+        function finishTransitionAndNavigate(targetHref = 'home.html') {
+            if (indraFlash) {
+                indraFlash.classList.add('flashing');
+            }
+            setTimeout(() => {
+                window.location.href = targetHref;
+            }, 550);
+        }
+
+        // Skip Button Action
+        if (vtSkipBtn) {
+            vtSkipBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'home.html' : 'home.html';
+                finishTransitionAndNavigate(targetHref);
+            });
+        }
+
+        // Trigger on clicking Enter Sanctuary
+        const enterPortalLink = document.getElementById('enterPortalLink');
+        const enterBtn = document.getElementById('enterBtn');
+        if (enterPortalLink) {
+            enterPortalLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                triggerVideoTransition(enterPortalLink.getAttribute('href') || 'home.html');
+            });
+        }
+        if (enterBtn) {
+            enterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'home.html' : 'home.html';
+                triggerVideoTransition(targetHref);
+            });
+        }
+
+        // =========================================================================
+        // 2. HERO VIDEO & FINAL IMAGE CONTROLLER
+        // =========================================================================
+        const video = document.getElementById('entryHeroVideo');
+        const finalImage = document.getElementById('entryFinalImage');
+        const divineTypography = document.getElementById('divineTypography');
         const audioToggleFab = document.getElementById('audioToggleFab');
         const chakraDisc = document.getElementById('chakraDisc');
         const soundWaves = document.getElementById('soundWaves');
 
-        // Strictly ensure video starts paused and muted on initial page load
-        if (theaterVideo) {
-            theaterVideo.pause();
-            theaterVideo.muted = true;
-        }
-
-        function setAudioIndicator(isActive) {
-            if (isActive) {
+        function setAudioState(isPlaying) {
+            if (isPlaying) {
                 if (chakraDisc) chakraDisc.classList.add('spinning');
                 if (soundWaves) soundWaves.classList.add('active');
                 if (audioToggleFab) audioToggleFab.classList.add('playing');
@@ -777,159 +260,38 @@
             }
         }
 
-        // Direct postMessage bridge for instantaneous YouTube iframe control
-        function postToYtPlayer(func, args) {
-            const iframe = document.getElementById('ytPlayer');
-            if (iframe && iframe.contentWindow) {
-                try {
-                    iframe.contentWindow.postMessage(JSON.stringify({
-                        event: 'command',
-                        func: func,
-                        args: args || []
-                    }), '*');
-                } catch(e) {}
+        // Play video animation from start
+        function playVideoFromBeginning() {
+            if (!video) return;
+            if (finalImage) finalImage.classList.remove('active');
+            video.currentTime = 0;
+            video.muted = false;
+            video.volume = 1.0;
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    setAudioState(true);
+                }).catch(() => {
+                    video.muted = true;
+                    video.play().then(() => {
+                        unlockAudioOnPresence();
+                    }).catch(() => {});
+                });
             }
         }
 
-        // Initialize YouTube IFrame Player for exact track: https://youtube.com/shorts/33_-Bjt6icQ
-        window.onYouTubeIframeAPIReady = function() {
-            ytPlayer = new YT.Player('ytPlayer', {
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        };
-
-        function onPlayerReady(event) {
-            isYtReady = true;
-            try {
-                ytPlayer.setVolume(100);
-                ytPlayer.unMute();
-            } catch(e) {}
-            if (audioUnlocked && !isVideoInView && !isUserMuted) {
-                playMusicPlayerSong();
-            }
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data === YT.PlayerState.PLAYING) {
-                isYtPlaying = true;
-                if (!isVideoInView && !isUserMuted) {
-                    setAudioIndicator(true);
-                }
-            } else if (event.data === YT.PlayerState.PAUSED) {
-                isYtPlaying = false;
-                if (!isVideoInView) {
-                    setAudioIndicator(false);
-                }
-            } else if (event.data === YT.PlayerState.ENDED) {
-                // Loop YouTube Shorts song continuously
-                if (ytPlayer && ytPlayer.playVideo) {
-                    ytPlayer.seekTo(0);
-                    ytPlayer.playVideo();
-                } else {
-                    postToYtPlayer('seekTo', [0, true]);
-                    postToYtPlayer('playVideo');
-                }
-            }
-        }
-
-        // Dedicated Music Player Controllers (Plays https://youtube.com/shorts/33_-Bjt6icQ)
-        function playMusicPlayerSong() {
-            if (isUserMuted) return;
-
-            // 1. YouTube IFrame API play
-            if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
-                try {
-                    ytPlayer.unMute();
-                    ytPlayer.setVolume(100);
-                    ytPlayer.playVideo();
-                } catch(e) {}
-            }
-            // 2. Direct postMessage play to guarantee immediate audio response
-            postToYtPlayer('unMute');
-            postToYtPlayer('setVolume', [100]);
-            postToYtPlayer('playVideo');
-
-            setAudioIndicator(true);
-        }
-
-        function pauseMusicPlayerSong() {
-            if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
-                try { ytPlayer.pauseVideo(); } catch(e) {}
-            }
-            postToYtPlayer('pauseVideo');
-        }
-
-        // Precision check to determine if the video is currently on screen in viewport
-        function checkVideoPosition() {
-            if (!theaterVideo) return false;
-            const rect = theaterVideo.getBoundingClientRect();
-            const vH = window.innerHeight || document.documentElement.clientHeight;
-            // Visible when within active viewport bounds
-            return (rect.top < vH * 0.80 && rect.bottom > vH * 0.20);
-        }
-
-        // Master Audio Sync function:
-        // - ONLY when video is ON SCREEN: play video with audio, pause music player.
-        // - REMAINING TIME (video off-screen / page open): pause video, play music player song.
-        function syncAudioState() {
-            if (isUserMuted) {
-                pauseMusicPlayerSong();
-                if (theaterVideo) {
-                    theaterVideo.pause();
-                    theaterVideo.muted = true;
-                }
-                setAudioIndicator(false);
-                return;
-            }
-
-            if (isVideoInView) {
-                // =====================================================
-                // 1. VIDEO IS ON SCREEN:
-                // - Pause background music player song completely
-                // - Play theater video with audio
-                // =====================================================
-                pauseMusicPlayerSong();
-
-                if (theaterVideo) {
-                    theaterVideo.muted = false;
-                    theaterVideo.volume = 1.0;
-                    const p = theaterVideo.play();
-                    if (p !== undefined) {
-                        p.then(() => {
-                            setAudioIndicator(true);
-                        }).catch(() => {
-                            theaterVideo.muted = true;
-                            theaterVideo.play().catch(() => {});
-                        });
-                    }
-                }
-            } else {
-                // =====================================================
-                // 2. VIDEO IS OFF SCREEN (or at top of page / scrolled away):
-                // - PAUSE and MUTE the theater video immediately!
-                // - Play the music player song!
-                // =====================================================
-                if (theaterVideo) {
-                    theaterVideo.pause();
-                    theaterVideo.muted = true;
-                }
-
-                playMusicPlayerSong();
-            }
-        }
-
-        // Unlock audio on presence gesture (conforms to browser autoplay policies)
+        let audioUnlocked = false;
         function unlockAudioOnPresence() {
-            if (audioUnlocked) return;
+            if (audioUnlocked || !video) return;
 
             const activate = function() {
-                if (!audioUnlocked) {
+                if (!audioUnlocked && video) {
                     audioUnlocked = true;
-                    isVideoInView = checkVideoPosition();
-                    syncAudioState();
+                    video.muted = false;
+                    video.volume = 1.0;
+                    video.play().then(() => {
+                        setAudioState(true);
+                    }).catch(() => {});
                     cleanupTriggers();
                 }
             };
@@ -945,113 +307,110 @@
                 window.addEventListener(evt, activate, { once: true, passive: true });
                 document.addEventListener(evt, activate, { once: true, passive: true });
             });
-
-            // Initial check & attempt to play music player
-            isVideoInView = checkVideoPosition();
-            syncAudioState();
         }
 
-        // IntersectionObserver: automatically toggle audio when video enters/leaves viewport
-        if ('IntersectionObserver' in window && theaterSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const inView = entry.isIntersecting && entry.intersectionRatio >= 0.20;
-                    if (inView !== isVideoInView) {
-                        isVideoInView = inView;
-                        if (audioUnlocked) {
-                            syncAudioState();
-                        }
-                    }
-                });
-            }, {
-                threshold: [0, 0.1, 0.2, 0.35, 0.6]
+        if (video) {
+            video.addEventListener('ended', () => {
+                if (finalImage) {
+                    finalImage.classList.add('active');
+                }
+                setAudioState(false);
             });
-            observer.observe(theaterSection);
-            if (theaterVideo && theaterVideo !== theaterSection) {
-                observer.observe(theaterVideo);
-            }
+
+            video.addEventListener('play', () => {
+                if (!video.muted && !finalImage.classList.contains('active')) {
+                    setAudioState(true);
+                }
+            });
+
+            video.addEventListener('pause', () => {
+                setAudioState(false);
+            });
         }
 
-        // Backup scroll listener to guarantee instant response during fast scrolling
-        window.addEventListener('scroll', () => {
-            const inView = checkVideoPosition();
-            if (inView !== isVideoInView) {
-                isVideoInView = inView;
-                if (audioUnlocked) {
-                    syncAudioState();
-                }
-            }
-        }, { passive: true });
-
-        // Toggle FAB Button Action (Clicking bottom-right ॐ symbol)
-        function toggleAudio() {
-            audioUnlocked = true;
-            if (isUserMuted) {
-                isUserMuted = false;
-                isVideoInView = checkVideoPosition();
-                syncAudioState();
+        function toggleOrReplaySequence() {
+            if (!video) return;
+            if (finalImage && finalImage.classList.contains('active')) {
+                playVideoFromBeginning();
+            } else if (video.paused || video.muted) {
+                video.muted = false;
+                video.volume = 1.0;
+                video.play();
+                setAudioState(true);
             } else {
-                isUserMuted = true;
-                pauseMusicPlayerSong();
-                if (theaterVideo) {
-                    theaterVideo.pause();
-                    theaterVideo.muted = true;
-                }
-                setAudioIndicator(false);
+                video.pause();
+                setAudioState(false);
             }
         }
 
         if (audioToggleFab) {
-            audioToggleFab.addEventListener('click', toggleAudio);
+            audioToggleFab.addEventListener('click', toggleOrReplaySequence);
             audioToggleFab.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    toggleAudio();
+                    toggleOrReplaySequence();
                 }
             });
         }
 
-        window.addEventListener('DOMContentLoaded', () => {
-            unlockAudioOnPresence();
-
-            // Interactive translation Telugu letter click listener (Telugu <-> English)
-            document.addEventListener('click', function(e) {
-                const charBtn = e.target.closest('.lang-char-btn');
-                if (charBtn) {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    const cardBack = charBtn.closest('.card-back');
-                    if (!cardBack) return;
-                    
-                    const isTe = cardBack.classList.toggle('show-te');
-                    
-                    const title = cardBack.querySelector('.card-back-title');
-                    const role = cardBack.querySelector('.card-back-role');
-                    const badge = cardBack.querySelector('.card-back-badge');
-                    const charSpan = charBtn.querySelector('.lang-char');
-                    
-                    if (title) title.textContent = isTe ? title.getAttribute('data-te') : title.getAttribute('data-en');
-                    if (role) role.textContent = isTe ? role.getAttribute('data-te') : role.getAttribute('data-en');
-                    if (badge) badge.textContent = isTe ? badge.getAttribute('data-te') : badge.getAttribute('data-en');
-                    if (charSpan) charSpan.textContent = isTe ? 'EN' : 'తె';
-                }
-            });
-        });
-        window.addEventListener('load', unlockAudioOnPresence);
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', playVideoFromBeginning);
+        window.addEventListener('load', playVideoFromBeginning);
+        playVideoFromBeginning();
 
         // =========================================================================
-        // 2. 60FPS SACRED SYMBOLS CANVAS (ॐ, 卐, ✦, ✧, 🪷) & GOLDEN STARDUST
+        // 3. SEAMLESS 3D CELESTIAL PARALLAX PERSPECTIVE
+        // =========================================================================
+        const heroWrapper = document.getElementById('heroWrapper');
+        const heroCard = document.getElementById('heroCard');
+        const cardGlare = document.getElementById('cardGlare');
+
+        if (heroWrapper && heroCard) {
+            heroWrapper.addEventListener('mousemove', (e) => {
+                const rect = heroWrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -6;
+                const rotateY = ((x - centerX) / centerX) * 6;
+                
+                heroCard.style.transform = `translateX(-50%) perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                if (cardGlare) {
+                    const glareX = (x / rect.width) * 100;
+                    const glareY = (y / rect.height) * 100;
+                    cardGlare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 230, 150, 0.25) 0%, rgba(255, 255, 255, 0) 65%)`;
+                    cardGlare.style.opacity = '1';
+                }
+            });
+
+            heroWrapper.addEventListener('mouseleave', () => {
+                heroCard.style.transform = 'translateX(-50%) perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                if (cardGlare) cardGlare.style.opacity = '0';
+            });
+
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', (e) => {
+                    if (e.gamma !== null && e.beta !== null) {
+                        const tiltX = Math.min(Math.max(e.beta - 45, -20), 20) * -0.4;
+                        const tiltY = Math.min(Math.max(e.gamma, -20), 20) * 0.4;
+                        heroCard.style.transform = `translateX(-50%) perspective(1200px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+                    }
+                });
+            }
+        }
+
+        // =========================================================================
+        // 4. 60FPS CELESTIAL STARDUST CANVAS (ICONS REMOVED)
         // =========================================================================
         const canvas = document.getElementById('cosmicCanvas');
         if (canvas) {
             const ctx = canvas.getContext('2d');
             let width, height;
             let particles = [];
-            let sacredSymbols = [];
             let mouseSparkles = [];
-
-            // Exact sacred symbols: ॐ, 卐, ✦, ✧, 🪷
-            const sacredGlyphsList = ['ॐ', '卐', '✦', '✧', '🪷'];
 
             function resizeCanvas() {
                 width = canvas.width = window.innerWidth;
@@ -1059,66 +418,6 @@
             }
             window.addEventListener('resize', resizeCanvas);
             resizeCanvas();
-
-            // Sacred Floating Symbol Class
-            class SacredSymbol {
-                constructor() {
-                    this.init(true);
-                }
-                init(firstRun = false) {
-                    this.symbol = sacredGlyphsList[Math.floor(Math.random() * sacredGlyphsList.length)];
-                    this.isFlower = (this.symbol === '🪷');
-                    this.x = Math.random() * width;
-                    this.y = firstRun ? Math.random() * height : height + 35;
-                    this.size = this.isFlower 
-                        ? Math.random() * 8 + 18 
-                        : ((this.symbol === 'ॐ' || this.symbol === '卐') ? Math.random() * 8 + 18 : Math.random() * 6 + 14);
-                    
-                    this.speedY = Math.random() * 0.4 + 0.2;
-                    this.speedX = (Math.random() - 0.5) * 0.3;
-                    this.rotation = (Math.random() - 0.5) * 0.2;
-                    this.rotSpeed = (Math.random() - 0.5) * 0.005;
-                    this.maxOpacity = Math.random() * 0.35 + 0.22;
-                    this.opacity = firstRun ? Math.random() * this.maxOpacity : 0;
-                    this.fadeIn = true;
-                    this.fadeSpeed = Math.random() * 0.003 + 0.002;
-                    this.color = this.isFlower 
-                        ? (Math.random() > 0.4 ? 'rgba(255, 215, 120, ' : 'rgba(255, 185, 90, ')
-                        : (Math.random() > 0.35 ? 'rgba(252, 224, 128, ' : 'rgba(230, 168, 23, ');
-                }
-                update() {
-                    this.y -= this.speedY;
-                    this.x += this.speedX + Math.sin(this.y * 0.015) * 0.25;
-                    this.rotation += this.rotSpeed;
-
-                    if (this.fadeIn) {
-                        this.opacity += this.fadeSpeed;
-                        if (this.opacity >= this.maxOpacity) {
-                            this.fadeIn = false;
-                        }
-                    } else if (this.y < height * 0.15) {
-                        this.opacity -= this.fadeSpeed * 1.5;
-                    }
-
-                    if (this.y < -40 || (this.opacity <= 0 && !this.fadeIn)) {
-                        this.init();
-                    }
-                }
-                draw() {
-                    ctx.save();
-                    ctx.translate(this.x, this.y);
-                    ctx.rotate(this.rotation);
-                    ctx.font = `600 ${this.size}px 'Cinzel', 'Noto Sans Telugu', serif`;
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-                    
-                    ctx.shadowColor = 'rgba(230, 168, 23, 0.75)';
-                    ctx.shadowBlur = this.isFlower ? 12 : 10;
-                    ctx.fillStyle = `${this.color}${this.opacity})`;
-                    ctx.fillText(this.symbol, 0, 0);
-                    ctx.restore();
-                }
-            }
 
             // Pure Celestial Stardust Particles
             class Particle {
@@ -1128,11 +427,11 @@
                 reset() {
                     this.x = Math.random() * width;
                     this.y = height + Math.random() * 20;
-                    this.size = Math.random() * 2.5 + 0.8;
-                    this.speedY = Math.random() * 0.75 + 0.3;
-                    this.speedX = (Math.random() - 0.5) * 0.4;
-                    this.opacity = Math.random() * 0.65 + 0.25;
-                    this.fadeSpeed = Math.random() * 0.005 + 0.002;
+                    this.size = Math.random() * 2.2 + 0.8;
+                    this.speedY = Math.random() * 0.65 + 0.25;
+                    this.speedX = (Math.random() - 0.5) * 0.35;
+                    this.opacity = Math.random() * 0.6 + 0.2;
+                    this.fadeSpeed = Math.random() * 0.004 + 0.002;
                     this.hue = Math.random() > 0.35 ? 45 : 35;
                 }
                 update() {
@@ -1147,8 +446,8 @@
                     ctx.beginPath();
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                     ctx.fillStyle = `hsla(${this.hue}, 95%, 65%, ${this.opacity})`;
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = 'rgba(230, 168, 23, 0.8)';
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = 'rgba(230, 168, 23, 0.7)';
                     ctx.fill();
                 }
             }
@@ -1159,7 +458,7 @@
                     mouseSparkles.push({
                         x: e.clientX,
                         y: e.clientY,
-                        size: Math.random() * 3 + 1.5,
+                        size: Math.random() * 2.5 + 1.2,
                         opacity: 1,
                         vx: (Math.random() - 0.5) * 1.5,
                         vy: (Math.random() - 0.5) * 1.5 - 0.5
@@ -1167,35 +466,24 @@
                 }
             });
 
-            // Initialize Stardust and Sacred Symbols + Lotus
-            const particleCount = window.innerWidth < 768 ? 35 : 70;
+            // Initialize Stardust Particles
+            const particleCount = window.innerWidth < 768 ? 40 : 80;
             for (let i = 0; i < particleCount; i++) {
                 const p = new Particle();
                 p.y = Math.random() * height;
                 particles.push(p);
             }
 
-            const symbolCount = window.innerWidth < 768 ? 16 : 26;
-            for (let i = 0; i < symbolCount; i++) {
-                sacredSymbols.push(new SacredSymbol());
-            }
-
             function animate() {
                 ctx.clearRect(0, 0, width, height);
 
-                // 1. Draw Sacred Symbols: ॐ, 卐, ✦, ✧, 🪷
-                for (let i = 0; i < sacredSymbols.length; i++) {
-                    sacredSymbols[i].update();
-                    sacredSymbols[i].draw();
-                }
-
-                // 2. Draw Golden Stardust Particles
+                // 1. Draw Golden Stardust Particles
                 for (let i = 0; i < particles.length; i++) {
                     particles[i].update();
                     particles[i].draw();
                 }
 
-                // 3. Draw Cursor Sparkles
+                // 2. Draw Cursor Sparkles
                 for (let i = mouseSparkles.length - 1; i >= 0; i--) {
                     const sp = mouseSparkles[i];
                     sp.x += sp.vx;
@@ -1207,7 +495,7 @@
                         ctx.beginPath();
                         ctx.arc(sp.x, sp.y, sp.size, 0, Math.PI * 2);
                         ctx.fillStyle = `rgba(255, 230, 130, ${sp.opacity})`;
-                        ctx.shadowBlur = 12;
+                        ctx.shadowBlur = 10;
                         ctx.shadowColor = '#e6a817';
                         ctx.fill();
                     }

@@ -625,7 +625,7 @@
     function initFloatingVerseNavigator() {
         // STRICT RULE: Never display on entry.html or index.html
         const path = window.location.pathname.toLowerCase();
-        if (path.endsWith('entry.html') || path.endsWith('index.html') || path.endsWith('/') || path === '' || path.endsWith('bhagavad-gita-main')) {
+        if (path.endsWith('entry.html') || path.endsWith('index.html') || path.endsWith('home.html') || path.endsWith('/') || path === '' || path.endsWith('bhagavad-gita-main')) {
             return;
         }
 
@@ -779,7 +779,7 @@
     function initEmbeddedNavigatorSection() {
         // STRICT RULE: Never display on entry.html or index.html
         const path = window.location.pathname.toLowerCase();
-        if (path.endsWith('entry.html') || path.endsWith('index.html') || path.endsWith('/') || path === '' || path.endsWith('bhagavad-gita-main')) {
+        if (path.endsWith('entry.html') || path.endsWith('index.html') || path.endsWith('home.html') || path.endsWith('/') || path === '' || path.endsWith('bhagavad-gita-main')) {
             return;
         }
 

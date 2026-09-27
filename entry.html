@@ -68,7 +68,7 @@
         </section>
 
         <div class="enter" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center;">
-            <a href="index.html" id="enterPortalLink">
+            <a href="home.html" id="enterPortalLink">
                 <button type="button" class="btn-portal" id="enterBtn">
                     <span class="btn-text">Enter Sanctuary</span>
                     <span class="btn-glow-ring"></span>
@@ -143,12 +143,12 @@
             videoTransitionOverlay.addEventListener('click', (e) => {
                 if (e.target.closest('.vt-ctrl-btn')) return;
                 if (isTransitioning) {
-                    finishTransitionAndNavigate(enterPortalLink ? enterPortalLink.getAttribute('href') || 'index.html' : 'index.html');
+                    finishTransitionAndNavigate(enterPortalLink ? enterPortalLink.getAttribute('href') || 'home.html' : 'home.html');
                 }
             });
         }
 
-        function triggerVideoTransition(targetHref = 'index.html') {
+        function triggerVideoTransition(targetHref = 'home.html') {
             if (isTransitioning) return;
             isTransitioning = true;
 
@@ -203,7 +203,7 @@
             }, 3800);
         }
 
-        function finishTransitionAndNavigate(targetHref = 'index.html') {
+        function finishTransitionAndNavigate(targetHref = 'home.html') {
             if (indraFlash) {
                 indraFlash.classList.add('flashing');
             }
@@ -216,7 +216,7 @@
         if (vtSkipBtn) {
             vtSkipBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'index.html' : 'index.html';
+                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'home.html' : 'home.html';
                 finishTransitionAndNavigate(targetHref);
             });
         }
@@ -227,13 +227,13 @@
         if (enterPortalLink) {
             enterPortalLink.addEventListener('click', (e) => {
                 e.preventDefault();
-                triggerVideoTransition(enterPortalLink.getAttribute('href') || 'index.html');
+                triggerVideoTransition(enterPortalLink.getAttribute('href') || 'home.html');
             });
         }
         if (enterBtn) {
             enterBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'index.html' : 'index.html';
+                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'home.html' : 'home.html';
                 triggerVideoTransition(targetHref);
             });
         }

@@ -492,8 +492,8 @@
             language = 'te';
         }
 
-        // Gita AI only shows from page1 onwards, not on index or entry
-        const isExcluded = fileName === 'entry.html' || fileName === 'index.html' || fileName === '' || path === '/' || path.endsWith('/index.html') || path.endsWith('/entry.html');
+        // Gita AI only shows from page1 onwards, not on index, entry, or home
+        const isExcluded = fileName === 'entry.html' || fileName === 'index.html' || fileName === 'home.html' || fileName === '' || path === '/' || path.endsWith('/index.html') || path.endsWith('/entry.html') || path.endsWith('/home.html');
         const isIntro = fileName === 'page1.html' || fileName === 'telugu.html' || path.includes('page1') || path.includes('telugu.html');
 
         // Match chapter numbers from filename

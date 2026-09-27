@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Śhraddhā Traya Vibhāg Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu17.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu17.html'"><a href="telugu17.html">తెలుగు</a></label>
+              </div>
              <p>Earlier in chapter fourteen, Shree Krishna had explained the three gunas or modes of material nature and how they govern human behavior. In this chapter, He goes deeper into the subject. In the beginning, He discusses faith as an inseparable aspect of human nature and says that everyone holds faith. However, depending upon the nature of their mind, their faith adapts a corresponding color: sāttvic, rājasic, or tamasic. The quality of life they lead is determined by the nature of their faith, including the food they prefer to eat. He also classifies food into three categories and discusses the impact of each category upon humans.<br><br>
 
 Shree Krishna then moves to the subject of yajña (sacrifice) and explains that based on the modes of nature, sacrifice can manifest into varied forms. He also discusses tapah (austerity) and describes the austerities of the speech, body, and mind. Again, based on the modes in which these austerities are performed—goodness, passion, or ignorance, they take different forms. Similarly, dān (charity) and its three-fold division based on the modes of nature are explained.<br><br>
@@ -74,9 +73,13 @@ Towards the end of this chapter, Shree Krishna explains the relevance and import
                 <p>O son of Pritha, whatever acts of sacrifice, charity, or penance are done without faith, are termed as “Asat.” They are useless both in this world and the next.</p><br>
                
                                 <div class="footer">
-                   <a href="chapter16.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter18.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 18</button></a>
+                   <a href="chapter16.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter18.html"><button class="btn-primary">Enter Into Chapter 18</button></a>
             </div>
             </div>    
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

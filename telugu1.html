@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;"> అర్జున విషాద యోగము</p>
               <div class="anchor">
-               
-                <input style="accent-color:goldenrod;" type="radio" name="telugu" checked><a href="#">తెలుగు</a>
-                 <input style="accent-color:goldenrod;" type="radio" name="telugu"><a href="chapter1.html">English</a>
-                </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='#'"><a href="#">తెలుగు</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='chapter1.html'"><a href="chapter1.html">English</a></label>
+              </div>
              <p>దాయాదులైన కౌరవులు, పాండవుల మధ్య మొదలవ్వబోతున్న గొప్ప మహాభారత సంగ్రామ యుద్ధభూమి యందు భగవద్గీత చెప్పబడింది. ఈ భారీ యుద్ధానికి దారి తీసిన పరిణామాల యొక్క వివరణాత్మక వర్ణన ఈ పుస్తకం యొక్క ఉపోద్ఘాతంలో, భగవద్గీత సమయ పరిస్థితి అనే భాగంలో చెప్పబడింది.<br><br>  
     ధృతరాష్ట్ర మహారాజు మరియు అతని మంత్రి సంజయుడికి మధ్య జరిగిన సంభాషణ రూపంలో భగవద్గీత విశదీకరింపబడటం మొదలౌతుంది. ధృతరాష్ట్రుడు అంధుడైన కారణం చేత, తానే స్వయంగా యుద్ధభూమి యందు లేడు, అందుకే సంజయుడు అతనికి యుద్ధరంగ విశేషాలని యథాతథంగా చెప్తున్నాడు. సంజయుడు, మహాభారతాన్ని రచించిన మహాత్ముడైన వేద వ్యాసుని శిష్యుడు. వేద వ్యాసునికి సుదూరంలో జరిగే విషయాలని చూసే దివ్యశక్తి వుంది. అదే శక్తిని సంజయుడికి, యుద్ధభూమిలో జరిగే విశేషాలని ధృతరాష్ట్రునికి వివరించటానికి, ఆయన ప్రసాదించాడు.<br><br></p>
              <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 1.1</h5>
@@ -88,9 +87,13 @@
                  <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 1.47</h5>
                 <p>సంజయుడు పలికెను: ఈ విధంగా పలికిన అర్జునుడు, దీనస్థితిలో, తీవ్ర శోకసంతప్తుడై తన బాణాలను, ధనుస్సును పక్కన జారవిడిచి, రథంలో కూలబడ్డాడు.</p><br>  
                           <div class="footer">
-                   <a href="telugu.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">తిరిగి వెళ్ళు</button></a>
- <a href="telugu2.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">2వ అధ్యాయము</button></a>
+                   <a href="telugu.html"><button id="back" class="btn-secondary">తిరిగి వెళ్ళు</button></a>
+ <a href="telugu2.html"><button class="btn-primary">2వ అధ్యాయము</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

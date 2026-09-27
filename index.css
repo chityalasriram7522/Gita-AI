@@ -1,365 +1,4696 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-html,body{
-    width:100%;
-    height:100%;
-    background-color:black;
-}
-.enter button{
-  padding: 10px;
-}
-.header{
-    display: flex;
-    margin: 10px;
-    justify-content:flex-start; 
-}
-.header1{
-    display: flex;
-    margin: 10px;
-    justify-content:flex-start; 
-    align-items: center;
-}
-.logo{
-    width:55px;
-    height:55px;
-    /* background-color: aqua; */
-    border-radius: 50%;
-    background-image:url(https://i.pinimg.com/736x/33/ab/7b/33ab7b8250e037466989958979fde58c.jpg);
-    background-size: cover;
-    background-position: top;
-    z-index: 1;
-    margin-left:30px;
-    margin-top: 10px;
-    border: 2px solid white;
-}
-/* entry.html css code start*/
-.logo1{
-    width:100%;
-    height:400px;
-    background-color: rgb(0, 6, 6);
-    border-radius:10px;
-    /* background-image:url(https://i.pinimg.com/736x/33/ab/7b/33ab7b8250e037466989958979fde58c.jpg);*/
-    /* background-image: url(https://imgs.search.brave.com/H58FyFq23j-KTFHRry4enWveYodc2cEtYQZxB_ekA5A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9ibGFjay1iYWNr/Z3JvdW5kLXdpdGgt/dGV4dHVyZWQtYmFj/a2dyb3VuZC1mcmVl/LWRvd25sb2FkXzgz/ODk2LTc5LmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA); */
-    background-image: url(f8fd5a53-7621-44e8-afea-7ca096327aec.jpeg);
-    background-size:300px;
-    background-position:center;
-    object-fit:cover;
-    background-repeat:repeat;
-    mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-.text{
-    width:170px;
-    height:55px;
-    background-color:#EE7473;
-    margin-left: -20px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-left:-25px;
-    margin-top:10px;
-    border:2px solid white
-}
-.text p{
-    font-size:20px;
-    text-align: center;
-    margin-top: 15px;
-    margin-left: 7px;
+/* ==========================================================================
+   BHAGAVAD GITA - MASTER 3D RESPONSIVE STYLESHEET
+   Supports: Grand 4K Vishwaroopam Cosmic Stage, Deep Black Smoke Dissolves,
+   Seamless Background Video Fusion, Golden Typography, & Universal Adaptivity
+   ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cinzel+Decorative:wght@700&family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap');
+
+/* --- Sacred Design System Tokens --- */
+:root {
+  --bg-deep: #050508;
+  --bg-card: rgba(14, 14, 22, 0.93);
+  --gold-primary: #e6a817;
+  --gold-light: #fce080;
+  --gold-dark: #b8860b;
+  --gold-gradient: linear-gradient(135deg, #fce080 0%, #e6a817 50%, #b8860b 100%);
+  --gold-glow: 0 0 30px rgba(230, 168, 23, 0.4);
+  --gold-border: rgba(230, 168, 23, 0.32);
+  --text-main: #f2f2f8;
+  --text-muted: #a5a5c0;
+  --font-title: 'Cinzel', 'Noto Sans Telugu', serif;
+  --font-body: 'Outfit', 'Noto Sans Telugu', sans-serif;
+  --card-radius: 18px;
+  --btn-radius: 10px;
+  --transition-smooth: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.enter button{
-  position: absolute;
-  /* top:90%; */
-  left:45%;
+
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+body {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(circle at 50% 12%, rgba(230, 168, 23, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 50%, rgba(20, 90, 159, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 90% 75%, rgba(238, 116, 115, 0.05) 0%, transparent 55%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.75;
+  overflow-x: hidden !important;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Cosmic Particle Canvas Layer */
+#cosmicCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main, header, section, .footer, fieldset, .image1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Global Typography & Links --- */
+p:not(.gita-chat-widget *):not(.gita-chat-launcher *) {
+  color: var(--text-main) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(15px, 1.8vw, 17.5px) !important;
+  line-height: 1.85 !important;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.2px;
+}
+
+b:not(.gita-chat-widget *):not(.gita-chat-launcher *), 
+strong:not(.gita-chat-widget *):not(.gita-chat-launcher *) {
+  color: var(--gold-light) !important;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gold-primary);
+  transition: var(--transition-smooth);
+}
+
+fieldset {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Responsive Media Constraints */
+img, video {
+  max-width: 100%;
+}
+
+.image1 video {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 14px !important;
+  margin: 1rem 0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   MINIMALIST SACRED AUDIO FAB (Bottom-Right Position)
+   ========================================================================== */
+.sacred-audio-fab {
+  position: fixed;
+  bottom: 24px;
+  left: 24px !important;
+  right: auto !important;
+  top: auto !important;
+  z-index: 999;
   display: flex;
-  justify-content:flex-end;
   align-items: center;
-  padding: 5px;
-  background-color:#CD9557;
-  color: rgb(222, 213, 213);
+  gap: 8px;
+  cursor: pointer;
+  background: rgba(14, 14, 24, 0.88);
+  padding: 6px;
+  border-radius: 50px;
+  border: 1.5px solid var(--gold-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.85), 0 0 25px rgba(230, 168, 23, 0.3);
+  transition: var(--transition-smooth);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
-.enter button::after{
-   content: "";
-   border-image:linear-gradient(to bottom right, #f4bc03,#f51414)1;
-}
-.enter button:hover{
-  border-image:linear-gradient(to right ,#f4bc03,#f51414)1;
-  box-shadow: 40px 0 100px #f4bc03,-40px 0 100px#f51414;
-  color: black;
-  background-color: white;
-}
-#dialoge{
-  color: aliceblue;
-  font-size: 18px;
-  /* font-family: 'Courier New', Courier, monospace; */
-  margin-top: 20px;
-  background:linear-gradient(to right,#f4bc03,#f51414);
-  background-clip: text;
-  color: transparent;
-}
-#firstfield{
-  height:50px;
-  border-left: none;
-   border-right: none;
-  border-top: none;
-}
-/* entry.html css code end */
-.marque1{
-  width: 90%;
-  max-width: 1536px;
-  margin-inline: auto;
-  position: relative;
-  height:170px;
-  margin-top:4rem;
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-@keyframes scrollLeft {
-  to {
-    left: -200px;
+
+/* Placed on bottom-left on both entry.html and index.html across all mobile screens */
+@media (max-width: 768px) {
+  .sacred-audio-fab {
+    left: 14px !important;
+    right: auto !important;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+  }
+
+  /* Ensure Entry Sanctuary button sits with generous vertical clearance above the bottom-left audio FAB */
+  .entry-body .enter {
+    margin: 1rem auto calc(5.75rem + env(safe-area-inset-bottom, 0px)) auto !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 10 !important;
   }
 }
-.item {
-  width:200px;
-  height:170px;
-  /* background-color: red; */
-  border-radius: 6px;
-  position: absolute;
-  left: max(calc(200px * 8), 100%);
-  animation-name: scrollLeft;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+
+.sacred-audio-fab:hover {
+  transform: scale(1.1) translateY(-3px);
+  border-color: var(--gold-light);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), 0 0 40px rgba(230, 168, 23, 0.7);
 }
-.item1 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-  background-image: url(20250714_123625.jpg);
-  background-size: cover;
-  background-position:top;
-}
-.item2 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-   background-image: url(2232de381d57b7c95aa60cc216683119.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.item3 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-   background-image: url(20250714_123407.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.item4 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-   background-image: url(20250714_123651.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.item5 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-   background-image: url(20250714_123543.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.item6 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-   background-image: url(20250714_123548.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.item7 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-   background-image: url(20250714_123519.jpg);
-  background-size: cover;
-  background-position:top;
-}
-.item8 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-   background-image: url(20250714_123530.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.marque2{
-  width: 90%;
-  max-width: 1536px;
-  margin-inline: auto;
-  position: relative;
-  height:170px;
-  margin-top:2rem;
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
-}
-@keyframes scrollright {
-  to {
-    right: -200px;
-  }
-}
-.item11{
-  width:200px;
-  height:170px;
-  /* background-color: red; */
-  border-radius: 6px;
-  position: absolute;
-  right: max(calc(200px * 8), 100%);
-  animation-name: scrollright;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.item01 {
-  animation-delay: calc(30s / 8 * (8 - 1) * -1);
-  background-image: url(efca9b6f-ade2-43c0-81f3-789ccfb9e1a6.jpeg);
-  background-size: cover;
-  background-position:left;
-}
-.item02 {
-  animation-delay: calc(30s / 8 * (8 - 2) * -1);
-   background-image: url(0b34eae6-ee2b-4ced-8bd1-4da3d0fd8f08.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-.item03 {
-  animation-delay: calc(30s / 8 * (8 - 3) * -1);
-   background-image: url(b90867ff-26e2-4503-b282-5d8f2510701d.jpeg);
-  background-size: cover;
-  background-position:top;
-}
-.item04 {
-  animation-delay: calc(30s / 8 * (8 - 4) * -1);
-   background-image: url(43c519c2-d1e5-4528-a5c0-1f6f54e90cc2.jpeg);
-  background-size: cover;
-  background-position:top;
-}
-.item05 {
-  animation-delay: calc(30s / 8 * (8 - 5) * -1);
-   background-image: url(46f41a2e-3208-457c-9d70-d178af2c4022.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-.item06 {
-  animation-delay: calc(30s / 8 * (8 - 6) * -1);
-   background-image: url(cabeb903-61d2-4f52-9987-4f6c3394a19b.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-.item07 {
-  animation-delay: calc(30s / 8 * (8 - 7) * -1);
-   background-image: url(3f0a2367-774b-41bf-ba30-f7f77c23203d.jpeg);
-  background-size: cover;
-  background-position:top;
-}
-.item08 {
-  animation-delay: calc(30s / 8 * (8 - 8) * -1);
-   background-image: url(9ec5edf2-4f87-491e-b100-f89e6f002016.jpeg);
-  background-size: cover;
-  background-position:top;
-}
-video{
-    width:90%;
-    height:500px;
-    margin: 3rem;
-    mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 1)50%,
-    rgba(0, 0, 0, 0)
-  );
-   mask-image: linear-gradient(
-      to left,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 0)
-  );
-}
-.footer{
+
+.fab-disc {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
   display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px rgba(230, 168, 23, 0.65);
+  transition: transform 0.4s ease;
+  position: relative;
+}
+
+.fab-disc.spinning {
+  animation: spinChakra 10s linear infinite;
+}
+
+@keyframes spinChakra {
+  100% { transform: rotate(360deg); }
+}
+
+.om-symbol {
+  font-size: 25px;
+  color: #07070b;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.fab-waves {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 18px;
+  padding: 0 8px 0 2px;
+}
+
+.fab-waves .wave-bar {
+  width: 3px;
+  height: 4px;
+  background: var(--gold-light);
+  border-radius: 2px;
+  transition: height 0.25s ease;
+}
+
+.fab-waves.active .wb1 { animation: waveBounce 0.8s ease-in-out infinite alternate; }
+.fab-waves.active .wb2 { animation: waveBounce 1.1s ease-in-out infinite alternate 0.2s; }
+.fab-waves.active .wb3 { animation: waveBounce 0.9s ease-in-out infinite alternate 0.4s; }
+
+@keyframes waveBounce {
+  0% { height: 4px; }
+  100% { height: 18px; background: #ffffff; }
+}
+
+/* ==========================================================================
+   HEADER & SACRED BRANDING (index.html)
+   ========================================================================== */
+header {
+  width: 100%;
+  padding: 1.25rem 1.5rem 0.5rem 1.5rem;
+}
+
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.logo {
+  width: clamp(52px, 8vw, 68px);
+  height: clamp(52px, 8vw, 68px);
+  border-radius: 50%;
+  background-image: url(https://i.pinimg.com/736x/33/ab/7b/33ab7b8250e037466989958979fde58c.jpg);
+  background-size: cover;
+  background-position: top center;
+  border: 2.5px solid var(--gold-primary);
+  box-shadow: 0 0 25px rgba(230, 168, 23, 0.6);
+  flex-shrink: 0;
+}
+
+.text {
+  padding: 8px 28px !important;
+  background: linear-gradient(135deg, rgba(238, 116, 115, 0.95), rgba(184, 59, 59, 0.95)) !important;
+  border-radius: 14px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
-.footer button{
-    padding:10px;
-    border-radius:5px; 
-    margin-bottom:40px;
-    margin-left: 80px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #145A9F;
-    color: white;
+
+.text p {
+  font-family: var(--font-title) !important;
+  font-size: clamp(18px, 2.8vw, 24px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px;
+  color: #ffffff !important;
+  margin: 0 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
-/* .button #back{
-  position: absolute;
-  top:215%;
-  right:52%;
-} */
-button:hover{
-  border-image:linear-gradient(to right ,#0066ff,#ff32de)1;
-  box-shadow: 40px 0 100px #0066ff,-40px 0 100px#ff32de;
-  color: black;
-  background-color: white;
+
+.brand-tagline {
+  margin-top: 4px;
 }
-.footer button::after{
-  content: "";
-   border-image:linear-gradient(to bottom right ,#0066ff,#ff32de)1;
+
+.brand-tagline span {
+  font-family: var(--font-title);
+  font-size: clamp(13px, 1.8vw, 15.5px);
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(230, 168, 23, 0.5);
 }
-.button a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size:20px;
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+/* ==========================================================================
+   CONTINUOUS SEAMLESS SHLOKA MARQUEE (entry.html)
+   ========================================================================== */
+.entry-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  background: #050508 !important;
 }
-/* page1 css start */
-.image1{
-  width:70%;
+
+#firstfield {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.5rem, 1.5vw, 1.25rem);
+  box-sizing: border-box;
+}
+
+/* Full Shloka Marquee Banner */
+.shloka-banner {
+  width: min(96%, 1200px);
+  margin: 0.25rem auto 0.5rem auto;
+  padding: 10px 0;
+  background: rgba(230, 168, 23, 0.08);
+  border: 1px solid var(--gold-border);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.shloka-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: shlokaMarquee 32s linear infinite;
+}
+
+.shloka-banner:hover .shloka-track {
+  animation-play-state: paused;
+}
+
+@keyframes shlokaMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.shloka-text {
+  font-family: var(--font-title);
+  font-size: clamp(14.5px, 2vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90deg, #fce080, #ff8c00, #fce080);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.shloka-divider {
+  color: var(--gold-light);
+  font-size: 14px;
   opacity: 0.7;
-  background-image: url(https://imgs.search.brave.com/H58FyFq23j-KTFHRry4enWveYodc2cEtYQZxB_ekA5A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9ibGFjay1iYWNr/Z3JvdW5kLXdpdGgt/dGV4dHVyZWQtYmFj/a2dyb3VuZC1mcmVl/LWRvd25sb2FkXzgz/ODk2LTc5LmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA);
-  background-size: cover;
-  margin-left:150px;
+  flex-shrink: 0;
 }
-p{
-  color: white;
-  text-align: justify;
+
+/* ==========================================================================
+   GRAND 4K VISHWAROOPAM COSMIC HERO STAGE (entry.html)
+   ========================================================================== */
+.hero-cosmic-stage {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  min-height: clamp(400px, 64vh, 760px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1.5rem auto 0.5rem auto;
+  overflow: hidden !important;
+}
+
+/* Expansive 4K Video Container - Zero Box Outlines & Deep Black Smoke Melt */
+.hero-video-wrap {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100vw, 1400px);
+  height: 110%;
+  z-index: 1;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  /* Deep Black Smoke Radial Feather Mask */
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 46%, black 20%, rgba(0, 0, 0, 0.95) 42%, rgba(0, 0, 0, 0.6) 58%, rgba(0, 0, 0, 0.15) 74%, transparent 84%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 46%, black 20%, rgba(0, 0, 0, 0.95) 42%, rgba(0, 0, 0, 0.6) 58%, rgba(0, 0, 0, 0.15) 74%, transparent 84%);
+}
+
+.hero-video-wrap video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 38% !important;
+  display: block;
+}
+
+/* 4K Final Pure Master Image (Simple & Smooth Fade Transition) */
+.hero-final-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 38% !important;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.8s ease-in-out;
+  display: block;
+}
+
+.hero-final-image.active {
+  opacity: 1;
+}
+
+/* Black Smoke & Shadow Radial Vignette Melt */
+.vignette-melt-radial {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 75% 65% at 50% 48%, transparent 20%, rgba(5, 5, 8, 0.6) 50%, var(--bg-deep) 86%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Top & Bottom Deep Black Smoke Edge Melt */
+.vignette-melt-vertical {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(5, 5, 8, 0.7) 8%, transparent 20%, transparent 80%, rgba(5, 5, 8, 0.7) 92%, var(--bg-deep) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.card-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Grand Sacred Typography Floating in Space - Golden Glow */
+.hero-divine-text {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.5rem;
+  pointer-events: auto;
+  transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-divine-text.image-active {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+  pointer-events: none;
+}
+
+/* Badge with Shadow Completely Removed */
+.divine-badge {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: clamp(11px, 1.5vw, 13px);
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--gold-light);
+  background: rgba(230, 168, 23, 0.12) !important;
+  border: 1px solid rgba(230, 168, 23, 0.35) !important;
+  padding: 5px 18px;
+  border-radius: 25px;
+  margin-bottom: 8px;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Golden Title Typography - Matches Artwork Gold */
+.divine-title {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff7c2 0%, #fce080 35%, #e6a817 70%, #d49a00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(230, 168, 23, 0.65)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.9));
+  margin: 0 0 6px 0;
+  letter-spacing: 1.5px;
+}
+
+/* Golden Subtitle Typography */
+.divine-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(13.5px, 2vw, 17px);
+  color: var(--gold-light) !important;
+  margin: 0;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 15px rgba(230, 168, 23, 0.4), 0 2px 6px rgba(0, 0, 0, 0.9);
+  font-weight: 500;
+}
+
+.enter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 1.5rem 0;
+  z-index: 10;
+}
+
+/* Action Portal Button with Radiant Celestial Gold Hover State */
+.btn-portal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 52px !important;
+  font-family: var(--font-title) !important;
+  font-size: clamp(16px, 2.2vw, 20px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #07070b !important;
+  background: var(--gold-gradient) !important;
+  border: 2px solid var(--gold-light) !important;
+  border-radius: 50px !important;
+  cursor: pointer;
+  box-shadow: 0 0 35px rgba(230, 168, 23, 0.65), 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+/* Radiant Gold Aura on Hover (NO WHITE WASH) */
+.btn-portal:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  background: linear-gradient(135deg, #fff3a8 0%, #ffd043 50%, #e6a817 100%) !important;
+  color: #050508 !important;
+  border-color: #fff3a8 !important;
+  box-shadow: 0 0 60px rgba(245, 183, 0, 0.95), 0 15px 40px rgba(0, 0, 0, 0.9) !important;
+}
+
+@media (max-width: 480px) {
+  .btn-portal {
+    padding: 14px 30px !important;
+    font-size: 15px !important;
+    letter-spacing: 1.2px;
+    max-width: 92%;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ==========================================================================
+   DUAL-DIRECTION 3D STREAM MARQUEES (3D FLIP CARD FRAMES)
+   ========================================================================== */
+.marquehead {
+  width: 100%;
+  margin: 1.5rem 0 2.5rem 0;
+  overflow: hidden;
+}
+
+.stream-title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.stream-title span {
+  font-family: var(--font-title);
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold-light);
+  text-shadow: 0 0 15px rgba(230, 168, 23, 0.5);
+}
+
+.stream-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 24px 0;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.stream-track:hover .stream-content {
+  animation-play-state: paused;
+}
+
+.stream-content {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+}
+
+/* Row 1: Left to Right */
+.stream-left-to-right .stream-content {
+  animation: scrollL2R 45s linear infinite;
+}
+
+@keyframes scrollL2R {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Row 2: Right to Left */
+.stream-right-to-left .stream-content {
+  margin-top: 14px;
+  animation: scrollR2L 45s linear infinite;
+}
+
+@keyframes scrollR2L {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 3D Gallery Stream Card - Optimized Portrait Flip Card with Bilingual Lore */
+.card-3d {
+  width: clamp(190px, 20vw, 245px);
+  height: clamp(270px, 29vw, 345px);
+  aspect-ratio: 3 / 4.2;
+  flex-shrink: 0;
+  perspective: 1200px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+  margin: 6px 0;
+}
+
+.card-3d:hover {
+  z-index: 25;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.34, 1.4, 0.64, 1), box-shadow 0.35s ease;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 15px rgba(230, 168, 23, 0.15);
+}
+
+.card-3d:hover .card-inner,
+.card-3d.flipped .card-inner {
+  transform: rotateY(180deg) scale(1.05);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.98), 0 0 35px rgba(230, 168, 23, 0.6);
+}
+
+/* Front & Back Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--gold-border);
+}
+
+.card-front::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 240, 180, 0.12) 0%, transparent 45%, rgba(230, 168, 23, 0.08) 100%);
+  mix-blend-mode: screen;
+}
+
+.card-front {
+  background-color: rgba(12, 12, 20, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.35s ease;
+}
+
+.card-3d:hover .card-front {
+  border-color: var(--gold-light);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 14px;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(5, 5, 10, 0.85) 55%, rgba(5, 5, 10, 0.98) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px 10px;
+  z-index: 2;
+}
+
+.card-overlay span {
+  font-family: var(--font-title);
+  font-size: clamp(12px, 1.4vw, 13.5px);
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+}
+
+/* Back Face with Character Details & Interactive Translation */
+.card-back {
+  background: linear-gradient(145deg, #140d22 0%, #08060f 100%);
+  transform: rotateY(180deg);
+  border-color: var(--gold-light);
+  padding: 16px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: inset 0 0 25px rgba(230, 168, 23, 0.25);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card-back-header {
+  border-bottom: 1px solid rgba(230, 168, 23, 0.3);
+  padding-bottom: 7px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  text-align: left;
+}
+
+.card-back-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-back-title {
+  font-family: var(--font-title), 'Noto Sans Telugu', serif;
+  font-size: clamp(12.5px, 1.45vw, 14.5px);
+  font-weight: 800;
+  color: var(--gold-light);
+  letter-spacing: 0.8px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(230, 168, 23, 0.5);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-back-role {
+  font-size: 10px;
+  color: #ffd875;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 2px;
+  font-family: var(--font-body), 'Noto Sans Telugu', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Minimalist Single Telugu Alphabet Translation Toggle (No Box, No Yellow Shadow) */
+.lang-char-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 2px 4px !important;
+  margin: 0 !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Noto Sans Telugu', var(--font-title), sans-serif;
   font-size: 15px;
-  font-family: Georgia, Helvetica, Tahoma, Sans-Serif, Gaura Times, Serif;
-}
-pre{
-  color: white;
-}
-.anchor{
-   display: flex;
-   justify-content: flex-end;
-   margin-top: -30px;
-   
-}
-a{
-  text-decoration: none;
-  color: goldenrod;
-  margin: 10px;
-}
-.page1field{
-    width:70%;
-    
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+  user-select: none;
+  outline: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
 }
 
+.lang-char-btn:hover {
+  color: #ffffff !important;
+  transform: scale(1.2);
+  box-shadow: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
 
+.lang-char-btn:active {
+  transform: scale(0.95);
+}
+
+.lang-char {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Body & Descriptions */
+.card-back-body {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 2px;
+}
+
+.card-desc-en,
+.card-desc-te {
+  margin: 0;
+  line-height: 1.5;
+  transition: opacity 0.3s ease;
+}
+
+.card-desc-en {
+  font-family: var(--font-body);
+  font-size: clamp(10.5px, 1.2vw, 12px);
+  color: #f5efff;
+}
+
+.card-desc-te {
+  display: none;
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-size: clamp(11px, 1.25vw, 12.5px);
+  color: #fce080;
+  opacity: 0.98;
+}
+
+.card-back.show-te .card-desc-en {
+  display: none;
+}
+
+.card-back.show-te .card-desc-te {
+  display: block;
+}
+
+.card-back-footer {
+  border-top: 1px solid rgba(230, 168, 23, 0.25);
+  padding-top: 6px;
+  margin-top: 4px;
+}
+
+.card-back-badge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #07070b;
+  background: var(--gold-gradient);
+  padding: 3px 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(230, 168, 23, 0.4);
+  font-family: var(--font-body), 'Noto Sans Telugu', sans-serif;
+}
+
+/* ==========================================================================
+   ENLARGED THEATER VIDEO SECTION - DEEP BLACK SMOKE DISSOLVE (NO GOLD HALOS)
+   ========================================================================== */
+.theater-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 3.5rem auto 2.5rem auto;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.theater-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Deep Black Atmospheric Smoke & Nebula Shadow (NO GOLD GLOW) */
+.theater-ambilight {
+  position: absolute;
+  top: -8%;
+  left: -5%;
+  width: 110%;
+  height: 116%;
+  background: radial-gradient(ellipse at 50% 50%, transparent 20%, rgba(5, 5, 8, 0.8) 55%, var(--bg-deep) 85%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Seamless Theater Video Wrap - Deep Black Smoke Feather Mask */
+.theater-video-wrap {
+  position: relative;
+  z-index: 1;
+  width: min(96vw, 1150px);
+  aspect-ratio: 16 / 9;
+  overflow: visible;
+  /* Deep Black Smoke Radial Mask Dissolve */
+  mask-image: radial-gradient(ellipse 68% 58% at 50% 50%, black 18%, rgba(0, 0, 0, 0.92) 40%, rgba(0, 0, 0, 0.5) 58%, rgba(0, 0, 0, 0.12) 74%, transparent 84%);
+  -webkit-mask-image: radial-gradient(ellipse 68% 58% at 50% 50%, black 18%, rgba(0, 0, 0, 0.92) 40%, rgba(0, 0, 0, 0.5) 58%, rgba(0, 0, 0, 0.12) 74%, transparent 84%);
+}
+
+.theater-video-wrap video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.theater-caption {
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.theater-caption h3 {
+  font-family: var(--font-title);
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--gold-light);
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 15px rgba(230, 168, 23, 0.4);
+}
+
+.theater-caption p {
+  color: var(--text-muted) !important;
+  font-size: clamp(14px, 1.8vw, 16px) !important;
+}
+
+/* ==========================================================================
+   READER CONTAINER & CHAPTER PAGES
+   ========================================================================== */
+#page1field {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.image1 {
+  width: min(94%, 920px) !important;
+  margin: 2rem auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  opacity: 1 !important;
+  background-color: var(--bg-card) !important;
+  background-image: 
+    linear-gradient(180deg, rgba(230, 168, 23, 0.06) 0%, rgba(10, 10, 16, 0.96) 100%),
+    url(https://imgs.search.brave.com/H58FyFq23j-KTFHRry4enWveYodc2cEtYQZxB_ekA5A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9ibGFjay1iYWNr/Z3JvdW5kLXdpdGgt/dGV4dHVyZWQtYmFj/a2dyb3VuZC1mcmVl/LWRvd25sb2FkXzgz/ODk2LTc5LmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA) !important;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--gold-border) !important;
+  border-radius: var(--card-radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(230, 168, 23, 0.12);
+  padding: clamp(1.25rem, 4vw, 2.75rem) !important;
+  transition: var(--transition-smooth);
+}
+
+.image1 > p:first-of-type,
+.image1 > p[style*="goldenrod"],
+.image1 > p[style*="font-size"] {
+  font-family: var(--font-title) !important;
+  font-size: clamp(22px, 3.5vw, 32px) !important;
+  font-weight: 700 !important;
+  color: var(--gold-light) !important;
+  margin: 0 0 1rem 0 !important;
+  text-shadow: 0 0 20px rgba(230, 168, 23, 0.5);
+  letter-spacing: 0.8px;
+  line-height: 1.35 !important;
+}
+
+.anchor {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+  margin: 0 0 1.75rem 0 !important;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(230, 168, 23, 0.15);
+  flex-wrap: wrap;
+}
+
+.anchor .lang-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.anchor input[type="radio"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  border: 1.8px solid rgba(230, 168, 23, 0.5) !important;
+  border-radius: 50% !important;
+  outline: none !important;
+  cursor: pointer !important;
+  background: rgba(18, 14, 26, 0.95) !important;
+  position: relative !important;
+  display: inline-grid !important;
+  place-content: center !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7), inset 0 0 5px rgba(230, 168, 23, 0.15) !important;
+  margin: 0 !important;
+  vertical-align: middle !important;
+}
+
+.anchor input[type="radio"]::before {
+  content: "" !important;
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50% !important;
+  transform: scale(0) !important;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  background: var(--gold-gradient) !important;
+  box-shadow: 0 0 10px rgba(245, 183, 0, 0.95) !important;
+}
+
+.anchor input[type="radio"]:checked {
+  border-color: var(--gold-light) !important;
+  background: rgba(28, 20, 42, 0.95) !important;
+  box-shadow: 0 0 14px rgba(245, 183, 0, 0.65), inset 0 0 6px rgba(230, 168, 23, 0.35) !important;
+}
+
+.anchor input[type="radio"]:checked::before {
+  transform: scale(1) !important;
+}
+
+.anchor input[type="radio"]:hover {
+  border-color: var(--gold-light) !important;
+  box-shadow: 0 0 12px rgba(245, 183, 0, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
+.anchor a {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 18px !important;
+  border-radius: 20px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  color: var(--gold-light) !important;
+  background: rgba(230, 168, 23, 0.12) !important;
+  border: 1px solid var(--gold-border) !important;
+  margin: 0 !important;
+  transition: var(--transition-smooth) !important;
+  text-decoration: none !important;
+}
+
+.anchor a:hover {
+  background: rgba(230, 168, 23, 0.32) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(230, 168, 23, 0.5) !important;
+}
+
+h5 {
+  display: block !important;
+  width: 100% !important;
+  font-family: var(--font-title) !important;
+  font-size: clamp(16px, 2.2vw, 19px) !important;
+  font-weight: 700 !important;
+  color: var(--gold-light) !important;
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.2), rgba(25, 25, 40, 0.9)) !important;
+  border: 1px solid var(--gold-border) !important;
+  border-left: 5px solid var(--gold-primary) !important;
+  border-radius: 8px !important;
+  padding: 10px 18px !important;
+  margin: 2.25rem 0 1rem 0 !important;
+  text-align: left !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   NAVIGATION FOOTERS & BUTTONS
+   ========================================================================== */
+.footer {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1.25rem !important;
+  margin: 2.75rem 0 1rem 0 !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid rgba(230, 168, 23, 0.2) !important;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none !important;
+  margin: 0 !important;
+  display: inline-flex;
+}
+
+.footer button,
+.enter button,
+#firstfield button,
+.image1 button:not(.gita-verse-ai-btn),
+button:not(.gita-chat-widget *):not(.gita-chat-launcher *):not(.gita-verse-ai-btn) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 48px !important;
+  padding: 12px 28px !important;
+  font-family: var(--font-title) !important;
+  font-size: clamp(14px, 2vw, 16.5px) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.8px;
+  border-radius: var(--btn-radius) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--gold-border) !important;
+  background: linear-gradient(135deg, #1c2233, #131724) !important;
+  color: var(--gold-light) !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.btn-primary,
+.footer a:last-child button,
+.footer a:only-child button {
+  background: var(--gold-gradient) !important;
+  color: #07070b !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--gold-light) !important;
+  box-shadow: 0 4px 20px rgba(230, 168, 23, 0.4) !important;
+}
+
+.btn-secondary,
+.footer a:first-child:not(:only-child) button,
+#back {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #e4e4ed !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+}
+
+.footer button:hover,
+.enter button:hover,
+#firstfield button:hover,
+.image1 button:not(.gita-verse-ai-btn):hover,
+button:not(.gita-chat-widget *):not(.gita-chat-launcher *):not(.gita-verse-ai-btn):hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(230, 168, 23, 0.5) !important;
+}
+
+.btn-primary:hover,
+.footer a:last-child button:hover {
+  background: linear-gradient(135deg, #fff3a8 0%, #ffd043 50%, #e6a817 100%) !important;
+  color: #050508 !important;
+  border-color: #fff3a8 !important;
+  box-shadow: 0 0 35px rgba(245, 183, 0, 0.8) !important;
+}
+
+.btn-secondary:hover,
+.footer a:first-child:not(:only-child) button:hover,
+#back:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border-color: var(--gold-light) !important;
+}
+
+.home-footer {
+  justify-content: center !important;
+  gap: 2rem !important;
+  border-top: none !important;
+  margin: 3rem 0 4rem 0 !important;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .sacred-audio-fab {
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 14px !important;
+    right: auto !important;
+    top: auto !important;
+  }
+
+  .shloka-text {
+    font-size: 14.5px;
+  }
+
+  .hero-cosmic-stage {
+    min-height: 480px;
+    margin-top: 1.5rem;
+  }
+
+  .hero-video-wrap {
+    width: 140vw;
+    height: 105%;
+  }
+
+  .theater-section {
+    margin: 2rem auto;
+    padding: 0 0.75rem;
+  }
+
+  .theater-video-wrap {
+    width: 100%;
+  }
+
+  .image1 {
+    width: 95% !important;
+    padding: 1.5rem !important;
+  }
+
+  .anchor {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .footer:not(.home-footer) {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 2rem 0 calc(5.5rem + env(safe-area-inset-bottom, 0px)) 0 !important;
+    padding-top: 1.25rem !important;
+  }
+
+  .footer:not(.home-footer) a {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .footer:not(.home-footer) button,
+  .footer:not(.home-footer) a button,
+  #back {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 13px 20px !important;
+    font-size: 15px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1. Devotional Audio FAB & Sacred Symbols */
+  .sacred-audio-fab {
+    left: 12px !important;
+    right: auto !important;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+    top: auto !important;
+    padding: 4px;
+  }
+
+  .fab-disc {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .om-symbol {
+    font-size: 20px;
+  }
+
+  .shloka-text {
+    font-size: 13px;
+  }
+
+  /* 2. Brand Header & Titles (Guaranteed Zero Clipping on Android 360px-412px) */
+  .brand-hero {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0 8px !important;
+  }
+
+  .text {
+    width: auto !important;
+    max-width: min(240px, 86vw) !important;
+    padding: 6px 20px !important;
+  }
+
+  .text p {
+    font-size: clamp(16px, 4.8vw, 19px) !important;
+    letter-spacing: 1px !important;
+  }
+
+  .brand-tagline {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0 4px !important;
+    text-align: center !important;
+  }
+
+  .brand-tagline span {
+    font-size: clamp(9.5px, 2.85vw, 12px) !important;
+    letter-spacing: 0.6px !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    max-width: 96vw !important;
+  }
+
+  .stream-title {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0 4px !important;
+    text-align: center !important;
+  }
+
+  .stream-title span {
+    font-size: clamp(9.5px, 2.8vw, 11.5px) !important;
+    letter-spacing: 0.8px !important;
+    display: inline-block !important;
+    max-width: 96vw !important;
+  }
+
+  .stream-track {
+    padding: 16px 0 !important;
+  }
+
+  /* 3. Hero Cosmic Stage & Typography (entry.html) */
+  .hero-cosmic-stage {
+    min-height: 380px;
+    margin-top: 0.75rem;
+    overflow: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .hero-video-wrap {
+    width: 140vw;
+    height: 100%;
+  }
+
+  .hero-divine-text {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0.75rem 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .divine-badge {
+    font-size: clamp(10px, 3vw, 11.5px) !important;
+    letter-spacing: 1.2px !important;
+    padding: 4px 14px !important;
+    max-width: 92vw !important;
+  }
+
+  .divine-title {
+    font-size: clamp(24px, 7.5vw, 36px) !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  .divine-subtitle {
+    font-size: clamp(10.5px, 3.1vw, 13px) !important;
+    letter-spacing: 0.4px !important;
+    max-width: 94vw !important;
+    margin: 0 auto !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+  }
+
+  .btn-portal {
+    padding: 13px 26px !important;
+    min-height: 48px !important;
+    width: min(290px, 88vw) !important;
+    font-size: 14px !important;
+    letter-spacing: 1.2px !important;
+  }
+
+  /* 4. Home & Reading Footers */
+  .home-footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 92% !important;
+    margin: 1.75rem auto calc(7.5rem + env(safe-area-inset-bottom, 0px)) auto !important;
+    gap: 0.85rem !important;
+  }
+
+  .home-footer a,
+  .home-footer button {
+    width: 100% !important;
+    min-height: 48px !important;
+    font-size: 14.5px !important;
+  }
+
+  /* 5. Reading Page Container & Typography (Perfect Android Framing) */
+  .image1 {
+    width: calc(100% - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    padding: 1rem 0.85rem !important;
+    border-radius: 14px !important;
+    margin: 10px auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .image1 > p:first-of-type,
+  .image1 > p[style*="goldenrod"],
+  .image1 > p[style*="font-size"] {
+    font-size: clamp(18px, 5.2vw, 22px) !important;
+    margin-bottom: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  .image1 p {
+    font-size: clamp(14px, 3.8vw, 15.5px) !important;
+    line-height: 1.75 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .anchor {
+    gap: 8px !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .anchor a {
+    padding: 5px 14px !important;
+    font-size: 13px !important;
+  }
+
+  /* 6. 3D Marquee Cards (True iPhone & Android Equalized Framing) */
+  .card-3d {
+    width: clamp(148px, 44vw, 192px) !important;
+    height: clamp(216px, 62vw, 272px) !important;
+  }
+
+  .card-back {
+    padding: 8px 6px 6px 6px !important;
+  }
+
+  .card-back-title {
+    font-size: 10.5px !important;
+    letter-spacing: 0.4px !important;
+  }
+
+  .card-back-role {
+    font-size: 9px !important;
+  }
+
+  .lang-char-btn {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 11px !important;
+  }
+
+  .card-desc-en, .card-desc-te {
+    font-size: 10px !important;
+    line-height: 1.32 !important;
+  }
+
+  .card-back-badge {
+    font-size: 8.5px !important;
+    padding: 2px 7px !important;
+  }
+
+  h5 {
+    padding: 6px 10px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* ==========================================================================
+   FULLSCREEN CINEMATIC FAST VIDEO TRANSITION (Responsive Desktop & 9:16 Mobile)
+   ========================================================================== */
+.video-transition-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: #030105;
+  overflow: hidden;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+}
+
+.video-transition-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+/* Ambient Radiant Cosmic Glow in the Background */
+.video-transition-ambient {
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(ellipse 65% 55% at 50% 50%, rgba(230, 168, 23, 0.22) 0%, rgba(184, 59, 59, 0.14) 40%, rgba(10, 6, 18, 0.85) 75%, #030105 100%);
+  filter: blur(45px);
+  z-index: 1;
+  pointer-events: none;
+  animation: cosmicAuraPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes cosmicAuraPulse {
+  0% { transform: scale(0.98); opacity: 0.75; }
+  100% { transform: scale(1.04); opacity: 1; }
+}
+
+/* Atmospheric Vignettes (Top & Bottom safe zone melt) */
+.video-transition-vignette-top,
+.video-transition-vignette-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: clamp(60px, 14vh, 130px);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.video-transition-vignette-top {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(3, 1, 5, 0.9) 0%, rgba(3, 1, 5, 0.4) 50%, transparent 100%);
+}
+
+.video-transition-vignette-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(3, 1, 5, 0.95) 0%, rgba(3, 1, 5, 0.5) 50%, transparent 100%);
+}
+
+/* Responsive Floating Quick Controls (Fill/Fit & Enter Now) */
+.video-transition-controls {
+  position: absolute;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  right: max(16px, env(safe-area-inset-right, 16px));
+  left: max(16px, env(safe-area-inset-left, 16px));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  pointer-events: auto;
+  gap: 12px;
+}
+
+.vt-ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  background: rgba(14, 10, 24, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(230, 168, 23, 0.5);
+  border-radius: 999px;
+  color: #f7e7ce;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.vt-ctrl-btn:hover,
+.vt-ctrl-btn:active {
+  background: rgba(230, 168, 23, 0.28);
+  border-color: rgba(230, 168, 23, 0.95);
+  color: #ffffff;
+  transform: scale(1.04);
+  box-shadow: 0 0 18px rgba(230, 168, 23, 0.6);
+}
+
+.vt-ctrl-btn .vt-icon {
+  font-size: 13px;
+  color: var(--gold-light);
+}
+
+.vt-skip-btn {
+  margin-left: auto;
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.32), rgba(212, 85, 43, 0.32));
+  border-color: rgba(230, 168, 23, 0.75);
+}
+
+@media (max-width: 480px) {
+  .video-transition-controls {
+    top: max(12px, env(safe-area-inset-top, 12px));
+    left: 10px;
+    right: 10px;
+    gap: 8px;
+  }
+  .vt-ctrl-btn {
+    padding: 7px 11px;
+    font-size: 11px;
+    gap: 5px;
+  }
+}
+
+.video-transition-inner {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Default Desktop: Clean contained view (perfect for 16:9 widescreen) */
+.video-transition-inner video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: object-fit 0.3s ease, transform 0.3s ease;
+}
+
+/* ==========================================================================
+   MOBILE & VERTICAL / 9:16 ASPECT RATIO RESPONSIVENESS
+   ========================================================================== */
+/* Triggers for mobile screens, portrait orientation, or vertical 9:16 / 9:19 ratios */
+@media (max-width: 820px), (max-aspect-ratio: 1/1) {
+  /* By default on mobile portrait / 9:16 screens: IMMERSIVE FULL-SCREEN COVER */
+  .video-transition-inner video {
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.01); /* Eliminates subpixel seams */
+  }
+
+  /* When mobile user toggles to "Fit" (contained widescreen with glowing aura) */
+  .video-transition-inner.mode-contain video {
+    object-fit: contain !important;
+    transform: none !important;
+  }
+}
+
+/* Explicit landscape check on mobile devices to preserve wide viewing */
+@media (orientation: landscape) and (max-height: 600px) {
+  .video-transition-inner video {
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+  }
+}
+
+.video-transition-progress {
+  position: fixed;
+  bottom: max(0px, env(safe-area-inset-bottom, 0px));
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 10;
+}
+
+.video-transition-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gold-gradient);
+  box-shadow: 0 0 10px rgba(230, 168, 23, 0.9);
+  transition: width 0.1s linear;
+}
+
+/* ==========================================================================
+   DRAMATIC COSMIC BLACK DROP & SHUTTER TRANSITION OVERLAY
+   ========================================================================== */
+.indra-flash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 30%, #0c0816 0%, #05030a 50%, #010003 100%);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.2s ease;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Radiant Golden Event-Horizon Leading Edge Crest */
+.indra-flash-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, transparent 0%, #e6a817 25%, #fff3a8 50%, #e6a817 75%, transparent 100%);
+  box-shadow: 0 0 35px #ffd700, 0 10px 40px rgba(245, 183, 0, 0.85);
+}
+
+/* Atmospheric Smoke Ripple */
+.indra-flash-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(230, 168, 23, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.indra-flash-overlay.flashing {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+/* ==========================================================================
+   GITA AI CHATBOT • SACRED COSMIC OBSIDIAN & CELESTIAL GOLD LUXURY THEME
+   ========================================================================== */
+
+/* Universal Reset for Chatbot Components */
+.gita-chat-widget,
+.gita-chat-widget *,
+.gita-chat-launcher,
+.gita-chat-launcher * {
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', 'Noto Sans Telugu', sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.gita-chat-widget button,
+.gita-chat-launcher button {
+  min-height: unset !important;
+  max-height: unset !important;
+  margin: 0 !important;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  cursor: pointer !important;
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  padding: 0;
+}
+
+.gita-chat-widget p {
+  color: #f2f2f8 !important;
+  font-size: 11.5px !important;
+  line-height: 1.55 !important;
+  margin: 0 0 5px 0 !important;
+  text-shadow: none !important;
+}
+
+.gita-chat-widget strong,
+.gita-chat-widget b {
+  color: #fce080 !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* 1. Floating Launcher FAB */
+.gita-chat-launcher {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 1000000 !important;
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 50%, #7d5fff 100%) !important;
+  background-size: 200% 200% !important;
+  animation: launcherGradientMove 6s ease infinite alternate !important;
+  color: #050508 !important;
+  box-shadow: 0 10px 28px rgba(230, 168, 23, 0.45), 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease !important;
+}
+
+@keyframes launcherGradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.gita-chat-launcher:hover {
+  transform: scale(1.08) translateY(-2px) !important;
+  box-shadow: 0 14px 34px rgba(230, 168, 23, 0.6), 0 0 20px rgba(252, 224, 128, 0.5) !important;
+}
+
+.gita-launcher-icon {
+  position: absolute !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  color: #050508 !important;
+}
+
+.gita-launcher-icon svg {
+  width: 25px !important;
+  height: 25px !important;
+  stroke: #050508 !important;
+}
+
+.gita-launcher-icon.chat-open-icon {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.gita-launcher-icon.chat-close-icon {
+  opacity: 0 !important;
+  transform: scale(0.5) rotate(-90deg) !important;
+}
+
+.gita-chat-launcher.active .chat-open-icon {
+  opacity: 0 !important;
+  transform: scale(0.5) rotate(90deg) !important;
+}
+
+.gita-chat-launcher.active .chat-close-icon {
+  opacity: 1 !important;
+  transform: scale(1) rotate(0deg) !important;
+}
+
+.gita-launcher-badge {
+  position: absolute !important;
+  right: 66px !important;
+  background: rgba(18, 14, 28, 0.95) !important;
+  border: 1px solid rgba(230, 168, 23, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 5px 12px !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 10px rgba(230, 168, 23, 0.15) !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+}
+
+.gita-chat-launcher.active .gita-launcher-badge {
+  opacity: 0 !important;
+  transform: translateX(10px) !important;
+}
+
+.launcher-badge-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #fce080 !important;
+  box-shadow: 0 0 8px #fce080 !important;
+}
+
+.launcher-badge-text {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* 2. Main Widget Window (Sacred Cosmic Obsidian Glassmorphism) */
+.gita-chat-widget {
+  position: fixed !important;
+  bottom: 88px !important;
+  right: 24px !important;
+  z-index: 1000005 !important;
+  width: 375px !important;
+  height: 610px !important;
+  max-height: calc(100vh - 105px) !important;
+  background: linear-gradient(165deg, rgba(16, 12, 28, 0.98) 0%, rgba(10, 8, 18, 0.99) 50%, rgba(5, 4, 10, 1) 100%) !important;
+  border: 1.5px solid rgba(230, 168, 23, 0.35) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(230, 168, 23, 0.15) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(20px) scale(0.96) !important;
+  transform-origin: bottom right !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), width 0.28s ease, height 0.28s ease !important;
+}
+
+.gita-chat-widget.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.gita-chat-widget.expanded {
+  width: min(740px, 94vw) !important;
+  height: min(800px, 90vh) !important;
+  max-height: 90vh !important;
+  bottom: 50% !important;
+  right: 50% !important;
+  transform: translate(50%, 50%) scale(1) !important;
+  transform-origin: center center !important;
+  border-radius: 24px !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 50px rgba(230, 168, 23, 0.35) !important;
+}
+
+/* Top Header Bar */
+.gita-top-header {
+  padding: 12px 14px 8px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(230, 168, 23, 0.15) !important;
+}
+
+.gita-header-circle-btn {
+  width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(230, 168, 23, 0.35) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
+  color: #fce080 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+  padding: 0 !important;
+}
+
+.gita-header-circle-btn:hover {
+  background: rgba(230, 168, 23, 0.2) !important;
+  border-color: #fce080 !important;
+  transform: scale(1.06) !important;
+  box-shadow: 0 0 12px rgba(230, 168, 23, 0.4) !important;
+}
+
+.gita-header-circle-btn.voice-toggle-btn {
+  color: #fce080 !important;
+}
+
+.gita-header-center-pill {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.gita-model-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: rgba(24, 18, 38, 0.9) !important;
+  border: 1px solid rgba(230, 168, 23, 0.35) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 18px !important;
+  padding: 4px 10px !important;
+  gap: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.gita-model-pill:hover {
+  background: rgba(36, 26, 56, 0.95) !important;
+  border-color: #fce080 !important;
+  box-shadow: 0 0 12px rgba(230, 168, 23, 0.3) !important;
+}
+
+.gita-model-icon {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+
+.gita-ch-select-model {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+  cursor: pointer !important;
+  padding: 0 2px 0 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.gita-ch-select-model option {
+  background: #140e22 !important;
+  color: #fce080 !important;
+  padding: 6px !important;
+}
+
+.gita-pill-arrow {
+  font-size: 8px !important;
+  color: #fce080 !important;
+  pointer-events: none !important;
+  line-height: 1 !important;
+}
+
+.gita-header-right-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.gita-lang-toggle-pill {
+  display: inline-flex !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(230, 168, 23, 0.3) !important;
+  border-radius: 14px !important;
+  padding: 2px !important;
+  gap: 2px !important;
+  box-shadow: none !important;
+}
+
+.gita-lang-toggle-pill .lang-btn {
+  background: transparent !important;
+  border: none !important;
+  color: #a5a5c0 !important;
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+  padding: 2px 6px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  min-height: unset !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.gita-lang-toggle-pill .lang-btn.active {
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 100%) !important;
+  color: #050508 !important;
+  font-weight: 800 !important;
+}
+
+/* 3. Discovery / Hero Section ("Start Asking" Screen) */
+.gita-body-area {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  padding: 8px 14px 10px 14px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(230, 168, 23, 0.3) transparent !important;
+}
+
+.gita-body-area::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.gita-body-area::-webkit-scrollbar-thumb {
+  background: rgba(230, 168, 23, 0.3) !important;
+  border-radius: 4px !important;
+}
+
+.gita-discovery-hero {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 4px 2px 10px 2px !important;
+}
+
+.gita-hero-avatar-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.gita-hero-lotus-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 50%, #7d5fff 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;
+  box-shadow: 0 0 20px rgba(230, 168, 23, 0.5) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.gita-thought-bubble {
+  background: rgba(230, 168, 23, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 3px 8px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(230, 168, 23, 0.4) !important;
+}
+
+.gita-hero-title {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #fce080 60%, #e6a817 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin: 0 0 3px 0 !important;
+  letter-spacing: -0.3px !important;
+}
+
+.gita-hero-subtitle {
+  font-size: 11.5px !important;
+  color: #a5a5c0 !important;
+  margin: 0 0 14px 0 !important;
+  font-weight: 400 !important;
+}
+
+/* Discovery Cards (Rounded Pill List) */
+.gita-discovery-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.gita-discovery-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: rgba(22, 16, 36, 0.85) !important;
+  border: 1px solid rgba(230, 168, 23, 0.25) !important;
+  border-radius: 18px !important;
+  padding: 9px 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-align: left !important;
+}
+
+.gita-discovery-card:hover {
+  background: rgba(36, 26, 56, 0.95) !important;
+  border-color: rgba(230, 168, 23, 0.6) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(230, 168, 23, 0.25) !important;
+}
+
+.gita-card-icon-wrap {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 15px !important;
+  flex-shrink: 0 !important;
+}
+
+.gita-card-icon-wrap.icon-blue {
+  background: rgba(30, 60, 120, 0.5) !important;
+  border: 1px solid rgba(100, 150, 255, 0.4) !important;
+  color: #74b9ff !important;
+}
+
+.gita-card-icon-wrap.icon-pink {
+  background: rgba(120, 30, 60, 0.5) !important;
+  border: 1px solid rgba(255, 100, 150, 0.4) !important;
+  color: #ff7675 !important;
+}
+
+.gita-card-icon-wrap.icon-gold {
+  background: rgba(120, 90, 20, 0.5) !important;
+  border: 1px solid rgba(230, 168, 23, 0.5) !important;
+  color: #fce080 !important;
+}
+
+.gita-card-icon-wrap.icon-purple {
+  background: rgba(80, 40, 120, 0.5) !important;
+  border: 1px solid rgba(180, 120, 255, 0.4) !important;
+  color: #a29bfe !important;
+}
+
+.gita-card-texts {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.gita-card-title {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+}
+
+.gita-card-desc {
+  font-size: 10px !important;
+  color: #c4c4dc !important;
+  margin-top: 1px !important;
+}
+
+/* 4. Chat Messages Stream Area */
+.gita-chat-messages {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.gita-chat-messages.hidden {
+  display: none !important;
+}
+
+.gita-message-row {
+  display: flex !important;
+  width: 100% !important;
+}
+
+.gita-message-row.user-row {
+  justify-content: flex-end !important;
+}
+
+.gita-message-row.bot-row {
+  justify-content: flex-start !important;
+  gap: 6px !important;
+}
+
+.gita-bot-avatar-col {
+  display: flex !important;
+  align-items: flex-end !important;
+  flex-shrink: 0 !important;
+}
+
+.bot-tiny-avatar {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #fce080, #e6a817) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gita-msg-bubble {
+  max-width: 86% !important;
+  padding: 9px 12px !important;
+  font-size: 11.5px !important;
+  line-height: 1.55 !important;
+}
+
+.gita-msg-bubble.user-bubble {
+  background: linear-gradient(135deg, #2b1d52 0%, #1c1338 100%) !important;
+  border: 1px solid rgba(230, 168, 23, 0.35) !important;
+  color: #ffffff !important;
+  border-radius: 18px 18px 4px 18px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+  font-weight: 500 !important;
+}
+
+.gita-msg-bubble.user-bubble .gita-msg-text {
+  color: #ffffff !important;
+  font-size: 11.5px !important;
+}
+
+.gita-msg-bubble.user-bubble .gita-msg-time {
+  font-size: 8.5px !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  text-align: right !important;
+  margin-top: 3px !important;
+}
+
+.gita-msg-bubble.bot-bubble {
+  background: rgba(18, 14, 28, 0.95) !important;
+  border: 1px solid rgba(230, 168, 23, 0.28) !important;
+  color: #f2f2f8 !important;
+  border-radius: 18px 18px 18px 4px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gita-msg-content p {
+  color: #f2f2f8 !important;
+  font-size: 11.5px !important;
+  line-height: 1.55 !important;
+  margin: 0 0 5px 0 !important;
+}
+
+.gita-msg-content p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.gita-msg-meta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: 6px !important;
+  padding-top: 4px !important;
+  border-top: 1px solid rgba(230, 168, 23, 0.15) !important;
+}
+
+.gita-msg-time {
+  font-size: 8.5px !important;
+  color: #a5a5c0 !important;
+}
+
+.gita-listen-container {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.gita-listen-chip {
+  background: rgba(230, 168, 23, 0.15) !important;
+  border: 1px solid rgba(230, 168, 23, 0.35) !important;
+  color: #fce080 !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 3px 8px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: all 0.15s ease !important;
+  min-height: unset !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  user-select: none !important;
+}
+
+.gita-listen-chip:hover {
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 100%) !important;
+  color: #050508 !important;
+  border-color: #fce080 !important;
+}
+
+.gita-listen-chip.is-playing {
+  background: linear-gradient(135deg, #ff4757 0%, #d63031 100%) !important;
+  color: #ffffff !important;
+  border-color: #ff6b81 !important;
+  font-weight: 700 !important;
+  animation: gitaPulsePlaying 1.3s infinite ease-in-out !important;
+}
+
+.gita-listen-chip.is-playing:hover {
+  background: linear-gradient(135deg, #ff6b81 0%, #e84118 100%) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.gita-listen-chip.is-paused {
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.25) 0%, rgba(255, 215, 0, 0.35) 100%) !important;
+  color: #ffd700 !important;
+  border: 1px solid #ffd700 !important;
+  font-weight: 700 !important;
+  animation: none !important;
+}
+
+.gita-listen-chip.is-paused:hover {
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 100%) !important;
+  color: #050508 !important;
+  border-color: #fce080 !important;
+}
+
+.gita-stop-chip {
+  background: rgba(255, 71, 87, 0.15) !important;
+  border: 1px solid rgba(255, 71, 87, 0.4) !important;
+  color: #ff6b81 !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 3px 7px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  transition: all 0.15s ease !important;
+  min-height: unset !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  user-select: none !important;
+}
+
+.gita-stop-chip:hover {
+  background: linear-gradient(135deg, #ff4757 0%, #d63031 100%) !important;
+  color: #ffffff !important;
+  border-color: #ff4757 !important;
+}
+
+.gita-stop-chip.hidden {
+  display: none !important;
+}
+
+@keyframes gitaPulsePlaying {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.6); }
+  70% { transform: scale(1.03); box-shadow: 0 0 0 5px rgba(255, 71, 87, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 71, 87, 0); }
+}
+
+/* Structured response card */
+.gita-response-card {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.gita-response-badge {
+  display: inline-block !important;
+  align-self: flex-start !important;
+  font-size: 8.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  color: #fce080 !important;
+  background: rgba(230, 168, 23, 0.18) !important;
+  border: 1px solid rgba(230, 168, 23, 0.4) !important;
+  padding: 2px 6px !important;
+  border-radius: 6px !important;
+}
+
+.gita-response-title {
+  font-size: 12.5px !important;
+  color: #fce080 !important;
+  margin: 0 !important;
+  font-weight: 700 !important;
+}
+
+.gita-response-desc {
+  font-size: 11.5px !important;
+  color: #e4e4f0 !important;
+  margin: 0 !important;
+  line-height: 1.55 !important;
+}
+
+.gita-highlight-box {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(230, 168, 23, 0.18) !important;
+  border-left: 3px solid #e6a817 !important;
+  padding: 6px 8px !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+}
+
+.gita-highlight-box strong {
+  color: #fce080 !important;
+}
+
+.gita-highlight-box p {
+  color: #f2f2f8 !important;
+  margin: 2px 0 0 0 !important;
+  font-size: 11px !important;
+}
+
+.gita-sanskrit-verse {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+  background: rgba(28, 20, 44, 0.9) !important;
+  padding: 6px 8px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(230, 168, 23, 0.4) !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+}
+
+.gita-transliteration {
+  font-size: 10px !important;
+  color: #a5a5c0 !important;
+  text-align: center !important;
+}
+
+.gita-quote-box {
+  font-style: italic !important;
+  font-size: 11px !important;
+  color: #f2f2f8 !important;
+  background: rgba(230, 168, 23, 0.08) !important;
+  border-left: 3px solid #fce080 !important;
+  padding: 5px 8px !important;
+  border-radius: 6px !important;
+}
+
+.gita-quote-box p {
+  color: #f2f2f8 !important;
+  font-size: 11px !important;
+  margin: 0 !important;
+}
+
+.btn-gita-action {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 4px 10px !important;
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 100%) !important;
+  color: #050508 !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+}
+
+/* Typing Indicator (Contemplating state) */
+.gita-typing-row {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 6px !important;
+  width: 100% !important;
+}
+
+.gita-typing-bubble {
+  background: rgba(18, 14, 28, 0.95) !important;
+  border: 1px solid rgba(230, 168, 23, 0.3) !important;
+  border-radius: 16px 16px 16px 4px !important;
+  padding: 8px 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gita-typing-text {
+  font-size: 10.5px !important;
+  color: #fce080 !important;
+  font-style: italic !important;
+}
+
+.gita-typing-dots {
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+}
+
+.gita-typing-dots span {
+  width: 4px !important;
+  height: 4px !important;
+  border-radius: 50% !important;
+  background: #fce080 !important;
+  display: inline-block !important;
+  animation: gitaPulseDot 1.4s infinite ease-in-out both !important;
+}
+
+.gita-typing-dots span:nth-child(1) { animation-delay: -0.32s !important; }
+.gita-typing-dots span:nth-child(2) { animation-delay: -0.16s !important; }
+
+@keyframes gitaPulseDot {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Interactive Follow-up Question Chips */
+.gita-followup-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 5px !important;
+  margin-top: 8px !important;
+  padding-top: 6px !important;
+  border-top: 1px dashed rgba(230, 168, 23, 0.2) !important;
+}
+
+.gita-followup-chip {
+  background: rgba(230, 168, 23, 0.1) !important;
+  border: 1px solid rgba(230, 168, 23, 0.35) !important;
+  color: #fce080 !important;
+  font-size: 9.5px !important;
+  font-weight: 500 !important;
+  padding: 3px 8px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  text-align: left !important;
+  box-shadow: none !important;
+}
+
+.gita-followup-chip:hover {
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 100%) !important;
+  color: #0d0914 !important;
+  border-color: #fce080 !important;
+  font-weight: 700 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 5. Floating Modern Input Box */
+.gita-input-wrapper {
+  padding: 6px 12px 12px 12px !important;
+  flex-shrink: 0 !important;
+}
+
+.gita-floating-input-card {
+  background: rgba(20, 15, 34, 0.95) !important;
+  border: 1.5px solid rgba(230, 168, 23, 0.35) !important;
+  border-radius: 20px !important;
+  padding: 8px 10px 6px 12px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(230, 168, 23, 0.15) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+.gita-floating-input-card:focus-within {
+  border-color: #fce080 !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(230, 168, 23, 0.3) !important;
+}
+
+.gita-input-text-row {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.gita-main-input {
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 12px !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  padding: 2px 0 !important;
+}
+
+.gita-main-input::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-size: 11.5px !important;
+}
+
+.gita-input-bottom-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 2px !important;
+}
+
+.gita-input-left-tools {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.gita-quick-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(230, 168, 23, 0.3) !important;
+  color: #fce080 !important;
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+  padding: 3px 8px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  min-height: unset !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.gita-quick-pill:hover {
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 100%) !important;
+  color: #050508 !important;
+  border-color: #fce080 !important;
+  font-weight: 700 !important;
+}
+
+.gita-input-right-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.gita-coral-mic-btn {
+  width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 50%, #b8860b 100%) !important;
+  border: none !important;
+  color: #050508 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(230, 168, 23, 0.5) !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.gita-coral-mic-btn svg {
+  fill: #050508 !important;
+}
+
+.gita-coral-mic-btn:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 20px rgba(252, 224, 128, 0.7) !important;
+}
+
+.gita-coral-mic-btn.listening {
+  animation: micPulseGold 1.2s infinite !important;
+}
+
+@keyframes micPulseGold {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 168, 23, 0.8); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(230, 168, 23, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 168, 23, 0); }
+}
+
+.gita-send-circle-btn {
+  width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #7d5fff 0%, #575fcf 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(125, 95, 255, 0.5) !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.gita-send-circle-btn svg {
+  fill: #ffffff !important;
+}
+
+.gita-send-circle-btn:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 20px rgba(125, 95, 255, 0.7) !important;
+}
+
+/* 6. Full Interactive Voice Chat Screen (Cosmic Theme) */
+.gita-voice-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(165deg, rgba(14, 10, 26, 0.98) 0%, rgba(8, 6, 16, 0.99) 50%, rgba(4, 3, 8, 1) 100%) !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 14px 16px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0.95) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  border-radius: 28px !important;
+}
+
+.gita-voice-overlay.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: scale(1) !important;
+}
+
+.gita-voice-top-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.gita-voice-screen-title {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+}
+
+.gita-voice-center-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin: auto 0 !important;
+}
+
+.gita-voice-status-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #fce080 !important;
+  margin-bottom: 20px !important;
+}
+
+/* 3D Iridescent Dotted Particle Sphere */
+.gita-dotted-sphere {
+  width: 140px !important;
+  height: 140px !important;
+  border-radius: 50% !important;
+  position: relative !important;
+  background: radial-gradient(circle at 35% 35%, #fff3a8 0%, #ffd043 30%, #e6a817 55%, #7d5fff 80%, #1c1430 100%) !important;
+  box-shadow: 0 0 50px rgba(230, 168, 23, 0.45), inset -10px -10px 30px rgba(0, 0, 0, 0.5), inset 10px 10px 30px rgba(255, 255, 255, 0.4) !important;
+  animation: spherePulse 4s ease-in-out infinite alternate !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 22px !important;
+}
+
+.gita-dotted-sphere::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 4px !important;
+  border-radius: 50% !important;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.85) 1.2px, transparent 1.2px) !important;
+  background-size: 8px 8px !important;
+  opacity: 0.8 !important;
+  animation: sphereRotate 20s linear infinite !important;
+}
+
+.gita-dotted-sphere::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: -8px !important;
+  border-radius: 50% !important;
+  border: 1.5px dashed rgba(230, 168, 23, 0.4) !important;
+  animation: sphereRotate 30s linear infinite reverse !important;
+}
+
+@keyframes spherePulse {
+  0% { transform: scale(0.96); filter: drop-shadow(0 0 20px rgba(230, 168, 23, 0.35)); }
+  100% { transform: scale(1.04); filter: drop-shadow(0 0 40px rgba(252, 224, 128, 0.6)); }
+}
+
+@keyframes sphereRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gita-voice-prompt-text {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #d4d4e8 !important;
+  line-height: 1.4 !important;
+  max-width: 260px !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.gita-voice-prompt-text strong {
+  color: #fce080 !important;
+  font-weight: 700 !important;
+}
+
+/* Soundwave visualizer */
+.gita-voice-soundwave {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  height: 18px !important;
+  margin-bottom: 16px !important;
+}
+
+.gita-voice-soundwave span {
+  width: 3px !important;
+  height: 6px !important;
+  background: #fce080 !important;
+  border-radius: 2px !important;
+  animation: soundWaveAnim 1.2s ease-in-out infinite alternate !important;
+}
+
+.gita-voice-soundwave span:nth-child(1) { animation-delay: 0.1s !important; }
+.gita-voice-soundwave span:nth-child(2) { animation-delay: 0.3s !important; }
+.gita-voice-soundwave span:nth-child(3) { animation-delay: 0.2s !important; }
+.gita-voice-soundwave span:nth-child(4) { animation-delay: 0.4s !important; }
+.gita-voice-soundwave span:nth-child(5) { animation-delay: 0.15s !important; }
+
+@keyframes soundWaveAnim {
+  0% { height: 4px; background: #e6a817; }
+  100% { height: 18px; background: #fce080; }
+}
+
+/* Quick Topic Chips & Direct Type Switcher in Voice Overlay */
+.gita-voice-quick-topics {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  max-width: 320px !important;
+  margin: 0 auto 10px auto !important;
+}
+
+.gita-voice-topic-chip {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(230, 168, 23, 0.4) !important;
+  border-radius: 20px !important;
+  color: #ffeaa7 !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  padding: 5px 11px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.gita-voice-topic-chip:hover,
+.gita-voice-topic-chip:active {
+  background: rgba(230, 168, 23, 0.25) !important;
+  border-color: #ffd043 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+.gita-voice-type-switch-btn {
+  background: transparent !important;
+  border: none !important;
+  color: #a4a4c4 !important;
+  font-size: 11.5px !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+  padding: 4px 8px !important;
+  transition: color 0.2s ease !important;
+  margin-bottom: 4px !important;
+}
+
+.gita-voice-type-switch-btn:hover,
+.gita-voice-type-switch-btn:active {
+  color: #ffeaa7 !important;
+}
+
+/* Bottom Voice Controls */
+.gita-voice-bottom-controls {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 10px 6px 10px !important;
+}
+
+.gita-voice-action-btn {
+  width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.gita-voice-action-btn:hover {
+  transform: scale(1.08) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+}
+
+.gita-voice-action-btn.confirm-btn {
+  background: linear-gradient(135deg, #7d5fff 0%, #575fcf 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(125, 95, 255, 0.5) !important;
+  font-weight: 800 !important;
+}
+
+.gita-voice-action-btn.confirm-btn:hover {
+  box-shadow: 0 0 20px rgba(125, 95, 255, 0.7) !important;
+}
+
+.gita-voice-timer {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #fce080 !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+.gita-voice-center-big-mic {
+  width: 56px !important;
+  height: 56px !important;
+  min-height: 56px !important;
+  max-height: 56px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 50%, #b8860b 100%) !important;
+  color: #050508 !important;
+  border: 3px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 0 35px rgba(230, 168, 23, 0.7) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  animation: micPulseGold 1.6s infinite !important;
+  padding: 0 !important;
+}
+
+.gita-voice-center-big-mic svg {
+  fill: #050508 !important;
+}
+
+.gita-voice-center-big-mic:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 45px rgba(252, 224, 128, 0.9) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .gita-chat-widget {
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    border-radius: 0 !important;
+  }
+  .gita-top-header {
+    padding-top: calc(12px + env(safe-area-inset-top, 0px)) !important;
+  }
+  .gita-input-wrapper {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .gita-voice-overlay {
+    border-radius: 0 !important;
+    height: 100dvh !important;
+  }
+  .gita-voice-top-row {
+    padding-top: calc(12px + env(safe-area-inset-top, 0px)) !important;
+  }
+  .gita-voice-bottom-controls {
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .gita-chat-launcher {
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 14px !important;
+  }
+  /* In mobile view: when chat widget is active, hide the floating launcher so it NEVER covers the send/voice button */
+  .gita-chat-widget.active ~ .gita-chat-launcher,
+  body.gita-chat-active .gita-chat-launcher,
+  .gita-chat-launcher.active {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+/* In-Page Verse Header & Sacred ASK AI Pill (Exact UI match to Launcher Gita AI Badge) */
+h5:has(.gita-verse-ai-btn),
+h5.gita-verse-header-row,
+h5 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+  padding: 7px 14px !important;
+  margin: 1.75rem 0 0.6rem 0 !important;
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.16) 0%, rgba(18, 14, 28, 0.94) 100%) !important;
+  border: 1px solid rgba(230, 168, 23, 0.32) !important;
+  border-left: 4px solid var(--gold-primary) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
+  min-height: unset !important;
+  gap: 10px !important;
+}
+
+.gita-verse-title {
+  font-size: clamp(14.5px, 2vw, 17.5px) !important;
+  font-weight: 700 !important;
+  color: var(--gold-light) !important;
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.4px !important;
+}
+
+/* ASK AI Pill Button - Exact Replica of Reference UI (Image 2) */
+.gita-verse-ai-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  margin-left: auto !important;
+  padding: 4px 16px 4px 13px !important;
+  border-radius: 9999px !important;
+  background: #0d0a17 !important;
+  border: 1.5px solid #d4a017 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6), inset 0 0 8px rgba(212, 160, 23, 0.08) !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  box-sizing: border-box !important;
+  user-select: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.gita-verse-ai-btn:hover {
+  background: #181226 !important;
+  border-color: #ffd043 !important;
+  transform: translateY(-1px) scale(1.04) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75), 0 0 16px rgba(230, 168, 23, 0.5) !important;
+}
+
+.gita-verse-ai-btn:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
+.gita-btn-glow-dot {
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50% !important;
+  background: #ffe37d !important;
+  box-shadow: 0 0 10px 3px rgba(255, 224, 120, 0.8), 0 0 4px #ffe37d !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.gita-btn-text {
+  color: #ffeaa7 !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  line-height: 1 !important;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease !important;
+}
+
+.gita-verse-ai-btn:hover .gita-btn-text {
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(255, 234, 167, 0.9) !important;
+}
+
+@media (max-width: 540px) {
+  h5:has(.gita-verse-ai-btn),
+  h5.gita-verse-header-row,
+  h5 {
+    padding: 6px 10px !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    row-gap: 8px !important;
+    column-gap: 8px !important;
+    margin: 1.25rem 0 0.5rem 0 !important;
+  }
+  .gita-verse-title {
+    font-size: clamp(12.5px, 3.6vw, 14px) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    flex: 1 1 auto !important;
+    min-width: 110px !important;
+  }
+  .gita-verse-ai-btn {
+    height: 28px !important;
+    min-height: 28px !important;
+    padding: 2px 10px 2px 8px !important;
+    gap: 5px !important;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+  }
+  .gita-verse-ai-btn .gita-btn-text {
+    font-size: 11.5px !important;
+  }
+  .gita-btn-glow-dot {
+    width: 7px !important;
+    height: 7px !important;
+  }
+}
+
+/* Remove excessive padding and margins around verse body texts */
+.image1 p {
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.75rem !important;
+  padding: 0 !important;
+}
+
+.image1 > br {
+  display: none !important;
+}
+
+/* ==========================================================================
+   DIVYA SHLOKA DARSHINI - UNIVERSAL VERSE NAVIGATOR & SHLOKA HUB STYLES
+   ========================================================================== */
+
+/* 1. Section Container on Homepage */
+.gita-nav-section-wrap {
+  width: 100%;
+  max-width: 1400px;
+  margin: 3.5rem auto 2.5rem auto;
+  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  position: relative;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .gita-nav-section-wrap {
+    padding: 0 0.5rem;
+    margin: 2rem auto 1.5rem auto;
+  }
+}
+
+.gita-nav-hero-header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.gita-badge-celestial {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #ffd54f;
+  background: rgba(230, 168, 23, 0.12);
+  border: 1px solid rgba(230, 168, 23, 0.38);
+  padding: 5px 16px;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 0 18px rgba(230, 168, 23, 0.25);
+}
+
+.gita-nav-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #ffffff 30%, #fce080 70%, #e6a817 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.gita-nav-desc {
+  font-size: clamp(14px, 1.8vw, 16.5px);
+  color: var(--text-muted);
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 2. Focused Single Card Layout */
+.gita-nav-cards-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gita-jump-form-card {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.gita-nav-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(17, 13, 27, 0.88) 0%, rgba(9, 6, 16, 0.94) 100%);
+  border: 1px solid rgba(230, 168, 23, 0.28);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gita-nav-card:hover {
+  border-color: rgba(230, 168, 23, 0.55);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(230, 168, 23, 0.18);
+}
+
+.card-aura-glow {
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(230, 168, 23, 0.14) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Card 1: Quick Jump Form */
+.jump-card-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sacred-feather-svg {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(0 0 15px rgba(230, 168, 23, 0.5));
+  animation: floatFeather 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatFeather {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  100% { transform: translateY(-6px) rotate(3deg); }
+}
+
+.jump-card-title {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.jump-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.gita-field-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--gold-light);
+  margin-bottom: 0.35rem;
+}
+
+.gita-select-styled {
+  position: relative;
+  width: 100%;
+}
+
+.gita-field-select,
+.gita-custom-select {
+  width: 100%;
+  padding: 12px 38px 12px 14px;
+  background: rgba(7, 5, 12, 0.85);
+  border: 1.5px solid rgba(230, 168, 23, 0.35);
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.gita-field-select::-webkit-scrollbar,
+.gita-custom-select::-webkit-scrollbar,
+select::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.gita-field-select option,
+.gita-custom-select option {
+  background: #0d0918;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.gita-field-select:focus,
+.gita-custom-select:focus {
+  border-color: #ffd54f;
+  box-shadow: 0 0 16px rgba(230, 168, 23, 0.45);
+}
+
+/* Custom Select with Completely Hidden Scrollbars (Zero Scrollbar Visible) */
+.gita-custom-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.gita-custom-select-trigger {
+  width: 100%;
+  padding: 12px 38px 12px 14px;
+  background: rgba(7, 5, 12, 0.9);
+  border: 1.5px solid rgba(230, 168, 23, 0.35);
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.gita-custom-select-trigger:hover,
+.gita-custom-select-trigger:focus,
+.gita-custom-select-wrap.open .gita-custom-select-trigger {
+  border-color: #ffd54f;
+  box-shadow: 0 0 16px rgba(230, 168, 23, 0.45);
+}
+
+.trigger-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 18px;
+}
+
+.gita-custom-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  background: #0d0918;
+  border: 1.5px solid rgba(230, 168, 23, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(230, 168, 23, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 1000;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+  
+  /* HIDE SCROLLBAR ENTIRELY */
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.gita-custom-dropdown-menu::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.gita-custom-select-wrap.open .gita-custom-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.gita-custom-dropdown-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #e5e5f0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.gita-custom-dropdown-item:hover {
+  background: rgba(230, 168, 23, 0.22);
+  color: #ffffff;
+}
+
+.gita-custom-dropdown-item.selected {
+  background: rgba(230, 168, 23, 0.35);
+  color: #ffd54f;
+  font-weight: 700;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: var(--gold-primary);
+  pointer-events: none;
+}
+
+/* Language Selection Row */
+.jump-lang-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jump-lang-label {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.jump-lang-options {
+  display: flex;
+  gap: 8px;
+}
+
+.gita-radio-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.gita-radio-label input {
+  display: none;
+}
+
+.radio-custom-pill {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease;
+}
+
+.gita-radio-label input:checked + .radio-custom-pill {
+  color: #0d0918;
+  background: var(--gold-gradient);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px rgba(230, 168, 23, 0.5);
+}
+
+/* Action Buttons Stack */
+.jump-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-gita-jump-primary,
+.sheet-btn-go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fce080 0%, #e6a817 55%, #b8860b 100%);
+  color: #06040a;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(230, 168, 23, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-gita-jump-primary:hover,
+.sheet-btn-go:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(230, 168, 23, 0.55);
+  filter: brightness(1.06);
+}
+
+.btn-gita-jump-primary:active,
+.sheet-btn-go:active {
+  transform: translateY(0);
+}
+
+.btn-gita-jump-oracle,
+.sheet-btn-oracle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 12px;
+  background: rgba(230, 168, 23, 0.08);
+  border: 1px solid rgba(230, 168, 23, 0.4);
+  color: #fce080;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  user-select: none;
+}
+
+.btn-gita-jump-oracle:hover,
+.sheet-btn-oracle:hover {
+  background: rgba(230, 168, 23, 0.2);
+  border-color: rgba(230, 168, 23, 0.85);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(230, 168, 23, 0.3);
+}
+
+/* Card 2: Matrix Verse Grid */
+.matrix-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.matrix-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.matrix-subtitle {
+  font-size: 13.5px;
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.matrix-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick-verse-search {
+  width: 100px;
+  padding: 7px 10px;
+  background: rgba(7, 5, 12, 0.85);
+  border: 1px solid rgba(230, 168, 23, 0.35);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+}
+
+.quick-verse-go-btn {
+  padding: 7px 14px;
+  background: var(--gold-primary);
+  color: #06040a;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quick-verse-go-btn:hover {
+  background: #ffd54f;
+}
+
+/* Horizontal Chapter Tabs */
+.matrix-chapter-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 1.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) transparent;
+}
+
+.matrix-chapter-bar::-webkit-scrollbar {
+  height: 5px;
+}
+
+.matrix-chapter-bar::-webkit-scrollbar-thumb {
+  background: rgba(230, 168, 23, 0.4);
+  border-radius: 4px;
+}
+
+.matrix-chapter-chip {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(230, 168, 23, 0.2);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-family: var(--font-body);
+  user-select: none;
+}
+
+.matrix-chapter-chip .chip-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.matrix-chapter-chip .chip-title {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.matrix-chapter-chip:hover {
+  border-color: var(--gold-primary);
+  color: #ffffff;
+}
+
+.matrix-chapter-chip.active {
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.25), rgba(184, 59, 59, 0.15));
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 16px rgba(230, 168, 23, 0.35);
+  color: #ffffff;
+}
+
+/* Matrix Verse Grid Legend */
+.matrix-grid-legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.legend-star {
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-badge {
+  color: #ffd700;
+  font-size: 13px;
+}
+
+/* Dynamic Verse Grid Numbers */
+.matrix-verse-grid,
+.sheet-verse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+  gap: 8px;
+  max-height: 290px;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) transparent;
+}
+
+.matrix-verse-grid::-webkit-scrollbar,
+.sheet-verse-grid::-webkit-scrollbar {
+  width: 5px;
+}
+
+.matrix-verse-grid::-webkit-scrollbar-thumb,
+.sheet-verse-grid::-webkit-scrollbar-thumb {
+  background: rgba(230, 168, 23, 0.35);
+  border-radius: 4px;
+}
+
+.matrix-verse-btn,
+.gita-grid-verse-pill {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 5, 14, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #e2e2ed;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  padding: 0;
+}
+
+.matrix-verse-btn:hover,
+.gita-grid-verse-pill:hover {
+  background: rgba(230, 168, 23, 0.22);
+  border-color: rgba(230, 168, 23, 0.8);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 4px 12px rgba(230, 168, 23, 0.3);
+}
+
+.matrix-verse-btn.active,
+.gita-grid-verse-pill.active {
+  background: var(--gold-gradient);
+  color: #06040a;
+  border-color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 0 16px rgba(230, 168, 23, 0.6);
+}
+
+.matrix-verse-btn.landmark-verse,
+.gita-grid-verse-pill.key-verse {
+  border-color: rgba(230, 168, 23, 0.55);
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.15) 0%, rgba(7, 5, 14, 0.8) 100%);
+}
+
+.verse-star {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  font-size: 8px;
+  color: #ffd700;
+}
+
+/* ==========================================================================
+   3. UNIVERSAL FLOATING PILL BUTTON ("≡ Quick Verse Navigator")
+   ========================================================================== */
+.gita-nav-floating-fab {
+  position: fixed !important;
+  bottom: 22px !important;
+  left: 20px !important;
+  right: auto !important;
+  transform: none !important;
+  z-index: 99980 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.gita-nav-floating-fab .fab-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px 8px 14px;
+  background: rgba(14, 10, 24, 0.88);
+  border: 1.5px solid rgba(230, 168, 23, 0.55);
+  border-radius: 999px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65), 0 0 20px rgba(230, 168, 23, 0.25);
+  color: #ffffff;
+  position: relative;
+}
+
+.gita-nav-floating-fab:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+}
+
+.gita-nav-floating-fab:hover .fab-inner {
+  border-color: #ffd54f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 30px rgba(230, 168, 23, 0.55);
+}
+
+.gita-nav-floating-fab .fab-lotus {
+  font-size: 16px;
+}
+
+.gita-nav-floating-fab .fab-lines {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.gita-nav-floating-fab .fab-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #ffeaa7;
+  white-space: nowrap;
+}
+
+.gita-nav-floating-fab .fab-pulse-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 999px;
+  border: 1px solid rgba(230, 168, 23, 0.4);
+  animation: fabPulseRing 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes fabPulseRing {
+  0% { transform: scale(0.98); opacity: 0.8; }
+  50% { transform: scale(1.06); opacity: 0.2; }
+  100% { transform: scale(1.12); opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .gita-nav-floating-fab {
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 14px !important;
+    max-width: calc(100vw - 85px) !important;
+    z-index: 99980 !important;
+  }
+  /* On gallery index.html on mobile, stack Audio FAB and Nav FAB so they never overlap */
+  .gallery-body .sacred-audio-fab {
+    left: 14px !important;
+    right: auto !important;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .gallery-body .gita-nav-floating-fab {
+    left: 14px !important;
+    right: auto !important;
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .gita-chat-launcher {
+    right: 14px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .gita-nav-floating-fab .fab-inner {
+    padding: 7px 12px 7px 10px !important;
+    gap: 6px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .gita-nav-floating-fab .fab-label {
+    font-size: 12px !important;
+    max-width: 115px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  /* Hide Gita AI wide text badge on mobile so it doesn't collide with anything */
+  .gita-launcher-badge {
+    display: none !important;
+  }
+  /* When chat is active, hide floating fab so mobile input is unobstructed */
+  body.gita-chat-active .gita-nav-floating-fab {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   4. UNIVERSAL SLIDE-UP BOTTOM SHEET / NAVIGATOR MODAL
+   ========================================================================== */
+.gita-nav-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999990;
+  background: rgba(4, 2, 8, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.gita-nav-sheet-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gita-nav-sheet {
+  width: 100% !important;
+  max-width: min(92vw, 660px) !important;
+  max-height: min(88vh, 700px) !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(160deg, #150f26 0%, #080512 100%);
+  border: 1.5px solid rgba(230, 168, 23, 0.5) !important;
+  border-radius: 22px !important;
+  padding: 1.75rem 1.75rem 2rem 1.75rem !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(230, 168, 23, 0.25) !important;
+  transform: scale(0.92);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .gita-nav-sheet-overlay {
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+  .gita-nav-sheet {
+    width: 100% !important;
+    max-width: 100vw !important;
+    max-height: 92dvh !important;
+    max-height: 92vh !important;
+    padding: 1.5rem 1rem calc(1.75rem + env(safe-area-inset-bottom, 0px)) 1rem !important;
+    border-radius: 24px 24px 0 0 !important;
+  }
+  .sheet-close-btn {
+    top: 14px !important;
+    right: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+}
+
+.gita-nav-sheet-overlay.active .gita-nav-sheet {
+  transform: scale(1);
+}
+
+.sheet-drag-handle {
+  display: none !important;
+}
+
+.sheet-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.sheet-close-btn:hover {
+  background: rgba(230, 168, 23, 0.25);
+  border-color: var(--gold-primary);
+}
+
+.sheet-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.sheet-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.sheet-title {
+  font-family: var(--font-title);
+  font-size: 1.45rem;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.sheet-subtitle {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.sheet-controls-bar {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr auto;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 1.15rem;
+}
+
+@media (max-width: 580px) {
+  .sheet-controls-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sheet-lang-switch {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
+
+.sheet-select-wrap label {
+  display: block;
+  font-size: 11.5px;
+  color: var(--gold-light);
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.sheet-lang-switch {
+  display: flex;
+  gap: 6px;
+}
+
+.gita-lang-chip input {
+  display: none;
+}
+
+.gita-lang-chip span {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gita-lang-chip input:checked + span {
+  background: var(--gold-gradient);
+  color: #06040a;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px rgba(230, 168, 23, 0.45);
+}
+
+.sheet-jump-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .sheet-jump-actions {
+    flex-direction: column;
+  }
+}
+
+.sheet-btn-go,
+.sheet-btn-oracle {
+  flex: 1 1 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 12px 18px !important;
+  border-radius: 12px !important;
+  font-family: var(--font-title) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  min-height: 48px !important;
+  transition: all 0.2s ease !important;
+}
+
+.sheet-btn-go {
+  background: var(--gold-gradient) !important;
+  color: #06040a !important;
+  border: 1px solid var(--gold-light) !important;
+  box-shadow: 0 4px 18px rgba(230, 168, 23, 0.4) !important;
+}
+
+.sheet-btn-go:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(230, 168, 23, 0.6) !important;
+}
+
+.sheet-btn-oracle {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.sheet-btn-oracle:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: var(--gold-light) !important;
+}
+
+.sheet-grid-section {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.sheet-grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+.sheet-grid-hint {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   5. INSTANT DIVINE SHLOKA CARD MODAL
+   ========================================================================== */
+.gita-shloka-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999995;
+  background: rgba(3, 1, 6, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.28s ease;
+}
+
+.gita-shloka-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gita-shloka-modal-card {
+  width: 100% !important;
+  max-width: min(94vw, 620px) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background: linear-gradient(155deg, #150f26 0%, #090514 100%);
+  border: 1.5px solid #e6a817;
+  border-radius: 22px;
+  padding: clamp(1.15rem, 3vw, 1.75rem);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(230, 168, 23, 0.35);
+  position: relative;
+  transform: scale(0.92);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gita-shloka-modal-overlay.active .gita-shloka-modal-card {
+  transform: scale(1);
+}
+
+.gita-shloka-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.gita-shloka-modal-close:hover {
+  background: rgba(230, 168, 23, 0.3);
+  border-color: #ffd54f;
+}
+
+.gita-shloka-modal-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.gita-badge-gold {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #ffd54f;
+  letter-spacing: 2px;
+}
+
+.gita-shloka-modal-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 4px 0 2px 0;
+}
+
+.gita-shloka-modal-chapter {
+  font-size: 13px;
+  color: var(--gold-light);
+}
+
+.gita-shloka-sanskrit-box {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(230, 168, 23, 0.3);
+  border-radius: 14px;
+  padding: 1.15rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.gita-shloka-sanskrit-text {
+  font-family: 'Cinzel', 'Noto Sans Telugu', serif;
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: #ffecb3;
+  white-space: pre-line;
+  margin-bottom: 6px;
+}
+
+.gita-shloka-translit {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.gita-shloka-meaning-box {
+  margin-bottom: 1.5rem;
+}
+
+.gita-meaning-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.gita-meaning-tab {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gita-meaning-tab.active {
+  background: rgba(230, 168, 23, 0.2);
+  border-color: var(--gold-primary);
+  color: #ffffff;
+}
+
+.gita-shloka-meaning-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #e5e5f0;
+  margin: 0 0 8px 0;
+}
+
+.gita-shloka-insight-pill {
+  font-size: 12.5px;
+  padding: 8px 12px;
+  background: rgba(230, 168, 23, 0.1);
+  border-left: 3px solid var(--gold-primary);
+  border-radius: 6px;
+  color: #ffe082;
+  line-height: 1.5;
+}
+
+/* Shloka Modal Actions - Exactly matching Image 3 layout with guaranteed full-width fitting */
+.gita-shloka-actions-bar {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 10px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 1.25rem !important;
+  align-items: stretch !important;
+}
+
+.gita-shloka-actions-bar .gita-btn-action {
+  min-height: 52px !important;
+  padding: 8px 6px !important;
+  border-radius: 12px !important;
+  font-family: var(--font-body) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  cursor: pointer !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+}
+
+.gita-shloka-actions-bar .btn-stack-txt {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  line-height: 1.15 !important;
+  text-align: left !important;
+}
+
+.gita-shloka-actions-bar .btn-line-1 {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.gita-shloka-actions-bar .btn-line-2 {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.4px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.gita-shloka-actions-bar .btn-icon {
+  font-size: 18px !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+}
+
+/* 1. Listen Audio */
+.gita-shloka-actions-bar .gita-btn-audio {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1.5px solid rgba(230, 168, 23, 0.4) !important;
+  color: #ffeaa7 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gita-shloka-actions-bar .gita-btn-audio:hover {
+  background: rgba(230, 168, 23, 0.2) !important;
+  border-color: #ffd043 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 2. Read in Chapter */
+.gita-shloka-actions-bar .gita-btn-read {
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.22) 0%, rgba(20, 16, 32, 0.95) 100%) !important;
+  border: 1.5px solid #d4a017 !important;
+  color: #ffeaa7 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(230, 168, 23, 0.15) !important;
+}
+
+.gita-shloka-actions-bar .gita-btn-read:hover {
+  background: linear-gradient(135deg, rgba(230, 168, 23, 0.35) 0%, rgba(30, 24, 48, 0.98) 100%) !important;
+  border-color: #ffe37d !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 22px rgba(230, 168, 23, 0.35) !important;
+}
+
+/* 3. Ask Gita AI */
+.gita-shloka-actions-bar .gita-btn-ai {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1.5px solid rgba(230, 168, 23, 0.4) !important;
+  color: #ffeaa7 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gita-shloka-actions-bar .gita-btn-ai:hover {
+  background: rgba(230, 168, 23, 0.2) !important;
+  border-color: #ffd043 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+/* 4. Copy Shloka */
+.gita-shloka-actions-bar .gita-btn-copy {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1.5px solid rgba(230, 168, 23, 0.4) !important;
+  color: #ffeaa7 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gita-shloka-actions-bar .gita-btn-copy:hover {
+  background: rgba(230, 168, 23, 0.22) !important;
+  border-color: #ffd043 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+@media (max-width: 600px) {
+  .gita-shloka-modal-overlay {
+    padding: 12px 10px !important;
+    align-items: center !important;
+    overflow-y: auto !important;
+  }
+  .gita-shloka-modal-card {
+    max-height: 90dvh !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 1.25rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px)) 1rem !important;
+    border-radius: 18px !important;
+  }
+  .gita-shloka-modal-close {
+    top: 12px !important;
+    right: 12px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+  }
+  .gita-shloka-actions-bar {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .gita-shloka-actions-bar .gita-btn-action {
+    min-height: 48px !important;
+    padding: 8px 6px !important;
+    gap: 6px !important;
+  }
+  /* Place Copy Shloka side-by-side with Ask Gita AI */
+  .gita-shloka-actions-bar .gita-btn-copy {
+    grid-column: auto !important;
+    min-height: 48px !important;
+  }
+  .gita-shloka-actions-bar .btn-line-1 {
+    font-size: 10px !important;
+    letter-spacing: 0.4px !important;
+  }
+  .gita-shloka-actions-bar .btn-line-2 {
+    font-size: 11px !important;
+    letter-spacing: 0.3px !important;
+  }
+  .gita-shloka-actions-bar .btn-icon {
+    font-size: 16px !important;
+  }
+}
+
+/* ==========================================================================
+   6. AUTO-SCROLL VERSE HIGHLIGHTING (FOR CHAPTER PAGES)
+   ========================================================================== */
+.gita-verse-highlight-target {
+  animation: verseGoldenPulse 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+@keyframes verseGoldenPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(230, 168, 23, 0);
+    transform: scale(1);
+  }
+  25% {
+    box-shadow: 0 0 45px rgba(230, 168, 23, 0.95), 0 0 15px #ffd700, inset 0 0 20px rgba(252, 224, 128, 0.5);
+    border-color: #ffd700 !important;
+    transform: scale(1.02);
+  }
+  75% {
+    box-shadow: 0 0 25px rgba(230, 168, 23, 0.6);
+    border-color: var(--gold-primary) !important;
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(230, 168, 23, 0.35);
+    transform: scale(1);
+  }
+}
+
+.gita-verse-p-highlight {
+  animation: versePTextPulse 2.8s ease-in-out forwards;
+}
+
+@keyframes versePTextPulse {
+  0% { color: inherit; }
+  25% { color: #ffffff; text-shadow: 0 0 10px rgba(252, 224, 128, 0.6); }
+  100% { color: inherit; }
+}
+
+/* Toast Notifications */
+.gita-nav-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30px);
+  background: rgba(18, 14, 28, 0.95);
+  border: 1.5px solid var(--gold-primary);
+  border-radius: 999px;
+  padding: 10px 22px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(230, 168, 23, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gita-nav-toast.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}

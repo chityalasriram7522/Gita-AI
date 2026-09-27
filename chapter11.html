@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Viśhwarūp Darśhan Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu11.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu11.html'"><a href="telugu11.html">తెలుగు</a></label>
+              </div>
              <p>To nurture and intensify Arjun’s devotion, Shree Krishna had described His divine vibhūtis (opulence) in the previous chapter. Towards the end, He had mentioned that all the beauty, glory, and power is just a spark of His immeasurable splendor. Hearing this, Arjun became curious.
 
 In this chapter, he requests the Lord to show him His viśhwarūp, or the infinite cosmic form. Shree Krishna grants Arjun divine vision to see His infinite-form that comprises all the universes. Arjun sees the entire creation in the body of the God of gods with unlimited arms, faces, and stomachs. It has no beginning or end and extends immeasurably in all directions. His radiance is similar to a thousand suns blazing together in the sky. The sight dazzles Arjun, and his hair stands on end. He witnesses the three worlds trembling with fear of God’s laws and the celestial gods taking His shelter. He can see several sages offering prayers and singing hymns exalting God. Then Arjun sees the Kauravas, along with their allies, rushing into the mouth of this formidable form, who look like moths rushing with great speed toward the fire to perish.<br><br>
@@ -125,9 +124,13 @@ Shree Krishna then manifests into His four-armed form, carrying a mace, disc, co
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 11.55</h5>
                 <p>Those who perform all their duties for My sake, who depend upon Me and are devoted to Me, who are free from attachment, and are without malice toward all beings, such devotees certainly come to Me.</p><br>     
                 <div class="footer">
-                <a href="chapter10.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter12.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 12</button></a>
+                <a href="chapter10.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter12.html"><button class="btn-primary">Enter Into Chapter 12</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

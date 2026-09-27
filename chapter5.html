@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -10,10 +10,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Karm Sanyās Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu5.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu5.html'"><a href="telugu5.html">తెలుగు</a></label>
+              </div>
              <p>In this chapter, Shree Krishna compares karm sanyās yog (the path of renunciation of actions) with karm yog (the path of work in devotion). He says: we can choose either of the two paths, as both lead to the same destination. However, he explains that the renunciation of actions is rather challenging and can only be performed flawlessly by those whose minds are adequately pure. Purification of the mind can be achieved only by working in devotion. Therefore, karm yog is a more appropriate path for the majority of humankind.<br><br>
 
 The karm yogis with a purified intellect perform their worldly duties without any attachment to its fruit. They dedicate all their works and its results to God. Just as a lotus leaf that floats on water does not get wet, the karm yogis also remain unaffected by sin. They are aware that the soul resides within the body that is like a city with nine gates. Therefore, they do not consider themselves to be the doer nor the enjoyer of their actions. Endowed with the vision of equality, they look equally upon a Brahmin, a cow, an elephant, a dog, and a dog-eater. Seated in the Absolute Truth, such truly learned people develop flawless qualities similar to God. The ignorant worldly people do not realize that the pleasures they strive to relish from their sense objects are the very source of their misery. However, the karm yogis do not get any joy from such worldly pleasures. Instead, they enjoy the bliss of God, who resides inside them.<br><br>
@@ -80,9 +79,13 @@ Lord Shree Krishna then describes karm sanyās yog or the path of renunciation. 
    
 
                         <div class="footer">
-                   <a href="chapter4.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter6.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 6</button></a>
+                   <a href="chapter4.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter6.html"><button class="btn-primary">Enter Into Chapter 6</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -10,10 +10,9 @@
       <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Sānkhya Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu2.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu2.html'"><a href="telugu2.html">తెలుగు</a></label>
+              </div>
              <p>In this chapter, Arjun reiterates to Shree Krishna that he is unable to cope with his current situation, where he has to kill his elders and teachers. He refuses to take part in such a battle and requests Shree Krishna to be his spiritual teacher and guide him on the proper path of action. Then the Supreme Lord starts imparting divine knowledge to Arjun. He begins with the immortal-nature of the soul, which is eternal and imperishable. Death only destroys the physical body, but the soul continues its journey.  Just as a person discards his old clothes and adorns new ones, the soul keeps changing bodies from one lifetime to another.<br><br>
 
 The Lord then reminds Arjun that his social responsibility as a warrior is to fight for upholding righteousness. He explains that performing one’s social duty is a virtuous act that can take him to the celestial abodes, while dereliction only leads to infamy and humiliation.<br><br>
@@ -165,9 +164,13 @@ Arjun is curious to know more about those who are situated in divine consciousne
                 <p>O Parth, such is the state of an enlightened soul that having attained it, one is never again deluded. Being established in this consciousness even at the hour of death, one is liberated from the cycle of life and death and reaches the Supreme Abode of God.</p><br>                                                          
                  
                 <div class="footer"> 
-                <a href="chapter1.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter3.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 3</button></a>
+                <a href="chapter1.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter3.html"><button class="btn-primary">Enter Into Chapter 3</button></a>
             </div>
             </div> 
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

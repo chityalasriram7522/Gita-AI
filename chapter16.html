@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Daivāsura Sampad Vibhāg Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu16.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu16.html'"><a href="telugu16.html">తెలుగు</a></label>
+              </div>
              <p>This chapter expounds on the two kinds of human nature—the saintly and the demoniac. Shree Krishna explains that the saintly-nature develops in humans by cultivating the modes of goodness, by following the instructions given in the scriptures, and purifying the mind with spiritual practices. Such behavior attracts daivī sampatti or godlike qualities, eventually leading to God-realization. Contrary to this, the demoniac-nature develops by associating with modes of passion and ignorance and materially focused lifestyles that breed unwholesome traits in human personality. This leads the soul finally to a hell-like existence.<br><br>
 
 Shree Krishna enumerates the saintly virtues of those endowed with a divine nature and then describes the demoniac qualities that should be shunned consciously. Else, these will drag the soul further into ignorance and samsara or the cycle of life and death. In the end, Shree Krishna declares that the knowledge of the scriptures helps in overcoming ignorance and passion. They also guide us to make the right choices in life. Therefore, we must understand their teachings and injunctions and accordingly perform our actions in this world.<br><br></p>
@@ -60,9 +59,13 @@ Shree Krishna enumerates the saintly virtues of those endowed with a divine natu
                
                        
                            <div class="footer">
-                   <a href="chapter16.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter17.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 17</button></a>
+                   <a href="chapter16.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter17.html"><button class="btn-primary">Enter Into Chapter 17</button></a>
             </div> 
             </div>   
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

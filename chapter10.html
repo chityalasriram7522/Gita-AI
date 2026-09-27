@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Vibhūti Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu10.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu10.html'"><a href="telugu10.html">తెలుగు</a></label>
+              </div>
              <p>The previous chapter revealed the science of bhakti or loving devotion of God. In this chapter, Shree Krishna desires to increase Arjun’s bhakti by describing His infinite glories and opulence. The verses are not only pleasing to read but also enchanting to hear. He helps Arjun to meditate on God by reflecting upon His magnificence.<br><br>
 
 Lord Krishna reveals that He is the source of all that exists. It is from His mind, the seven great sages, the four great saints, and the fourteen Manus were born. All the people of this world then descended from them. The various exceptional qualities in humans also arise from Him. Those devotees who know this engage in His devotion with great faith. They derive immense satisfaction by conversing about His glories and also help enlightening others about them. God dwells in the hearts of such devotees whose mind is always united in Him. He then bestows upon them His divine knowledge, through which they can attain God-realization.<br><br>
@@ -103,9 +102,13 @@ The rest of the chapter describes the personalities, objects, and activities tha
                
                       
                    <div class="footer">
-                   <a href="chapter9.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter11.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 11</button></a>
+                   <a href="chapter9.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter11.html"><button class="btn-primary">Enter Into Chapter 11</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

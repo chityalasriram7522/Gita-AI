@@ -2,30 +2,508 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Bhagavad Gita • The Song of God</title>
     <link rel="stylesheet" href="index.css">
- <style>
-
- </style>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e6a817">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(reg => reg.update()).catch(() => {});
+        });
+      }
+    </script>
 </head>
-<body>
-    <fieldset id="firstfield">
-        <marquee loop behavior="" direction="left">
-            <p  id="dialoge">यदा यदा  धर्मस्य ग्लानिर्भवति भारत। अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्।। परित्राणाय साधूनां विनाशाय च दुष्कृताम्। धर्मसंस्थापनार्थाय सम्भवामि  युगे युगे।।हि</p>
-        </marquee>
-        <header>
-        <div class="header1">
-<div class="logo1">
-</div>
-<div class="text1">
-        <!-- <p>Bhagavad Gita</p> -->
-    </div>
+<body class="entry-body">
+    <!-- Interactive Cosmic Canvas with Sacred Symbols: ॐ, 卐, ✦, ✧ & Sacred Lotus 🪷 -->
+    <canvas id="cosmicCanvas"></canvas>
+
+    <!-- Minimalist Bottom-Right Sacred Audio Toggle Button -->
+    <div class="sacred-audio-fab" id="audioToggleFab" role="button" tabindex="0" title="Play / Replay Vishwaroopam" aria-label="Toggle Video Song">
+        <div class="fab-disc" id="chakraDisc">
+            <span class="om-symbol" id="fabSymbol">ॐ</span>
         </div>
-    </header>
-    <div class="enter">
-       <a href="index.html"> <button type="submit">Enter Now</button></a>
+        <div class="fab-waves" id="soundWaves">
+            <span class="wave-bar wb1"></span>
+            <span class="wave-bar wb2"></span>
+            <span class="wave-bar wb3"></span>
+        </div>
     </div>
-    </fieldset>
+
+    <main id="firstfield">
+        <!-- Seamless Continuous Divine Shloka Banner -->
+        <div class="shloka-banner">
+            <div class="shloka-track">
+                <span class="shloka-text">यदा यदा हि धर्मस्य ग्लानिर्भवति भारत । अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥ परित्राणाय साधूनां विनाशाय च दुष्कृताम् । धर्मसंस्थापनार्थाय सम्भवामि युगे युगे ॥</span>
+                <span class="shloka-divider">✦</span>
+                <span class="shloka-text">यदा यदा हि धर्मस्य ग्लानिर्भवति भारत । अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥ परित्राणाय साधूनां विनाशाय च दुष्कृताम् । धर्मसंस्थापनार्थाय सम्भवामि युगे युगे ॥</span>
+                <span class="shloka-divider">✦</span>
+            </div>
+        </div>
+
+        <!-- Grand 4K Vishwaroopam Cosmic Stage (Video Sequence -> Smooth 4K Image Climax Transition) -->
+        <section class="hero-cosmic-stage" id="heroWrapper">
+            <!-- Pulsing Golden & Celestial Ambient Aura -->
+            <div class="cosmic-backlight-aura"></div>
+            
+            <!-- Video & 4K Final Image Stage -->
+            <div class="hero-video-wrap" id="heroCard">
+                <video id="entryHeroVideo" src="Untitled video - Made with Clipchamp (1).mp4" poster="vishwaroopam_4k_final.png" playsinline preload="auto"></video>
+                <!-- Pristine 4K Final Image (Instant switch, no transition animation) -->
+                <img id="entryFinalImage" class="hero-final-image" src="vishwaroopam_4k_final.png" alt="Ananta Vishwaroopam 4K Final" />
+                
+                <!-- Multi-Layer Vignette Melt Overlays -->
+                <div class="vignette-melt-radial"></div>
+                <div class="vignette-melt-vertical"></div>
+                <div class="card-glare" id="cardGlare"></div>
+            </div>
+
+            <!-- Grand Sacred Typography Floating in Deep Celestial Space -->
+            <div class="hero-divine-text" id="divineTypography">
+                <div class="divine-badge">✨ ANANTA VISHWAROOPAM ✨</div>
+                <h1 class="divine-title">श्रीमद्भगवद्गीता</h1>
+                <p class="divine-subtitle">The Eternal Song of God • Timeless Wisdom of Life</p>
+            </div>
+        </section>
+
+        <div class="enter" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center;">
+            <a href="index.html" id="enterPortalLink">
+                <button type="button" class="btn-portal" id="enterBtn">
+                    <span class="btn-text">Enter Sanctuary</span>
+                    <span class="btn-glow-ring"></span>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <!-- Fullscreen Cinematic Video Transition Overlay (Responsive for Desktop & 9:16 Mobile) -->
+    <div id="videoTransitionOverlay" class="video-transition-overlay" aria-hidden="true">
+        <!-- Ambient Glowing Aura Backdrop -->
+        <div class="video-transition-ambient"></div>
+
+        <!-- Atmospheric Vignettes for Seamless Edge Melt -->
+        <div class="video-transition-vignette-top"></div>
+        <div class="video-transition-vignette-bottom"></div>
+
+        <!-- Floating Quick Controls (Fill/Fit & Enter Now) -->
+        <div class="video-transition-controls">
+            <button type="button" class="vt-ctrl-btn vt-fit-btn" id="vtToggleFit" title="Toggle Fullscreen Fill / Fit Frame" aria-label="Toggle Fullscreen Fill or Fit Frame">
+                <span class="vt-icon" id="vtFitIcon">⛶</span>
+                <span class="vt-text" id="vtFitText">Fit Frame</span>
+            </button>
+            <button type="button" class="vt-ctrl-btn vt-skip-btn" id="vtSkipBtn" title="Enter Sanctuary Now" aria-label="Enter Sanctuary Now">
+                <span class="vt-text">Enter Now</span>
+                <span class="vt-icon">✦</span>
+            </button>
+        </div>
+
+        <div class="video-transition-inner" id="videoTransitionInner">
+            <video id="transitionVideo" src="Video Project 4.mp4" poster="vishwaroopam_4k_final.png" playsinline preload="auto"></video>
+            
+            <!-- Bottom Golden Progress Track -->
+            <div class="video-transition-progress">
+                <div class="video-transition-progress-bar" id="transitionProgressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Golden Celestial Flash Overlay for Climax Navigation -->
+    <div id="indraFlash" class="indra-flash-overlay"></div>
+
+    <!-- Video Controller, 3D Physics & Sacred Lotus + Symbols Canvas -->
+    <script>
+        // =========================================================================
+        // 1. FULLSCREEN CINEMATIC FAST VIDEO TRANSITION (Video Project 4 - Responsive)
+        // =========================================================================
+        let isTransitioning = false;
+        const videoTransitionOverlay = document.getElementById('videoTransitionOverlay');
+        const videoTransitionInner = document.getElementById('videoTransitionInner');
+        const transitionVideo = document.getElementById('transitionVideo');
+        const transitionProgressFill = document.getElementById('transitionProgressFill');
+        const indraFlash = document.getElementById('indraFlash');
+        const vtToggleFit = document.getElementById('vtToggleFit');
+        const vtFitText = document.getElementById('vtFitText');
+        const vtFitIcon = document.getElementById('vtFitIcon');
+        const vtSkipBtn = document.getElementById('vtSkipBtn');
+
+        // Toggle Fit / Fill on Mobile & Vertical Screens
+        if (vtToggleFit && videoTransitionInner) {
+            vtToggleFit.addEventListener('click', (e) => {
+                e.stopPropagation();
+                videoTransitionInner.classList.toggle('mode-contain');
+                const isContained = videoTransitionInner.classList.contains('mode-contain');
+                if (vtFitText) vtFitText.textContent = isContained ? 'Fill Screen' : 'Fit Frame';
+                if (vtFitIcon) vtFitIcon.textContent = isContained ? '⤢' : '⛶';
+            });
+        }
+
+        // Tap on overlay background to skip / navigate smoothly
+        if (videoTransitionOverlay) {
+            videoTransitionOverlay.addEventListener('click', (e) => {
+                if (e.target.closest('.vt-ctrl-btn')) return;
+                if (isTransitioning) {
+                    finishTransitionAndNavigate(enterPortalLink ? enterPortalLink.getAttribute('href') || 'index.html' : 'index.html');
+                }
+            });
+        }
+
+        function triggerVideoTransition(targetHref = 'index.html') {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            // Pause hero background video if playing
+            if (video && !video.paused) {
+                video.pause();
+                setAudioState(false);
+            }
+
+            if (!videoTransitionOverlay || !transitionVideo) {
+                window.location.href = targetHref;
+                return;
+            }
+
+            videoTransitionOverlay.classList.add('active');
+            videoTransitionOverlay.setAttribute('aria-hidden', 'false');
+
+            transitionVideo.currentTime = 0;
+            transitionVideo.muted = false;
+            transitionVideo.volume = 1.0;
+            transitionVideo.playbackRate = 1.75; // Fast-paced cinematic tempo
+
+            const playPromise = transitionVideo.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    transitionVideo.playbackRate = 1.75;
+                }).catch(() => {
+                    transitionVideo.muted = true;
+                    transitionVideo.playbackRate = 1.75;
+                    transitionVideo.play().catch(() => {});
+                });
+            }
+
+            // Update Progress Bar
+            transitionVideo.ontimeupdate = () => {
+                if (transitionProgressFill && transitionVideo.duration) {
+                    const pct = (transitionVideo.currentTime / transitionVideo.duration) * 100;
+                    transitionProgressFill.style.width = `${pct}%`;
+                }
+            };
+
+            // On Video Climax / End -> Golden Celestial Flash & Navigate!
+            transitionVideo.onended = () => {
+                finishTransitionAndNavigate(targetHref);
+            };
+
+            // Safety timeout: prevents users from being stuck on mobile network latency or stall
+            setTimeout(() => {
+                if (isTransitioning && (!indraFlash || !indraFlash.classList.contains('flashing'))) {
+                    finishTransitionAndNavigate(targetHref);
+                }
+            }, 3800);
+        }
+
+        function finishTransitionAndNavigate(targetHref = 'index.html') {
+            if (indraFlash) {
+                indraFlash.classList.add('flashing');
+            }
+            setTimeout(() => {
+                window.location.href = targetHref;
+            }, 550);
+        }
+
+        // Skip Button Action
+        if (vtSkipBtn) {
+            vtSkipBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'index.html' : 'index.html';
+                finishTransitionAndNavigate(targetHref);
+            });
+        }
+
+        // Trigger on clicking Enter Sanctuary
+        const enterPortalLink = document.getElementById('enterPortalLink');
+        const enterBtn = document.getElementById('enterBtn');
+        if (enterPortalLink) {
+            enterPortalLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                triggerVideoTransition(enterPortalLink.getAttribute('href') || 'index.html');
+            });
+        }
+        if (enterBtn) {
+            enterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetHref = enterPortalLink ? enterPortalLink.getAttribute('href') || 'index.html' : 'index.html';
+                triggerVideoTransition(targetHref);
+            });
+        }
+
+        // =========================================================================
+        // 2. HERO VIDEO & FINAL IMAGE CONTROLLER
+        // =========================================================================
+        const video = document.getElementById('entryHeroVideo');
+        const finalImage = document.getElementById('entryFinalImage');
+        const divineTypography = document.getElementById('divineTypography');
+        const audioToggleFab = document.getElementById('audioToggleFab');
+        const chakraDisc = document.getElementById('chakraDisc');
+        const soundWaves = document.getElementById('soundWaves');
+
+        function setAudioState(isPlaying) {
+            if (isPlaying) {
+                if (chakraDisc) chakraDisc.classList.add('spinning');
+                if (soundWaves) soundWaves.classList.add('active');
+                if (audioToggleFab) audioToggleFab.classList.add('playing');
+            } else {
+                if (chakraDisc) chakraDisc.classList.remove('spinning');
+                if (soundWaves) soundWaves.classList.remove('active');
+                if (audioToggleFab) audioToggleFab.classList.remove('playing');
+            }
+        }
+
+        // Play video animation from start
+        function playVideoFromBeginning() {
+            if (!video) return;
+            if (finalImage) finalImage.classList.remove('active');
+            video.currentTime = 0;
+            video.muted = false;
+            video.volume = 1.0;
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    setAudioState(true);
+                }).catch(() => {
+                    video.muted = true;
+                    video.play().then(() => {
+                        unlockAudioOnPresence();
+                    }).catch(() => {});
+                });
+            }
+        }
+
+        let audioUnlocked = false;
+        function unlockAudioOnPresence() {
+            if (audioUnlocked || !video) return;
+
+            const activate = function() {
+                if (!audioUnlocked && video) {
+                    audioUnlocked = true;
+                    video.muted = false;
+                    video.volume = 1.0;
+                    video.play().then(() => {
+                        setAudioState(true);
+                    }).catch(() => {});
+                    cleanupTriggers();
+                }
+            };
+
+            function cleanupTriggers() {
+                ['mousemove', 'mouseenter', 'pointerdown', 'touchstart', 'touchend', 'scroll', 'keydown', 'click'].forEach(evt => {
+                    window.removeEventListener(evt, activate);
+                    document.removeEventListener(evt, activate);
+                });
+            }
+
+            ['mousemove', 'mouseenter', 'pointerdown', 'touchstart', 'touchend', 'scroll', 'keydown', 'click'].forEach(evt => {
+                window.addEventListener(evt, activate, { once: true, passive: true });
+                document.addEventListener(evt, activate, { once: true, passive: true });
+            });
+        }
+
+        if (video) {
+            video.addEventListener('ended', () => {
+                if (finalImage) {
+                    finalImage.classList.add('active');
+                }
+                setAudioState(false);
+            });
+
+            video.addEventListener('play', () => {
+                if (!video.muted && !finalImage.classList.contains('active')) {
+                    setAudioState(true);
+                }
+            });
+
+            video.addEventListener('pause', () => {
+                setAudioState(false);
+            });
+        }
+
+        function toggleOrReplaySequence() {
+            if (!video) return;
+            if (finalImage && finalImage.classList.contains('active')) {
+                playVideoFromBeginning();
+            } else if (video.paused || video.muted) {
+                video.muted = false;
+                video.volume = 1.0;
+                video.play();
+                setAudioState(true);
+            } else {
+                video.pause();
+                setAudioState(false);
+            }
+        }
+
+        if (audioToggleFab) {
+            audioToggleFab.addEventListener('click', toggleOrReplaySequence);
+            audioToggleFab.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleOrReplaySequence();
+                }
+            });
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', playVideoFromBeginning);
+        window.addEventListener('load', playVideoFromBeginning);
+        playVideoFromBeginning();
+
+        // =========================================================================
+        // 3. SEAMLESS 3D CELESTIAL PARALLAX PERSPECTIVE
+        // =========================================================================
+        const heroWrapper = document.getElementById('heroWrapper');
+        const heroCard = document.getElementById('heroCard');
+        const cardGlare = document.getElementById('cardGlare');
+
+        if (heroWrapper && heroCard) {
+            heroWrapper.addEventListener('mousemove', (e) => {
+                const rect = heroWrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -6;
+                const rotateY = ((x - centerX) / centerX) * 6;
+                
+                heroCard.style.transform = `translateX(-50%) perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                if (cardGlare) {
+                    const glareX = (x / rect.width) * 100;
+                    const glareY = (y / rect.height) * 100;
+                    cardGlare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 230, 150, 0.25) 0%, rgba(255, 255, 255, 0) 65%)`;
+                    cardGlare.style.opacity = '1';
+                }
+            });
+
+            heroWrapper.addEventListener('mouseleave', () => {
+                heroCard.style.transform = 'translateX(-50%) perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                if (cardGlare) cardGlare.style.opacity = '0';
+            });
+
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', (e) => {
+                    if (e.gamma !== null && e.beta !== null) {
+                        const tiltX = Math.min(Math.max(e.beta - 45, -20), 20) * -0.4;
+                        const tiltY = Math.min(Math.max(e.gamma, -20), 20) * 0.4;
+                        heroCard.style.transform = `translateX(-50%) perspective(1200px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+                    }
+                });
+            }
+        }
+
+        // =========================================================================
+        // 4. 60FPS CELESTIAL STARDUST CANVAS (ICONS REMOVED)
+        // =========================================================================
+        const canvas = document.getElementById('cosmicCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            let mouseSparkles = [];
+
+            function resizeCanvas() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            // Pure Celestial Stardust Particles
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+                reset() {
+                    this.x = Math.random() * width;
+                    this.y = height + Math.random() * 20;
+                    this.size = Math.random() * 2.2 + 0.8;
+                    this.speedY = Math.random() * 0.65 + 0.25;
+                    this.speedX = (Math.random() - 0.5) * 0.35;
+                    this.opacity = Math.random() * 0.6 + 0.2;
+                    this.fadeSpeed = Math.random() * 0.004 + 0.002;
+                    this.hue = Math.random() > 0.35 ? 45 : 35;
+                }
+                update() {
+                    this.y -= this.speedY;
+                    this.x += this.speedX;
+                    this.opacity -= this.fadeSpeed;
+                    if (this.y < -10 || this.opacity <= 0) {
+                        this.reset();
+                    }
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsla(${this.hue}, 95%, 65%, ${this.opacity})`;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = 'rgba(230, 168, 23, 0.7)';
+                    ctx.fill();
+                }
+            }
+
+            // Interactive Cursor Sparkles
+            window.addEventListener('mousemove', (e) => {
+                if (mouseSparkles.length < 25) {
+                    mouseSparkles.push({
+                        x: e.clientX,
+                        y: e.clientY,
+                        size: Math.random() * 2.5 + 1.2,
+                        opacity: 1,
+                        vx: (Math.random() - 0.5) * 1.5,
+                        vy: (Math.random() - 0.5) * 1.5 - 0.5
+                    });
+                }
+            });
+
+            // Initialize Stardust Particles
+            const particleCount = window.innerWidth < 768 ? 40 : 80;
+            for (let i = 0; i < particleCount; i++) {
+                const p = new Particle();
+                p.y = Math.random() * height;
+                particles.push(p);
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+
+                // 1. Draw Golden Stardust Particles
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+
+                // 2. Draw Cursor Sparkles
+                for (let i = mouseSparkles.length - 1; i >= 0; i--) {
+                    const sp = mouseSparkles[i];
+                    sp.x += sp.vx;
+                    sp.y += sp.vy;
+                    sp.opacity -= 0.03;
+                    if (sp.opacity <= 0) {
+                        mouseSparkles.splice(i, 1);
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(sp.x, sp.y, sp.size, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(255, 230, 130, ${sp.opacity})`;
+                        ctx.shadowBlur = 10;
+                        ctx.shadowColor = '#e6a817';
+                        ctx.fill();
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+    </script>
 </body>
 </html>

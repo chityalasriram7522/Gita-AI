@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -10,10 +10,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Akṣhar Brahma Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu8.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu8.html'"><a href="telugu8.html">తెలుగు</a></label>
+              </div>
 
              <p>In this chapter, Shree Krishna briefly describes several significant concepts and terms that the Upanishads expound in detail. He also explains what decides the destination of the soul after death. He says that if we remember God at the time of death, we can definitely attain Him. Therefore, alongside doing our daily works, we must always practice thinking of God. We can do this by thinking of His Qualities, Attributes, Virtues, etc. A persistent yogic meditation upon God by chanting His Names is also a good practice. Through exclusive devotion, when our mind is perfectly absorbed in Him, we will elevate from the material dimension to the spiritual realm.<br><br>
 
@@ -65,9 +64,13 @@ Shree Krishna then talks about the various abodes in the material realm and the 
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 8.28</h5>
                 <p>The yogis, who know this secret, gain merit far beyond the fruits of Vedic rituals, the study of the Vedas, performance of sacrifices, austerities, and charities. Such yogis reach the Supreme Abode.</p><br>
                   <div class="footer">
-                <a href="chapter7.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter9.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 9</button></a>
+                <a href="chapter7.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter9.html"><button class="btn-primary">Enter Into Chapter 9</button></a>
             </div>   
             </div> 
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

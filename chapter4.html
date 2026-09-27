@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -10,10 +10,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Jñāna Karm Sanyās Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu4.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu4.html'"><a href="telugu4.html">తెలుగు</a></label>
+              </div>
              <p>To strengthen Arjun’s faith in the knowledge He is imparting, Shree Krishna reveals its pristine origin in this chapter. He says, “Arjun, as you are my devotee and a dear friend, I am revealing this supreme science of yog to you. It is the same eternal science that I taught to the Sun God at the beginning of time. And in a continuous tradition, the same knowledge; was passed to the saintly kings.” Arjun wonders how someone who is almost his age could exist so many eons ago. He asks Shree Krishna how is it possible that you gave this knowledge to the Sun God and the others so many years back in time.
 
 Shree Krishna clarifies Arjun’s doubts and discloses the divine mystery of His descension. He says that although God is unborn and eternal, it is to establish dharma (the path of righteousness) that He descends on this earth by His Yogmaya power. His birth and activities are divine and cannot get tainted by material imperfections. Once a devotee knows this secret and engages in devotion with great faith, he attains God and does not take birth in this world again.
@@ -111,9 +110,13 @@ Even those who are considered the most immoral of all sinners can cross over thi
                
                        <div class="footer"> 
 
-                   <a href="chapter3.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter5.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 5</button></a>
+                   <a href="chapter3.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter5.html"><button class="btn-primary">Enter Into Chapter 5</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

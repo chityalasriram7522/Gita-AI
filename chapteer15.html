@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Rāja Vidyā Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu15.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu15.html'"><a href="telugu15.html">తెలుగు</a></label>
+              </div>
              <p>Shree Krishna had enlightened Arjun in the previous chapter that by transcending the effects of the three gunas (modes of material nature), one can achieve the divine goal. He also declared that engaging in exclusive devotion is the best means of transcending beyond these gunas.  Such devotion is practiced by detaching the mind from the world and attaching it to God alone. Therefore, it is essential to understand both. He has already explained the nature of God in the previous chapters. In this chapter, He explains the material world graphically—so that Arjun can understand its nature and develop detachment from it.<br><br>
 
 Shree Krishna compares the material world to an upside-down aśhvatth (sacred fig) tree. On the branches of this mysterious tree, the embodied souls wander up and down, from lifetime after lifetime. They are unable to comprehend its origin, age, expanse, or how it continues to grow. However, as God is the source of this tree, its roots face upwards toward the sky. Its leaves are the fruitive activities defined in the Vedas. The three gunas irrigate this tree, which creates the objects of the senses that are like buds on the tree branches. These buds sprout aerial roots that further propagate this aśhvatth tree over a large area.<br><br>   
@@ -64,9 +63,13 @@ Lord Krishna reveals that, by recognizing the glories of God that shine forth al
                 <p>I have shared this most secret principle of the Vedic scriptures with you, O sinless Arjun. By understanding this, a person becomes enlightened, and fulfills all that is to be accomplished</p><br>
    
                           <div class="footer">
-                   <a href="chapteer15.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter16.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 16</button></a>
+                   <a href="chapteer15.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter16.html"><button class="btn-primary">Enter Into Chapter 16</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

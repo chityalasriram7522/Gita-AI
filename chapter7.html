@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -10,10 +10,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Jñāna Vijñāna Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu7.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu7.html'"><a href="telugu7.html">తెలుగు</a></label>
+              </div>
              <p>This chapter begins with Shree Krishna describing the material and spiritual dimensions of God’s energies. He explains that similar to beads strung on a single thread, all these energies have originated from Him and rest in Him. The entire creation begins and dissolves into Him. Although it is very difficult to overcome His material energy Maya, those who surrender to Him can easily cross over it by His grace.<br><br>
 
 He then describes the four kinds of people who engage in His devotion and the other four who do not surrender to Him. He says that those devotees who worship Him in knowledge with their mind and intellect merged in Him, are dearest to Him. Yet, some are deluded by material desires and surrender to the celestial gods, who bestow upon them temporary material prosperity. However, these celestial gods also get their powers from the Supreme Lord. Therefore, the worthiest object of devotion is the Almighty God Himself.<br><br>
@@ -85,9 +84,13 @@ Shree Krishna further confirms that He is the ultimate truth and the highest aut
                 <p>Those who know Me as the governing principle of the adhibhūta (field of matter) and the adhidaiva (the celestial gods), and as adhiyajña (the Lord of all sacrificial performances), such enlightened souls are in full consciousness of Me even at the time of death.</p><br>
                  
                          <div class="footer">
-                   <a href="chapter6.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapte8.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 8</button></a>
+                   <a href="chapter6.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapte8.html"><button class="btn-primary">Enter Into Chapter 8</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

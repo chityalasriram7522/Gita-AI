@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Rāja Vidyā Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu9.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu9.html'"><a href="telugu9.html">తెలుగు</a></label>
+              </div>
              <p>In the two previous chapters, the Supreme Lord Shree Krishna declared that among all, bhakti is the highest, yet the simplest path of attaining Yog, or union with the Supreme. In this chapter, He reveals His supreme glories that inspire reverence, devotion, and awe. Although Shree Krishna stands in front of Arjun in His personal form, it should not be mistaken to possess human personality.<br><br>
 
 At the beginning of creation, the Supreme Lord creates innumerable life-forms with His material energy. And at dissolution, He absorbs them back into Himself, and in the next cycle of creation, He manifests them again. Similar to the mighty winds that blow everywhere yet always stay within the sky, all living beings’ dwell within God. However, He remains ever aloof and detached from all these activities as a neutral observer by His divine Yogmaya power.<br><br>
@@ -89,9 +88,13 @@ Shree Krishna asserts that He is impartial towards all creatures; He neither fav
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 9.34</h5>
                 <p>Always think of Me, be devoted to Me, worship Me, and offer obeisance to Me. Having dedicated your mind and body to Me, you will certainly come to Me.</p><br>
                   <div class="footer">
-                <a href="chapte8.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter10.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 10</button></a>
+                <a href="chapte8.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter10.html"><button class="btn-primary">Enter Into Chapter 10</button></a>
             </div>    
             </div>
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

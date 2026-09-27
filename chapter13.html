@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Kṣhetra Kṣhetrajña Vibhāg Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu13.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu13.html'"><a href="telugu13.html">తెలుగు</a></label>
+              </div>
              <p>Based on its content, the eighteen chapters of the Bhagavad Gita can be divided into three sections. The first six chapters describe Karm Yog or the path of duty.  The second set, from chapters seven to twelve, glorify the path of bhakti or loving devotion of God. They also describe the opulence of God as the divine nectar that nourishes devotion. The third set, starting from this chapter, expounds upon tattva jñāna or the of knowledge scriptural terms and principles. <br><br>
 
 In this chapter, Shree Krishna introduces two terms—kṣhetra (the field) and kṣhetrajña (knower of the field). In simple terms, the ‘field’ may be considered the body and the soul as the ‘knower of the field.’ However, the field is actually much more than just the physical body—it includes the mind, intellect, ego, and all other components of material energy that are part of our personality. In broader terms, except for the soul, who is the ‘knower of the field,’ all material aspects of our entire personality are considered—the ‘field’ of the body.<br><br>
@@ -87,9 +86,13 @@ After describing the Supreme Soul, the soul, and the material nature of the livi
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 13.35</h5>
                 <p>Those who perceive with the eyes of knowledge the difference between the body and the knower of the body, and the process of release from material nature, attain the supreme destination.</p><br>
                      <div class="footer">
-                   <a href="chapter12.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter14.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 14</button></a>
+                   <a href="chapter12.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter14.html"><button class="btn-primary">Enter Into Chapter 14</button></a>
             </div>    
             </div>
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

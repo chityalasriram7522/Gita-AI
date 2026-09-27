@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Rāja Vidyā Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu14.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu14.html'"><a href="telugu14.html">తెలుగు</a></label>
+              </div>
              <p>In the previous chapter, Shree Krishna explained the difference between the material body and the soul in detail. In this chapter, He explains the nature of His material energy, which is the source of the body and its elements. Thus, it is the origin of both mind and matter.<br><br>
 
 The material nature constitutes of three gunas (modes)—sattva (goodness), rajas (passion), and tamas (ignorance). Since the body, mind, and intellect are material in nature, they too possess these three modes, and a combination of these gunas forms the basis of one’s character. Peacefulness, morality, well-being, serenity, etc. are the virtues of those in the mode of goodness. Those driven by passion have endless desires and ambitions; they strive to satiate them and work towards worldly enhancement. However, those in the mode of ignorance; are gripped by laziness, excessive sleep, delusion, intoxication, and other vices. A spiritual seeker needs to deal with all these three immensely powerful forces of material nature. Once the soul is able to transcend above these three modes, it attains illumination.<br><br>
@@ -65,9 +64,13 @@ To answer Arjun’s query, Shree Krishna systematically elaborates on the qualit
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 14.27</h5>
                 <p>I am the basis of the formless Brahman, the immortal and imperishable, of eternal dharma, and of unending divine bliss.</p><br>
                    <div class="footer">
-                <a href="chapter13.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapteer15.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 15</button></a>
+                <a href="chapter13.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapteer15.html"><button class="btn-primary">Enter Into Chapter 15</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

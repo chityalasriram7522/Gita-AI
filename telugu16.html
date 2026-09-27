@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">దైవాసుర సంపద్విభాగ యోగము</p>
               <div class="anchor">
-               
-                <input style="accent-color:goldenrod;" type="radio" name="telugu" checked><a href="#">తెలుగు</a>
-                 <input style="accent-color:goldenrod;" type="radio" name="telugu"><a href="chapter16.html">English</a>
-                </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='#'"><a href="#">తెలుగు</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='chapter16.html'"><a href="chapter16.html">English</a></label>
+              </div>
              <p>ఈ అధ్యాయములో, శ్రీ కృష్ణుడు, మనుష్యులలో ఉండే రెండు రకాల స్వభావాలను వివరిస్తున్నాడు - దైవీ గుణాలు మరియు ఆసురీ గుణాలు. శాస్త్ర ఉపదేశాలను/నియమాలను పాటించటం, సత్త్వ గుణమును పెంపొందించుకోవటం, మరియు మనస్సుని ఆధ్యాత్మిక సాధనచే శుద్ధి చేసుకోవటం ద్వారా, దైవీ గుణాలు వృద్ధి చెందుతాయి. అది దైవీ సంపత్తి (దేవుని వంటి గుణములు) పెంచుకోవటానికి దోహదపడుతుంది, చిట్ట చివరగా అది భగవత్-ప్రాప్తిని కలిగిస్తుంది. దీనికి విరుద్ధంగా, ఆసురీ ప్రవృత్తి కూడా ఉంది, రజో గుణము, తమో గుణములతో అనుసంధానం వలన మరియు భౌతిక ప్రాపంచిక దృక్పథాన్ని అవలంబించటం వలన అది పెరుగుతుంది. అది మనిషి యొక్క వ్యక్తిత్వములో అపవిత్ర నడవడికను కలిగిస్తుంది, మరియు అంతిమంగా ఆత్మను నరకం వంటి స్థితిలోకి నెట్టివేస్తుంది.<br><br>
 ఈ అధ్యాయం, దివ్య స్వభావము కలిగి ఉన్న వారి యొక్క దైవీ గుణములను వివరించటంతో ప్రారంభమవుతుంది. ఆ తదుపరి, జాగురూకతతో విడిచిపెట్టవలసిన ఆసురీ (రాక్షస) గుణములను వివరిస్తుంది ఎందుకంటే, అవి మన ఆత్మను మరింత అజ్ఞానములోకి మరియు జనన-మరణ సంసారములోనికి నెట్టివేస్తాయి. శ్రీ కృష్ణుడు ఈ అధ్యాయాన్ని ముగిస్తూ - మన ఏం చేయాలి ఏం చేయకూడదు అన్న విషయం పై శాస్త్రములు చెప్పినవే ప్రమాణములు - అని అంటున్నాడు. శాస్త్ర ఉపదేశాలను మనం అర్థం చేసుకోవాలి మరియు ఆ తరువాతే, ఆ చెప్పబడిన విధంగా ఈ ప్రపంచంలో ప్రవర్తించాలి.<br><br></p>
              <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 16.1-16.3</h5>
@@ -56,9 +55,13 @@
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 16.24</h5>
                 <p>కాబట్టి, ఏది చేయాలి ఏది చేయకూడదు అన్న విషయంలో శాస్త్రములనే ప్రమాణముగా తీసుకొనుము. శాస్త్ర విధివిధానాలు, ఉపదేశాలను తెలుసుకొనుము మరియు ఆవిధంగానే ఈ జగత్తులో ప్రవర్తించుము.</p><br>
                      <div class="footer">
-                   <a href="telugu15.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">మునుపటి అధ్యాయం</button></a>
- <a href="telugu17.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">16వ అధ్యాయము</button></a>
+                   <a href="telugu15.html"><button id="back" class="btn-secondary">మునుపటి అధ్యాయం</button></a>
+ <a href="telugu17.html"><button class="btn-primary">16వ అధ్యాయము</button></a>
             </div>    
             </div>
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

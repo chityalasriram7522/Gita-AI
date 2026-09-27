@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Mokṣha Sanyās Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu18.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu18.html'"><a href="telugu18.html">తెలుగు</a></label>
+              </div>
              <p>This last chapter of the Bhagavad Gita is the longest as it explicates many subjects. It starts with Arjun requesting Shree Krishna to educate him on renunciation and explain the difference between these two Sanskrit words; sanyās (renunciation of actions) and tyāg (renunciation of desires), as both come from the root words that mean “to abandon.” A sanyāsī (monk) is one who has renounced family and social life to practice sādhanā (spiritual discipline). And a tyāgī is one who acts without selfish desires for the rewards of his actions. However, Shree Krishna recommends another type of renunciation. He declares that one should never renounce the prescribed acts of duty, sacrifice, charity, penance, etc., as these aid in the purification of even the wisest souls. One should undertake actions only as a matter of duty without any attachment to their fruits.<br><br>
 
 Shree Krishna gives Arjun a detailed analysis of the five factors that contribute to action, the three constituents of action, and the three factors that inspire action. He describes each of these factors in relation to the three gunas. He declares that those who see themselves as the only cause of their works are ignorant. However, due to their purified intellect, the enlightened do not perceive themselves to be the doer nor the enjoyer of their actions. They are ever detached from the results, thus, free from the karmic reactions of their actions.  Shree Krishna then explains the reasons for the difference in the motives and actions of individuals. He describes the kinds of knowledge, types of actions, and categories of performers based on the three gunas or modes of nature. Then, He gives a similar analysis for the intellect, resolve or steadfast will, and happiness.<br><br>
@@ -176,9 +175,13 @@ Enlightened with the divine knowledge, Arjun tells Shree Krishna that all his do
                 <p>Wherever there is Shree Krishna, the Lord of all Yog, and wherever there is Arjun, the supreme archer, there will also certainly be unending opulence, victory, prosperity, and righteousness. Of this, I am certain.></p><br>
                  <video style="margin-top: -100px;"  autoplay loop muted src="Untitled video - Made with Clipchamp (1).mp4"></video>
                  <div class="footer">
-                 <a href="chapter11.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="index.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Completed</button></a>
+                 <a href="chapter11.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="index.html"><button class="btn-primary">Completed</button></a>
             </div>   
             </div> 
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

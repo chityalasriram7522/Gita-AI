@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=2026_rev5">
 </head>
 <body>
     <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">
 భగవద్గీతలో ముఖ్యమైన పదాలు:</p>
              <div class="anchor">
-               
-                <input style="accent-color:goldenrod;" type="radio" name="telugu" checked><a href="#">తెలుగు</a>
-                 <input style="accent-color:goldenrod;" type="radio" name="telugu"><a href="page1.html">English</a>
-                </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='#'"><a href="#">తెలుగు</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+              </div>
                 <p style="margin: 5px;">
 భగవద్గీత యొక్క మొత్తం సారాంశం ఇక్కడ పేర్కొనటం ఈ ఉపోద్ఘాతం యొక్క పరిధిలో లేనిది. ఒక కారణం ఏమిటంటే, అలాచేస్తే మీరే స్వయంగా చదివి దానిని తెలుసుకునే అవకాశాన్ని కోల్పోతారు. అంతేకాక, శ్రీ కృష్ణ భగవానుడు చెప్పినది అంతా ఇక్కడ సారాశంగా చెప్పటం సాధ్యం కాదు. అయినా, చదివేవారికి ఆయా విషయాలు సునాయాసంగా అవగతం చేసుకోవటానికి సహాయకారిగా, భగవద్గీత లో మరియు మిగతా వైదిక గ్రంధాల్లో తరచుగా కనిపించే కొన్ని పదాలు ఇక్కడ వివరించబడ్డాయి.<br><br>
 
@@ -87,10 +86,22 @@
 
 <b style="color:goldenrod;">కర్మ యోగము (కర్మ మార్గము): </b>కర్మ అంటే వ్యక్తి చేసే ప్రాపంచిక విధులు మరియు బాధ్యతలు, అదే సమయంలో యోగం అంటే భగవంతునితో ఏకమవ్వటం. కాబట్టి, ప్రపంచంలో విహిత కర్మలు చేస్తూ కూడా భగవంతునితో మనస్సుని ఐక్యం చేయటమే కర్మ యోగము. అన్ని పనులు భగవత్ ప్రీతి కోసం మాత్రమే అన్న ధృడ సంకల్పాన్ని బుద్ధి యందు పెంపొందించుకోవటం ద్వారా, మనస్సుని కర్మ ఫలాలపై అనాసక్తితో ఉంచటం దీనికి అవసరం. అందుకే గీత, ఒక్కోసారి దీనిని బుద్ధి యోగము అంటుంది. చాలా మంది జనులు గృహస్తులుగా ఉంటూ, ప్రాపంచిక కర్తవ్యాలను నిర్వర్తిస్తూనే, ఆధ్యాత్మికతను అభ్యాసం చేస్తారు కాబట్టి, వారికి, వేరే ఇతర ఎంచుకున్న యోగ విధానం తో పాటుగా కర్మ యోగము అనేది అవసరం అవుతుంది.<br><br>
                 </p>
+
+                <!-- ===================================================================
+                     SACRED CHAPTERS & DIVINE VERSE NAVIGATOR (DIVYA SHLOKA DARSHINI)
+                     =================================================================== -->
+                <section class="gita-nav-section-wrap" id="gitaQuickJumpSection">
+                    <!-- Injected & rendered dynamically by gita-navigator.js -->
+                </section>
+
                 <div class="footer">
-    <a href="index.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">తిరిగి వెళ్ళు</button></a>
-                <a href="telugu1.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:400px;margin-bottom: 10px;">1వ అధ్యాయము:</button></a>
+                    <a href="index.html"><button id="back" class="btn-secondary">తిరిగి వెళ్ళు</button></a>
+                    <a href="telugu1.html"><button class="btn-primary">1వ అధ్యాయము:</button></a>
+                </div>
  </div>
- </div>
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026_rev4"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js?v=2026_rev4"></script>
 </body>
 </html>

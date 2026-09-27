@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Bhakti Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu12.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu12.html'"><a href="telugu12.html">తెలుగు</a></label>
+              </div>
              <p>This chapter begins with Arjun asking Shree Krishna about the two types of yogis and among them whom does He consider perfect. Those who worship the formless Brahman or those who are devoted to the personal-form of God. Shree Krishna declares that devotees can attain Him by both paths. However, He considers those who worship His personal-form as the best yogis. In this small chapter of 20 verses, Shree Krishna emphasizes that the path of devotion is the highest among all types of spiritual practices.<br><br>
 
 He then explains to Arjun that it is rather difficult to meditate upon the unmanifest aspect of God. Hence, the path of worshiping the formless is full of tribulations for the embodied souls. On the other hand, the devotees who worship His personal-form dedicate all their actions to Him. And with their mind and intellect consciously surrendered, they attain Him. Such souls swiftly get liberated from the cycle of life and death. Therefore, Shree Krishna asks Arjun to give up all doubts and surrender his intellect with his mind fixed in loving devotion to God alone.<br><br>
@@ -55,9 +54,13 @@ Shree Krishna further explains that the cultivation of knowledge is higher than 
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 12.20</h5>
                 <p>Those who honor this nectar of wisdom declared here, have faith in Me, and are devoted and intent on Me as the supreme goal, they are exceedingly dear to Me.</p><br>  
                        <div class="footer">
-                   <a href="chapter11.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter13.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 13</button></a>
+                   <a href="chapter11.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter13.html"><button class="btn-primary">Enter Into Chapter 13</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

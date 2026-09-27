@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -11,10 +11,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">అక్షర బ్రహ్మ యోగము</p>
               <div class="anchor">
-               
-                <input style="accent-color:goldenrod;" type="radio" name="telugu" checked><a href="#">తెలుగు</a>
-                 <input style="accent-color:goldenrod;" type="radio" name="telugu"><a href="chapte8.html">English</a>
-                </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='#'"><a href="#">తెలుగు</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='chapte8.html'"><a href="chapte8.html">English</a></label>
+              </div>
              <p>ఉపనిషత్తులలో విస్తారంగా చెప్పబడిన చాలా పదాలని మరియు విషయాలని ఈ అధ్యాయం క్లుప్తంగా వివరిస్తుంది. ఇది మరణం తరువాత ఆత్మ యొక్క గమ్యాన్ని నిర్ణయించే కారకాలను కూడా వివరిస్తుంది. మనం మరణ సమయంలో భగవంతుడిని స్మరించగలిగితే, ఆయనను ఖచ్చితంగా పొందగలము. కాబట్టి, రోజువారి పనులు చేస్తూనే, ఆయనను అన్ని సమయాల్లో స్మరిస్తూనే ఉండాలి. ఆ స్వామి యొక్క గుణములు, లక్షణములు, మరియు మహిమలు గుర్తు చేసుకుంటూ ఆయనను స్మరించవచ్చు. దృఢ సంకల్పముతో యోగ ధ్యానములో మనస్సుని నామ సంకీర్తన ద్వారా ఆయనపైనే కేంద్రీకరించాలి. మన మనస్సుని సంపూర్ణంగా అనన్య భక్తితో ఆయన పైనే నిమగ్నం చేసినప్పుడు మనము ఈ భౌతిక జగత్తుకి అతీతంగా ఆధ్యాత్మిక స్థాయిలోనికి వెళతాము.<br><br>
     ఆ తర్వాత, ఈ అధ్యాయం, భౌతిక జగత్తు లోని రకరకాల లోకాల గురించి ప్రస్తావిస్తుంది. సృష్టి క్రమంలో, ఈ లోకాలు మరియు వాటిలో అసంఖ్యాకమైన జీవ రాశులు ఎలా వచ్చాయో, మరలా ప్రళయ కాలంలో ఎలా తిరిగి లయం అవుతాయో, ఈ అధ్యాయం చెపుతుంది. కానీ, ఈ యొక్క వ్యక్త, అవ్యక్త సృష్టికి అతీతంగా, భగవంతుని దివ్య ధామము ఉంటుంది. ప్రకాశవంతమైన మార్గాన్ని అనుసరించినవారు, అంతిమంగా దివ్య ధామాన్ని చేరుకుంటారు, మరియు ఈ మృత్యు లోకానికి తిరిగిరారు; చీకటి మార్గాన్ని అనుసరించేవారు, ఈ జన్మ, వ్యాధి, వృద్దాప్యం, మరియు మృత్యువు యొక్క అంతం లేని చక్రంలో పడి తిరుగుతూనే ఉంటారు.<br><br></p>
              <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 8.1-8-2</h5>
@@ -64,9 +63,13 @@
                 <h5 style="color: goldenrod;background-color: antiquewhite;font-size: 20px;text-align: center;">Bhagavad Gita 8.28</h5>
                 <p>ఈ రహస్యం తెలిసిన యోగులు - వైదిక కర్మ కాండల ఆచరణ, వేదాధ్యయనము, యజ్ఞములను ఆచరించుట, తపస్సు చేయుట మరియు దానధర్మాలు చేయుట - వీటన్నిటి పుణ్య ఫలముల కంటేనూ ఎక్కువ ఫలమును పొందుతారు. ఇటువంటి యోగులు పరమ పదమును పొందెదరు.</p><br>
                    <div class="footer">
-                <a href="telugu7.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">మునుపటి అధ్యాయం</button></a>
- <a href="telugu9.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">9వ అధ్యాయము</button></a>
+                <a href="telugu7.html"><button id="back" class="btn-secondary">మునుపటి అధ్యాయం</button></a>
+ <a href="telugu9.html"><button class="btn-primary">9వ అధ్యాయము</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

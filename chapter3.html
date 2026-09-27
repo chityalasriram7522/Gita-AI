@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -10,10 +10,9 @@
      <div class="image1">
              <p style="font-size: 20px;color:goldenrod;margin: 10px;">Karm Yog</p>
                <div class="anchor">
-               
-                  <input style="accent-color:goldenrod;" type="radio" name="english" checked><a href="page1.html">English</a>
-                  <input style="accent-color:goldenrod;" type="radio" name="english"><a href="telugu3.html">తెలుగు</a>
-                 </div>
+                  <label class="lang-pill"><input type="radio" name="lang_select" checked onclick="window.location.href='page1.html'"><a href="page1.html">English</a></label>
+                  <label class="lang-pill"><input type="radio" name="lang_select" onclick="window.location.href='telugu3.html'"><a href="telugu3.html">తెలుగు</a></label>
+              </div>
              <p>Shree Krishna expounds on karm yog or the yog of action in this chapter. He explains to Arjun that nobody can remain without action, even for a moment. Bound by their inherent modes of nature, all beings are always engaged in some work. Superior are those who practice karm yog and continue to work diligently to fulfill their responsibilities externally, but internally they are unattached to them. However, the hypocrites display external renunciation but internally dwell upon the objects of their senses.<br><br>
 
 Shree Krishna says that all living beings are an integral part of God’s creation and have roles and responsibilities to fulfill. Vedas prescribe performing yajña to please the celestial gods, who in-return bestow material gains. These yajñas cause rains to fall, which aids in the production of food grains for the sustenance of life on earth. Those who live only for the delight of their senses and do not accept their responsibility in this cycle— are sinful and living in vain. However, Shree Krishna says that when works or prescribed duties are performed as an obligation to God, they are also considered yajña (sacrifice).<br><br> 
@@ -111,9 +110,13 @@ Arjun then asks Shree Krishna why people commit sin, even when unwilling, as if 
                 <p>Thus knowing the soul to be superior to the material intellect, O mighty armed Arjun, subdue the lower self (senses, mind, and intellect) by the higher self (strength of the soul), and kill this formidable enemy called lust.</p>
                        
                      <div class="footer"> 
-                   <a href="chapterr2.html"><button id="back" style="background-color: goldenrod;padding:2px;color: white;">Prev Chapter</button></a>
- <a href="chapter4.html"><button style="background-color: goldenrod;color: white;padding:10px;margin-left:350px;margin-bottom: 10px;">Enter Into Chapter 4</button></a>
+                   <a href="chapterr2.html"><button id="back" class="btn-secondary">Prev Chapter</button></a>
+ <a href="chapter4.html"><button class="btn-primary">Enter Into Chapter 4</button></a>
             </div>  
             </div>  
+    <!-- Sanjaya Gita AI & Voice Narration Companion -->
+    <script src="gita-ai-assistant.js?v=2026"></script>
+    <!-- Universal Quick Verse Navigator & Sacred Shloka Explorer -->
+    <script src="gita-navigator.js"></script>
 </body>
 </html>

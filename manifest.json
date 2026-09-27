@@ -2,14 +2,14 @@
   "name": "Bhagavad Gita • The Song Divine",
   "short_name": "Bhagavad Gita",
   "description": "The eternal divine dialogue of righteousness, surrender, and ultimate transcendence with Gita AI.",
-  "start_url": "/entry.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#07070b",
   "theme_color": "#e6a817",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/vishwaroopam_4k_final.png",
+      "src": "./vishwaroopam_4k_final.png",
       "sizes": "192x192 512x512",
       "type": "image/png",
       "purpose": "any maskable"
